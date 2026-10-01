@@ -506,17 +506,20 @@
 <!-- Call to Action Banner (Register from Google Doc) -->
 <section class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-slate-900 text-white py-14">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-800/80 text-emerald-200 border border-emerald-600/40 uppercase tracking-wider">
+            ⏳ {{ $locale === 'en' ? 'UPDATING SOON' : 'ĐANG CẬP NHẬT' }}
+        </div>
         <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
             {{ __('conference.register_form.title') }}
         </h2>
         <p class="text-xs sm:text-sm text-emerald-100 max-w-2xl mx-auto">
             {{ $locale === 'en'
-                ? 'Fill out the registration form to receive your confirmation email and QR check-in code from the Organizing Committee.'
-                : 'Điền form đăng ký tham dự Hội nghị để nhận email xác nhận từ Ban Tổ Chức kèm mã QR check-in tại sự kiện.' }}
+                ? 'The registration portal for the Viet Duc University Hospital International Scientific Conference 2026 is currently being prepared and will open soon.'
+                : 'Cổng đăng ký tham dự Hội nghị Khoa học Quốc tế Bệnh viện Hữu nghị Việt Đức 2026 đang được Ban Tổ chức chuẩn bị và sẽ sớm mở trong thời gian tới.' }}
         </p>
         <div class="pt-4 flex flex-wrap justify-center gap-4">
             <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'register']) }}" class="btn-hero-primary">
-                {{ __('conference.cta.register_now') }}
+                {{ $locale === 'en' ? 'Registration Portal (Updating)' : 'Cổng đăng ký (Đang cập nhật)' }}
             </a>
             <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'about']) }}" class="btn-hero-secondary">
                 {{ __('conference.welcome_letter.title') }}

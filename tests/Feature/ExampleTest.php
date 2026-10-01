@@ -56,7 +56,7 @@ class ExampleTest extends TestCase
 
     public function test_updating_pages_display_updating_component(): void
     {
-        $pages = ['program', 'speakers', 'committees', 'sponsorship', 'layout', 'fees', 'guidelines', 'abstract', 'travel'];
+        $pages = ['register', 'program', 'speakers', 'committees', 'sponsorship', 'layout', 'fees', 'guidelines', 'abstract', 'travel'];
         foreach ($pages as $page) {
             $response = $this->get("/vi/{$page}");
             $response->assertStatus(200);
