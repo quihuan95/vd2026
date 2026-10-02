@@ -204,6 +204,12 @@
                     <p class="text-xs text-emerald-200/80 leading-relaxed mb-6">
                         {{ __('conference.welcome_letter.p2') }}
                     </p>
+                    <p class="text-xs text-emerald-200/80 leading-relaxed mb-6">
+                        {{ __('conference.welcome_letter.p3') }}
+                    </p>
+                    <p class="text-xs text-emerald-200/80 leading-relaxed mb-6">
+                        {{ __('conference.welcome_letter.p4') }}
+                    </p>
 
                     <div class="pt-4 border-t border-emerald-800/80 flex items-center justify-between">
                         <div>

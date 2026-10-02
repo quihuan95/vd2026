@@ -58,7 +58,7 @@ return array (
   array (
     'hero_tag' => 'LỄ KỶ NIỆM 120 NĂM THÀNH LẬP BỆNH VIỆN HỮU NGHỊ VIỆT ĐỨC',
     'hero_sub' => 'Kỷ niệm 120 năm truyền thống vẻ vang & Khẳng định vị thế ngoại khoa hàng đầu Việt Nam',
-    'intro_title' => '1. Giới thiệu',
+    'intro_title' => 'Giới thiệu',
     'intro_p1' => 'Hội nghị Khoa học Quốc tế Bệnh viện Hữu nghị Việt Đức 2026 được tổ chức trong khuôn khổ Lễ Kỷ niệm 120 năm thành lập Bệnh viện Hữu nghị Việt Đức, với sự tham gia của các chuyên gia, bác sĩ và cán bộ y tế trong nước và quốc tế. Hội nghị dự kiến có hơn 200 bài báo cáo khoa học thuộc 15 chuyên đề, bao gồm ghép tạng, chấn thương chỉnh hình, tiêu hóa – bệnh lý sàn chậu, phẫu thuật tim mạch và lồng ngực, phẫu thuật thần kinh, nam học – tiết niệu, dược lâm sàng, chẩn đoán hình ảnh và nhiều lĩnh vực khác. Đây là cơ hội để các đồng nghiệp cùng cập nhật kiến thức, chia sẻ kinh nghiệm chuyên môn, trao đổi những tiến bộ mới trong thực hành lâm sàng và tăng cường kết nối, hợp tác trong lĩnh vực y tế.',
     'stat_years' => '120 năm',
     'stat_years_label' => 'Hình thành & phát triển (1906 – 2026)',
@@ -72,7 +72,7 @@ return array (
 
   'welcome_letter' => 
   array (
-    'title' => '2. Thư chào mừng',
+    'title' => 'Thư chào mừng',
     'salutation' => 'Kính gửi Quý Đồng nghiệp,',
     'p1' => 'Chúng tôi trân trọng kính mời Quý vị tham dự Hội nghị Khoa học Quốc tế Bệnh viện Hữu nghị Việt Đức năm 2026, diễn ra tại Hà Nội ngày 19 tháng 11 năm 2026.',
     'p2' => 'Hội nghị năm nay được tổ chức trong khuôn khổ Lễ Kỷ niệm 120 năm thành lập Bệnh viện Hữu nghị Việt Đức. Trải qua 120 năm hình thành và phát triển với sự tiếp nối của nhiều thế hệ thầy thuốc, cán bộ và nhân viên y tế, Bệnh viện luôn trân trọng sự đồng hành, chia sẻ của các đồng nghiệp, chuyên gia và đối tác trong nước và quốc tế.',
@@ -114,7 +114,7 @@ return array (
     1 => 
     array (
       'q' => 'Đại biểu sẽ làm thủ tục check-in tại Hội nghị như thế nào?',
-      'a' => 'Sau khi điền link đăng ký tham dự Hội nghị, Quý Đại biểu sẽ nhận được email xác nhận từ Ban Tổ Chức, kèm mã QR để check-in tại Hội nghị. Quý Đại biểu vui lòng lưu mã QR để check-in nhanh tại sự kiện.',
+      'a' => 'Sau khi điền link đăng ký tham dự Hội nghị, Quý Đại biểu sẽ nhận được email xác nhận từ Ban Tổ Chức, kèm mã tham dự để check-in tại Hội nghị. Quý Đại biểu vui lòng lưu mã tham dự để check-in nhanh tại sự kiện.',
     ),
     2 => 
     array (
@@ -130,7 +130,7 @@ return array (
 
   'contact' => 
   array (
-    'title' => '5. Thông tin liên hệ',
+    'title' => 'Thông tin liên hệ',
     'inquiries' => 'Mọi thắc mắc xin liên hệ với Ban Tổ Chức qua email: eventvietduc@vduh.org',
     'email' => 'eventvietduc@vduh.org',
     'sec_academic_title' => 'Ban Thư ký chuyên môn',
@@ -148,7 +148,7 @@ return array (
 
   'register_form' => 
   array (
-    'title' => '6. Đăng ký tham dự',
+    'title' => 'Đăng ký tham dự',
     'full_name' => 'Họ và tên (Full name)',
     'gender' => 'Giới tính (Gender)',
     'gender_male' => 'Nam (Male)',
@@ -168,7 +168,7 @@ return array (
 
   'venue_page' => 
   array (
-    'badge' => '3. ĐỊA ĐIỂM TỔ CHỨC',
+    'badge' => 'ĐỊA ĐIỂM TỔ CHỨC',
     'hero_subtitle' => 'Địa điểm tổ chức Hội nghị Khoa học Quốc tế Bệnh viện Hữu nghị Việt Đức 2026',
     'name' => 'Trung tâm Hội nghị Quốc gia',
     'addr_1' => 'Đường Phạm Hùng, Phường Mễ Trì, Quận Nam Từ Liêm, Hà Nội',
@@ -182,7 +182,7 @@ return array (
 
   'sponsorship_page' => 
   array (
-    'badge' => '4. NHÀ TÀI TRỢ',
+    'badge' => 'NHÀ TÀI TRỢ',
     'title' => 'Nhà tài trợ',
     'status' => 'Update thông tin sau (Đang cập nhật thông tin)',
   ),

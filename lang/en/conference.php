@@ -72,7 +72,7 @@ return array (
 
   'welcome_letter' => 
   array (
-    'title' => '2. Welcome Message',
+    'title' => 'Welcome Message',
     'salutation' => 'Dear Esteemed Colleagues,',
     'p1' => 'We cordially invite you to attend the Viet Duc University Hospital International Scientific Conference 2026, held in Hanoi on November 19, 2026.',
     'p2' => 'This year’s Conference is organized within the framework of the 120th Anniversary of Viet Duc University Hospital. Spanning 120 years of establishment and continuous advancement through generations of devoted physicians, healthcare leaders, and staff, our Hospital profoundly values the collaboration, companionship, and support of domestic and international colleagues, experts, and partners.',
@@ -114,7 +114,7 @@ return array (
     1 => 
     array (
       'q' => 'How will delegates check in at the Conference?',
-      'a' => 'After completing the registration form, delegates will receive a confirmation email from the Organizing Committee with a personal QR code for check-in. Please save your QR code for rapid check-in at the venue.',
+      'a' => 'After completing the registration form, delegates will receive a confirmation email from the Organizing Committee with a participation code for check-in. Please save your participation code for rapid check-in at the venue.',
     ),
     2 => 
     array (
@@ -130,7 +130,7 @@ return array (
 
   'contact' => 
   array (
-    'title' => '5. Contact Information',
+    'title' => 'Contact Information',
     'inquiries' => 'For all inquiries, please contact the Organizing Committee via email: eventvietduc@vduh.org',
     'email' => 'eventvietduc@vduh.org',
     'sec_academic_title' => 'Academic & Scientific Secretariat',
@@ -168,7 +168,7 @@ return array (
 
   'venue_page' => 
   array (
-    'badge' => '3. VENUE',
+    'badge' => 'VENUE',
     'hero_subtitle' => 'Official Venue for Viet Duc University Hospital International Scientific Conference 2026',
     'name' => 'National Convention Center (NCC)',
     'addr_1' => 'Pham Hung Street, Me Tri Ward, Nam Tu Liem District, Hanoi',
@@ -182,7 +182,7 @@ return array (
 
   'sponsorship_page' => 
   array (
-    'badge' => '4. SPONSORSHIP',
+    'badge' => 'SPONSORSHIP',
     'title' => 'Sponsors & Partners',
     'status' => 'Information will be updated soon (Updating)',
   ),
