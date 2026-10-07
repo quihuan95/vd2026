@@ -3,134 +3,10 @@
 @section('title', __('conference.conference_name'))
 
 @section('content')
-<!-- Home Hero Key Visual -->
-<section class="relative hero-kv-bg text-white overflow-hidden pt-8 pb-16 lg:pt-16 lg:pb-24">
-    <!-- Ambient mesh dots and glows -->
-    <div class="absolute inset-0 hero-mesh-dots opacity-40 pointer-events-none"></div>
-    <div class="absolute top-1/4 -right-20 w-96 h-96 bg-amber-400/20 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-10 left-10 w-96 h-96 bg-emerald-600/20 rounded-full blur-3xl pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
-            <!-- Left 7 cols: Copy & CTAs -->
-            <div class="lg:col-span-7 space-y-6">
-                <!-- Badges -->
-                <div class="flex flex-wrap items-center gap-2.5">
-                    <div class="bg-white/95 rounded-lg p-1.5 shadow-md flex items-center gap-2 border border-white/40">
-                        <img src="{{ asset('assets/images/vietduc-logo.png') }}" alt="VDUH" class="h-8 w-auto">
-                        <span class="text-xs font-extrabold text-emerald-950 pr-2">
-                            {{ $locale === 'en' ? 'VIET DUC UNIVERSITY HOSPITAL' : 'BỆNH VIỆN HỮU NGHỊ VIỆT ĐỨC' }}
-                        </span>
-                    </div>
-                    <div class="border border-amber-400/40 bg-amber-400/10 backdrop-blur-md px-3 py-1 rounded-lg text-amber-300 text-xs font-bold tracking-wide">
-                        ⭐ {{ $locale === 'en' ? '120 YEARS (1906 – 2026)' : '120 NĂM (1906 – 2026)' }}
-                    </div>
-                </div>
-
-                <!-- KV Subtitles -->
-                <div class="space-y-1">
-                    <p class="text-amber-300 font-bold text-xs sm:text-sm uppercase tracking-[0.18em]">
-                        {{ __('conference.anniversary_title') }}
-                    </p>
-                    <p class="text-emerald-200/80 font-medium text-[11px] sm:text-xs uppercase tracking-[0.2em]">
-                        VIET DUC UNIVERSITY HOSPITAL 120TH ANNIVERSARY
-                    </p>
-                </div>
-
-                <!-- Main Hero Title -->
-                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-                    <span class="hero-kv-title block">
-                        {{ __('conference.conference_name') }}
-                    </span>
-                    <span class="text-lg sm:text-2xl text-emerald-100 font-normal block mt-2">
-                        {{ $locale === 'en' ? 'In-Person International Scientific Conference' : 'Hội Nghị Khoa Học Trực Tiếp' }}
-                    </span>
-                </h1>
-
-                <!-- Meta bar -->
-                <div class="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-emerald-100/90 pt-1">
-                    <div class="flex items-center gap-1.5 bg-black/30 backdrop-blur px-3 py-1.5 rounded-md border border-white/10">
-                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                        <span>{{ __('conference.event_dates') }}</span>
-                    </div>
-                    <div class="flex items-center gap-1.5 bg-black/30 backdrop-blur px-3 py-1.5 rounded-md border border-white/10">
-                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
-                        <span>{{ __('conference.venue_conference') }} (Hà Nội)</span>
-                    </div>
-                    <div class="flex items-center gap-1.5 bg-black/30 backdrop-blur px-3 py-1.5 rounded-md border border-white/10">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                        <span>{{ __('conference.format') }}</span>
-                    </div>
-                </div>
-
-                <!-- CTAs -->
-                <div class="pt-2 flex flex-wrap items-center gap-4">
-                    <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'register']) }}" class="btn-hero-primary">
-                        <span>{{ __('conference.cta.register_now') }}</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </a>
-
-                    <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'about']) }}" class="btn-hero-secondary">
-                        <span>{{ __('conference.welcome_letter.title') }}</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right 5 cols: Official 120 Anniversary Visual -->
-            <div class="lg:col-span-5 flex justify-center">
-                <div class="relative w-full max-w-md group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-amber-400/40 to-emerald-500/40 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500"></div>
-                    
-                    <div class="relative rounded-2xl overflow-hidden border-2 border-amber-300/40 bg-emerald-950/80 shadow-2xl backdrop-blur">
-                        <img src="{{ asset('assets/images/vietduc-banner-120.jpg') }}" alt="120 Năm Bệnh viện Hữu nghị Việt Đức" class="w-full h-auto object-cover transform transition duration-500 group-hover:scale-102">
-                        
-                        <div class="p-4 bg-gradient-to-t from-emerald-950 via-emerald-950/90 to-transparent">
-                            <div class="flex items-center justify-between text-xs text-amber-300 font-bold mb-1">
-                                <span>{{ $locale === 'en' ? 'INTERNATIONAL SCIENTIFIC CONFERENCE' : 'HỘI NGHỊ KHOA HỌC QUỐC TẾ' }}</span>
-                                <span>19.11.2026</span>
-                            </div>
-                            <p class="text-[11px] text-emerald-200 leading-tight">
-                                {{ __('conference.venue_conference') }} — {{ __('conference.venue_conference_address') }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Bottom Wave transition to white section -->
-    <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none pointer-events-none">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-10 sm:h-16 text-white fill-current">
-            <path d="M0,0 C150,90 350,-40 500,45 C650,130 900,10 1200,40 L1200,120 L0,120 Z"></path>
-        </svg>
-    </div>
-</section>
-
-<!-- Stats Bar Section -->
-<section class="py-8 bg-white border-b border-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-slate-100">
-            <div class="p-4">
-                <div class="text-3xl sm:text-4xl font-extrabold text-emerald-800 tracking-tight">{{ __('conference.home.stat_years') }}</div>
-                <div class="text-xs sm:text-sm text-slate-500 mt-1 font-medium">{{ __('conference.home.stat_years_label') }}</div>
-            </div>
-            <div class="p-4">
-                <div class="text-3xl sm:text-4xl font-extrabold text-amber-600 tracking-tight">{{ __('conference.home.stat_reports') }}</div>
-                <div class="text-xs sm:text-sm text-slate-500 mt-1 font-medium">{{ __('conference.home.stat_reports_label') }}</div>
-            </div>
-            <div class="p-4">
-                <div class="text-3xl sm:text-4xl font-extrabold text-emerald-800 tracking-tight">{{ __('conference.home.stat_tracks') }}</div>
-                <div class="text-xs sm:text-sm text-slate-500 mt-1 font-medium">{{ __('conference.home.stat_tracks_label') }}</div>
-            </div>
-            <div class="p-4">
-                <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">{{ __('conference.home.stat_format') }}</div>
-                <div class="text-xs sm:text-sm text-slate-500 mt-1 font-medium">{{ __('conference.home.stat_format_label') }}</div>
-            </div>
-        </div>
-    </div>
+<!-- Home banner -->
+<section>
+    <h1 class="sr-only">{{ __('conference.conference_name') }}</h1>
+    <img src="{{ asset('assets/images/banner-web.jpg') }}" alt="{{ __('conference.anniversary_title') }}" class="block w-full h-auto">
 </section>
 
 <!-- Section 1: Giới thiệu (Exact Content from Google Doc) -->
@@ -512,20 +388,15 @@
 <!-- Call to Action Banner (Register from Google Doc) -->
 <section class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-slate-900 text-white py-14">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center space-y-4">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-800/80 text-emerald-200 border border-emerald-600/40 uppercase tracking-wider">
-            ⏳ {{ $locale === 'en' ? 'UPDATING SOON' : 'ĐANG CẬP NHẬT' }}
-        </div>
         <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
             {{ __('conference.register_form.title') }}
         </h2>
         <p class="text-xs sm:text-sm text-emerald-100 max-w-2xl mx-auto">
-            {{ $locale === 'en'
-                ? 'The registration portal for the Viet Duc University Hospital International Scientific Conference 2026 is currently being prepared and will open soon.'
-                : 'Cổng đăng ký tham dự Hội nghị Khoa học Quốc tế Bệnh viện Hữu nghị Việt Đức 2026 đang được Ban Tổ chức chuẩn bị và sẽ sớm mở trong thời gian tới.' }}
+            Đăng ký tham dự Hội nghị Khoa học Quốc tế Bệnh viện Hữu nghị Việt Đức 2026. Sau khi gửi form, Quý đại biểu nhận email xác nhận kèm mã tham dự.
         </p>
         <div class="pt-4 flex flex-wrap justify-center gap-4">
             <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'register']) }}" class="btn-hero-primary">
-                {{ $locale === 'en' ? 'Registration Portal (Updating)' : 'Cổng đăng ký (Đang cập nhật)' }}
+                {{ __('conference.cta.register_now') }}
             </a>
             <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'about']) }}" class="btn-hero-secondary">
                 {{ __('conference.welcome_letter.title') }}

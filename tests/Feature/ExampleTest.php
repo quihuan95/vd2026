@@ -2,8 +2,10 @@
 
 namespace Tests\Feature;
 
+use App\Mail\RegistrationConfirmed;
 use App\Models\Registration;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 
 class ExampleTest extends TestCase
@@ -56,7 +58,7 @@ class ExampleTest extends TestCase
 
     public function test_updating_pages_display_updating_component(): void
     {
-        $pages = ['register', 'program', 'speakers', 'committees', 'sponsorship', 'layout', 'fees', 'guidelines', 'abstract', 'travel'];
+        $pages = ['program', 'speakers', 'committees', 'sponsorship', 'layout', 'fees', 'guidelines', 'abstract', 'travel'];
         foreach ($pages as $page) {
             $response = $this->get("/vi/{$page}");
             $response->assertStatus(200);
@@ -66,6 +68,9 @@ class ExampleTest extends TestCase
 
     public function test_registration_submission_with_doc_fields(): void
     {
+        Mail::fake();
+        config(['mail.always_cc' => 'dh.qt2@hoabinh-group.com']);
+
         $response = $this->post('/vi/register', [
             'full_name' => 'Nguyễn Văn Test',
             'gender' => 'male',
@@ -87,17 +92,22 @@ class ExampleTest extends TestCase
 
         $reg = Registration::where('email', 'bacsitest@example.com')->first();
         $this->assertNotNull($reg);
+        $this->assertSame('sent', $reg->email_status);
         $response->assertRedirect("/vi/register?success=1&id={$reg->delegate_id}&token={$reg->qr_code_token}");
+
+        Mail::assertSent(RegistrationConfirmed::class, function (RegistrationConfirmed $mail) use ($reg) {
+            return $mail->hasTo('bacsitest@example.com')
+                && $mail->hasCc('dh.qt2@hoabinh-group.com')
+                && $mail->registration->is($reg);
+        });
     }
 
-    public function test_english_locale_pages(): void
+    public function test_english_urls_redirect_to_vietnamese(): void
     {
-        $response = $this->get('/en');
-        $response->assertStatus(200);
-        $response->assertSee('Viet Duc University Hospital');
+        $this->get('/')->assertRedirect('/vi');
+        $this->get('/en')->assertRedirect('/vi');
+        $this->get('/en/about')->assertRedirect('/vi/about');
 
-        $responseAbout = $this->get('/en/about');
-        $responseAbout->assertStatus(200);
-        $responseAbout->assertSee('Assoc. Prof. Duong Duc Hung');
+        $this->get('/vi')->assertDontSee('>EN<');
     }
 }

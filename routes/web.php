@@ -10,11 +10,17 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
-// Root redirect to default locale
+// Root redirect to Vietnamese site
 Route::get('/', function () {
-    $locale = session('locale', 'vi');
-    return redirect("/{$locale}");
+    return redirect('/vi');
 });
+
+Route::get('/en/{path?}', function (?string $path = null) {
+    $target = '/vi'.($path ? '/'.$path : '');
+    $query = request()->getQueryString();
+
+    return redirect($target.($query ? '?'.$query : ''));
+})->where('path', '.*');
 
 // Admin Authentication Routes
 Route::prefix('admin')->group(function () {
@@ -54,7 +60,7 @@ Route::prefix('admin')->group(function () {
 });
 
 // Conference Public Routes (with locale prefix)
-Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'vi|en'], 'middleware' => ['web', 'locale']], function () {
+Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'vi'], 'middleware' => ['web', 'locale']], function () {
     Route::get('/', [ConferenceController::class, 'home'])->name('conference.home');
     
     // Explicit submissions

@@ -115,4 +115,8 @@ return [
         'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Laravel')),
     ],
 
+    'always_cc' => env('MAIL_ALWAYS_CC'),
+
+    'always_bcc' => env('MAIL_ALWAYS_BCC'),
+
 ];

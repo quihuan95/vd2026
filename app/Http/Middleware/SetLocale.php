@@ -13,15 +13,8 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $locale = $request->route('locale');
-
-        if ($locale && in_array($locale, ['vi', 'en'])) {
-            app()->setLocale($locale);
-            session(['locale' => $locale]);
-        } else {
-            $sessionLocale = session('locale', 'vi');
-            app()->setLocale($sessionLocale);
-        }
+        app()->setLocale('vi');
+        session(['locale' => 'vi']);
 
         return $next($request);
     }

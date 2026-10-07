@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\RegistrationConfirmed;
 use App\Models\AbstractSubmission;
 use App\Models\Registration;
 use App\Models\Setting;
 use App\Models\Speaker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class ConferenceController extends Controller
@@ -151,6 +154,20 @@ class ConferenceController extends Controller
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:50',
             'attend_dinner' => 'nullable',
+        ], [
+            'full_name.required' => 'Vui lòng nhập họ và tên.',
+            'full_name.max' => 'Họ và tên không được vượt quá 255 ký tự.',
+            'gender.required' => 'Vui lòng chọn giới tính.',
+            'gender.in' => 'Giới tính không hợp lệ.',
+            'dob.date' => 'Ngày tháng năm sinh không hợp lệ.',
+            'organization.max' => 'Cơ quan không được vượt quá 255 ký tự.',
+            'department.max' => 'Khoa/Phòng không được vượt quá 255 ký tự.',
+            'job_title.max' => 'Chức vụ không được vượt quá 255 ký tự.',
+            'email.required' => 'Vui lòng nhập email.',
+            'email.email' => 'Email không đúng định dạng.',
+            'email.max' => 'Email không được vượt quá 255 ký tự.',
+            'phone.required' => 'Vui lòng nhập số điện thoại.',
+            'phone.max' => 'Số điện thoại không được vượt quá 50 ký tự.',
         ]);
 
         $delegateId = Registration::generateDelegateId();
@@ -174,7 +191,7 @@ class ConferenceController extends Controller
             'attend_dinner' => $attendDinner,
             'request_cme' => true,
             'cme_id_number' => null,
-            'form_language' => $locale === 'en' ? 'en' : 'vi',
+            'form_language' => 'vi',
             'payment_method' => 'free',
             'payment_status' => 'complimentary',
             'amount_vnd' => 0,
@@ -184,6 +201,20 @@ class ConferenceController extends Controller
             'email_status' => 'pending',
             'paid_at' => now(),
         ]);
+
+        try {
+            Mail::to($registration->email)->send(new RegistrationConfirmed($registration));
+            $registration->update([
+                'email_status' => 'sent',
+                'email_sent_at' => now(),
+            ]);
+        } catch (\Throwable $exception) {
+            Log::error('Không gửi được email xác nhận đăng ký.', [
+                'delegate_id' => $registration->delegate_id,
+                'error' => $exception->getMessage(),
+            ]);
+            $registration->update(['email_status' => 'failed']);
+        }
 
         return redirect("/{$locale}/register?success=1&id={$registration->delegate_id}&token={$qrToken}");
     }
