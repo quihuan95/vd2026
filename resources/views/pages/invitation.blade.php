@@ -67,20 +67,6 @@
           @endforeach
         </ol>
       </section>
-
-      <!-- Action Buttons -->
-      <div class="flex flex-wrap justify-center gap-3 pt-2">
-        <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'program']) }}" class="btn-primary">
-          {{ __('conference.nav.program') }} →
-        </a>
-        <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'register']) }}" class="btn-secondary">
-          {{ __('conference.cta.register_now') }}
-        </a>
-        <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'venue']) }}" class="btn-secondary">
-          {{ __('conference.nav.venue') }}
-        </a>
-      </div>
-
     </div>
   </section>
 @endsection
