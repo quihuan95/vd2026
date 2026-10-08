@@ -1,6 +1,9 @@
 import Alpine from 'alpinejs';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 
 window.Alpine = Alpine;
+window.Swiper = Swiper;
 
 // Clipboard helper function
 window.copyToClipboard = function(text, element) {

@@ -58,12 +58,21 @@ class ExampleTest extends TestCase
 
     public function test_updating_pages_display_updating_component(): void
     {
-        $pages = ['program', 'speakers', 'committees', 'sponsorship', 'layout', 'fees', 'guidelines', 'abstract', 'travel'];
+        $pages = ['speakers', 'committees', 'sponsorship', 'layout', 'fees', 'guidelines', 'abstract', 'travel'];
         foreach ($pages as $page) {
             $response = $this->get("/vi/{$page}");
             $response->assertStatus(200);
             $response->assertSee('Đang cập nhật');
         }
+    }
+
+    public function test_program_page_displays_scientific_program(): void
+    {
+        $response = $this->get('/vi/program');
+        $response->assertStatus(200);
+        $response->assertSee('Phòng Khánh tiết');
+        $response->assertSee('Hội trường 1');
+        $response->assertSee('PGS.TS. Dương Đức Hùng');
     }
 
     public function test_registration_submission_with_doc_fields(): void

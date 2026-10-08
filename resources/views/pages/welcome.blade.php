@@ -3,10 +3,27 @@
 @section('title', __('conference.conference_name'))
 
 @section('content')
-<!-- Home banner -->
-<section>
+<!-- Home banner Swiper Slider -->
+<section class="relative bg-slate-900 overflow-hidden">
     <h1 class="sr-only">{{ __('conference.conference_name') }}</h1>
-    <img src="{{ asset('assets/images/banner-web.jpg') }}" alt="{{ __('conference.anniversary_title') }}" class="block w-full h-auto">
+    
+    <div class="swiper homeBannerSwiper w-full h-auto">
+        <div class="swiper-wrapper">
+            <!-- Slide 1: Main Conference Banner -->
+            <div class="swiper-slide">
+                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'program']) }}" class="block w-full">
+                    <img src="{{ asset('assets/images/banner-web.jpg') }}" alt="{{ __('conference.anniversary_title') }}" class="block w-full h-auto object-cover">
+                </a>
+            </div>
+
+            <!-- Slide 2: 120th Anniversary Visual -->
+            <div class="swiper-slide">
+                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'invitation']) }}" class="block w-full">
+                    <img src="{{ asset('assets/images/KV_banner HTKH.jpg') }}" alt="{{ __('conference.anniversary_title') }}" class="block w-full h-auto object-cover">
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Section 1: Giới thiệu (Exact Content from Google Doc) -->
@@ -404,4 +421,22 @@
         </div>
     </div>
 </section>
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        if (typeof Swiper !== 'undefined') {
+            new Swiper('.homeBannerSwiper', {
+                loop: true,
+                speed: 800,
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+            });
+        }
+    });
+</script>
+@endpush
 @endsection

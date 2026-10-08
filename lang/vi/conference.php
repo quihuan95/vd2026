@@ -23,7 +23,7 @@ return array (
   array (
     'welcome' => 'Trang chủ',
     'about' => 'Thư chào mừng',
-    'invitation' => 'Thông tin Lễ Kỷ niệm',
+    'invitation' => 'Lễ Kỷ niệm',
     'committees' => 'Ban Tổ chức',
     'venue' => 'Địa điểm tổ chức',
     'layout' => 'Sơ đồ phòng họp',
@@ -170,8 +170,8 @@ return array (
   'invitation_page' =>
   array (
     'badge' => 'LỄ KỶ NIỆM 120 NĂM',
-    'hero_subtitle' => 'Thư mời và thông tin Lễ Kỷ niệm 120 năm thành lập Bệnh viện Hữu nghị Việt Đức (1906 - 2026)',
-    'toolbar_title' => 'Thư mời Lễ Kỷ niệm',
+    'hero_subtitle' => 'Thông tin Lễ kỷ niệm 120 năm thành lập Bệnh viện Hữu nghị Việt Đức (1906 - 2026)',
+    'toolbar_title' => 'Lễ kỷ niệm',
     'toolbar_subtitle' => 'Xem và tải thư mời chính thức của Ban Tổ chức',
     'summary_title' => 'Thông tin chính',
     'time_label' => 'Thời gian',
