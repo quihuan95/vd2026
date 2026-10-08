@@ -163,9 +163,6 @@
                             <div class="text-xs text-amber-300 font-semibold">{{ __('conference.footer.anniversary') }}</div>
                         </div>
                     </div>
-                    <p class="text-xs text-emerald-300 leading-relaxed mb-4">
-                        {{ __('conference.home.intro_p1') }}
-                    </p>
                     <div class="text-xs text-emerald-400 space-y-1">
                         <div><strong>{{ __('conference.venue_conference') }}:</strong> {{ __('conference.venue_conference_address') }}</div>
                         <div><strong>{{ $locale === 'en' ? 'Date:' : 'Thời gian:' }}</strong> {{ __('conference.event_dates') }}</div>
