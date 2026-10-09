@@ -4,9 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Setting;
 use App\Models\Speaker;
-use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,15 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Admin user
-        User::updateOrCreate(
-            ['email' => 'admin@vduh.org'],
-            [
-                'name' => 'VDUH 2026 Administrator',
-                'password' => Hash::make('vduh2026@admin'),
-                'email_verified_at' => now(),
-            ]
-        );
+        $this->call(AdminSeeder::class);
 
         // General settings
         $settings = [
