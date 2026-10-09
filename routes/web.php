@@ -38,6 +38,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/registrations/{registration}', [AdminController::class, 'showRegistration'])->name('admin.registrations.show');
         Route::post('/registrations/{registration}/payment', [AdminController::class, 'updateRegistrationPayment'])->name('admin.registrations.payment');
         Route::post('/registrations/{registration}/checkin', [AdminController::class, 'checkInDelegate'])->name('admin.registrations.checkin');
+        Route::delete('/registrations/{registration}', [AdminController::class, 'destroyRegistration'])->name('admin.registrations.destroy');
 
         // Settings
         Route::get('/settings', [AdminController::class, 'settings'])->name('admin.settings');

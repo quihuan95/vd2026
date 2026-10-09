@@ -20,6 +20,13 @@
                     {{ $registration->checked_in_at ? 'Hủy Check-in' : 'Xác Nhận Check-in' }}
                 </button>
             </form>
+            <form action="{{ route('admin.registrations.destroy', $registration) }}" method="POST" onsubmit="return confirm('Bạn có chắc muốn xóa đại biểu này? Thao tác này không thể hoàn tác.');">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="px-3 py-2 rounded-xl bg-rose-700 hover:bg-rose-800 text-white font-bold text-xs shadow-sm transition">
+                    Xóa đại biểu
+                </button>
+            </form>
         </div>
     </div>
 

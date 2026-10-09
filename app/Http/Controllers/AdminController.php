@@ -6,8 +6,10 @@ use App\Models\Registration;
 use App\Models\Setting;
 use App\Support\RegistrationExcelExport;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use RuntimeException;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
@@ -124,6 +126,25 @@ class AdminController extends Controller
         $status = $registration->checked_in_at ? 'Đã check-in thành công' : 'Đã hủy check-in';
 
         return back()->with('success', "{$status} cho đại biểu {$registration->full_name} ({$registration->delegate_id}).");
+    }
+
+    public function destroyRegistration(Registration $registration): RedirectResponse
+    {
+        $delegateId = $registration->delegate_id;
+        $uploadedFiles = array_filter([
+            $registration->identity_path,
+            $registration->payment_proof_path,
+        ]);
+
+        $registration->delete();
+
+        if ($uploadedFiles !== []) {
+            Storage::disk('public')->delete($uploadedFiles);
+        }
+
+        return redirect()
+            ->route('admin.registrations')
+            ->with('success', "Đã xóa đại biểu {$delegateId}.");
     }
 
     private function registrationQuery(Request $request): Builder
