@@ -28,12 +28,12 @@
 
             <div>
                 <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Quản Trị Viên</label>
-                <input type="email" name="email" value="{{ old('email', 'admin@vduh.org') }}" required class="form-input text-xs sm:text-sm">
+                <input type="email" name="email" value="{{ old('email') }}" autocomplete="username" required class="form-input text-xs sm:text-sm">
             </div>
 
             <div>
                 <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Mật Khẩu</label>
-                <input type="password" name="password" value="vduh2026@admin" required class="form-input text-xs sm:text-sm">
+                <input type="password" name="password" autocomplete="current-password" required class="form-input text-xs sm:text-sm">
             </div>
 
             <div class="flex items-center justify-between text-xs pt-1">
@@ -47,10 +47,6 @@
                 Đăng Nhập CMS →
             </button>
         </form>
-
-        <div class="mt-6 text-center text-xs text-slate-400">
-            Mặc định: <code>admin@vduh.org</code> / <code>vduh2026@admin</code>
-        </div>
     </div>
 
 </body>
