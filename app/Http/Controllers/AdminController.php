@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AbstractSubmission;
 use App\Models\Registration;
 use App\Models\Setting;
-use App\Models\Speaker;
+use App\Support\RegistrationExcelExport;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
+use RuntimeException;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class AdminController extends Controller
 {
@@ -17,6 +18,7 @@ class AdminController extends Controller
         if (Auth::check()) {
             return redirect()->route('admin.dashboard');
         }
+
         return view('admin.login');
     }
 
@@ -29,6 +31,7 @@ class AdminController extends Controller
 
         if (Auth::attempt($credentials, $request->boolean('remember'))) {
             $request->session()->regenerate();
+
             return redirect()->intended(route('admin.dashboard'));
         }
 
@@ -42,6 +45,7 @@ class AdminController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
+
         return redirect()->route('admin.login');
     }
 
@@ -53,42 +57,45 @@ class AdminController extends Controller
             'pending_registrations' => Registration::where('payment_status', 'pending_verification')->count(),
             'complimentary_registrations' => Registration::where('payment_status', 'complimentary')->count(),
             'checked_in_count' => Registration::whereNotNull('checked_in_at')->count(),
-            'total_abstracts' => AbstractSubmission::count(),
-            'accepted_abstracts' => AbstractSubmission::where('review_status', 'accepted')->count(),
-            'total_speakers' => Speaker::count(),
         ];
 
         $recentRegistrations = Registration::orderByDesc('id')->limit(8)->get();
-        $recentAbstracts = AbstractSubmission::orderByDesc('id')->limit(8)->get();
 
-        return view('admin.dashboard', compact('stats', 'recentRegistrations', 'recentAbstracts'));
+        return view('admin.dashboard', compact('stats', 'recentRegistrations'));
     }
 
     public function registrations(Request $request)
     {
-        $query = Registration::query();
-
-        if ($request->filled('search')) {
-            $s = $request->input('search');
-            $query->where(function ($q) use ($s) {
-                $q->where('delegate_id', 'like', "%{$s}%")
-                  ->orWhere('full_name', 'like', "%{$s}%")
-                  ->orWhere('email', 'like', "%{$s}%")
-                  ->orWhere('organization', 'like', "%{$s}%");
-            });
-        }
-
-        if ($request->filled('payment_status')) {
-            $query->where('payment_status', $request->input('payment_status'));
-        }
-
-        if ($request->filled('category')) {
-            $query->where('category', $request->input('category'));
-        }
-
-        $registrations = $query->orderByDesc('id')->paginate(20)->withQueryString();
+        $registrations = $this->registrationQuery($request)
+            ->orderByDesc('id')
+            ->paginate(20)
+            ->withQueryString();
 
         return view('admin.registrations.index', compact('registrations'));
+    }
+
+    public function exportRegistrations(
+        Request $request,
+        RegistrationExcelExport $excelExport,
+    ): BinaryFileResponse {
+        $temporaryPath = tempnam(sys_get_temp_dir(), 'vduh-registrations-');
+
+        if ($temporaryPath === false) {
+            throw new RuntimeException('Không thể tạo file Excel tạm thời.');
+        }
+
+        $excelExport->export(
+            $this->registrationQuery($request)->orderByDesc('id')->cursor(),
+            $temporaryPath,
+        );
+
+        return response()
+            ->download(
+                $temporaryPath,
+                'danh-sach-dai-bieu-'.now()->format('Y-m-d-His').'.xlsx',
+                ['Content-Type' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'],
+            )
+            ->deleteFileAfterSend();
     }
 
     public function showRegistration(Registration $registration)
@@ -115,107 +122,31 @@ class AdminController extends Controller
         ]);
 
         $status = $registration->checked_in_at ? 'Đã check-in thành công' : 'Đã hủy check-in';
+
         return back()->with('success', "{$status} cho đại biểu {$registration->full_name} ({$registration->delegate_id}).");
     }
 
-    public function abstracts(Request $request)
+    private function registrationQuery(Request $request): Builder
     {
-        $query = AbstractSubmission::query();
+        $query = Registration::query();
 
         if ($request->filled('search')) {
-            $s = $request->input('search');
-            $query->where(function ($q) use ($s) {
-                $q->where('abstract_id', 'like', "%{$s}%")
-                  ->orWhere('title', 'like', "%{$s}%")
-                  ->orWhere('authors', 'like', "%{$s}%")
-                  ->orWhere('email', 'like', "%{$s}%");
+            $search = $request->string('search')->toString();
+            $query->where(function (Builder $query) use ($search): void {
+                $query->where('delegate_id', 'like', "%{$search}%")
+                    ->orWhere('full_name', 'like', "%{$search}%")
+                    ->orWhere('email', 'like', "%{$search}%")
+                    ->orWhere('organization', 'like', "%{$search}%");
             });
         }
 
-        if ($request->filled('specialty')) {
-            $query->where('specialty', $request->input('specialty'));
-        }
-
-        if ($request->filled('review_status')) {
-            $query->where('review_status', $request->input('review_status'));
-        }
-
-        $abstracts = $query->orderByDesc('id')->paginate(20)->withQueryString();
-
-        return view('admin.abstracts.index', compact('abstracts'));
-    }
-
-    public function showAbstract(AbstractSubmission $abstract)
-    {
-        return view('admin.abstracts.show', compact('abstract'));
-    }
-
-    public function updateAbstractStatus(AbstractSubmission $abstract, Request $request)
-    {
-        $validated = $request->validate([
-            'review_status' => 'required|string|in:submitted,under_review,accepted,revision_requested,rejected',
-            'review_notes' => 'nullable|string',
-        ]);
-
-        $abstract->update($validated);
-
-        return back()->with('success', "Đã cập nhật trạng thái báo cáo {$abstract->abstract_id}.");
-    }
-
-    public function speakers()
-    {
-        $speakers = Speaker::orderBy('sort_order')->get();
-        return view('admin.speakers.index', compact('speakers'));
-    }
-
-    public function storeSpeaker(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'title' => 'nullable|string|max:255',
-            'affiliation' => 'nullable|string|max:255',
-            'topic' => 'nullable|string|max:500',
-            'session_time' => 'nullable|string|max:100',
-            'bio_vi' => 'nullable|string',
-            'bio_en' => 'nullable|string',
-            'sort_order' => 'integer|default:0',
-            'is_published' => 'boolean',
-        ]);
-
-        $validated['is_published'] = $request->boolean('is_published');
-        Speaker::create($validated);
-
-        return back()->with('success', 'Đã thêm diễn giả mới thành công.');
-    }
-
-    public function updateSpeaker(Speaker $speaker, Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'title' => 'nullable|string|max:255',
-            'affiliation' => 'nullable|string|max:255',
-            'topic' => 'nullable|string|max:500',
-            'session_time' => 'nullable|string|max:100',
-            'bio_vi' => 'nullable|string',
-            'bio_en' => 'nullable|string',
-            'sort_order' => 'integer',
-        ]);
-
-        $validated['is_published'] = $request->boolean('is_published');
-        $speaker->update($validated);
-
-        return back()->with('success', "Đã cập nhật thông tin diễn giả {$speaker->name}.");
-    }
-
-    public function deleteSpeaker(Speaker $speaker)
-    {
-        $speaker->delete();
-        return back()->with('success', 'Đã xóa diễn giả thành công.');
+        return $query;
     }
 
     public function settings()
     {
         $settings = Setting::all()->pluck('value', 'key');
+
         return view('admin.settings.index', compact('settings'));
     }
 
@@ -239,7 +170,7 @@ class AdminController extends Controller
                 ->first();
 
             if ($reg) {
-                if (!$reg->checked_in_at) {
+                if (! $reg->checked_in_at) {
                     $reg->update(['checked_in_at' => now()]);
                     $result = [
                         'success' => true,
@@ -249,14 +180,14 @@ class AdminController extends Controller
                 } else {
                     $result = [
                         'warning' => true,
-                        'message' => 'Đại biểu này đã check-in vào lúc ' . $reg->checked_in_at->format('H:i d/m/Y'),
+                        'message' => 'Đại biểu này đã check-in vào lúc '.$reg->checked_in_at->format('H:i d/m/Y'),
                         'registration' => $reg,
                     ];
                 }
             } else {
                 $result = [
                     'error' => true,
-                    'message' => 'Không tìm thấy thông tin đại biểu tương ứng với mã ' . $token,
+                    'message' => 'Không tìm thấy thông tin đại biểu tương ứng với mã '.$token,
                 ];
             }
         }

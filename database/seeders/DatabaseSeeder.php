@@ -107,5 +107,7 @@ class DatabaseSeeder extends Seeder
                 $spk
             );
         }
+
+        $this->call(RegistrationSeeder::class);
     }
 }

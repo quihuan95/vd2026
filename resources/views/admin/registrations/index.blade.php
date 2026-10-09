@@ -11,30 +11,18 @@
         </div>
     </div>
 
-    <!-- Filter & Search Bar -->
-    <form method="GET" action="{{ route('admin.registrations') }}" class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs flex flex-wrap items-center gap-3 text-xs">
-        <input type="text" name="search" value="{{ request('search') }}" placeholder="Tìm theo Mã ĐB, Họ tên, Email, Cơ quan..." class="form-input text-xs max-w-xs">
-        
-        <select name="payment_status" class="form-input text-xs max-w-xs">
-            <option value="">-- Tất cả trạng thái thanh toán --</option>
-            <option value="pending_verification" {{ request('payment_status') == 'pending_verification' ? 'selected' : '' }}>Chờ xác nhận chuyển khoản</option>
-            <option value="paid" {{ request('payment_status') == 'paid' ? 'selected' : '' }}>Đã thanh toán (Paid)</option>
-            <option value="complimentary" {{ request('payment_status') == 'complimentary' ? 'selected' : '' }}>Miễn phí (Complimentary)</option>
-        </select>
+    <!-- Search Toolbar -->
+    <form method="GET" action="{{ route('admin.registrations') }}" class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs flex flex-nowrap items-center gap-3 text-xs overflow-x-auto">
+        <input type="text" name="search" value="{{ request('search') }}" placeholder="Tìm theo Mã ĐB, Họ tên, Email, Cơ quan..." class="form-input text-xs min-w-0 flex-1">
 
-        <select name="category" class="form-input text-xs max-w-xs">
-            <option value="">-- Tất cả phân loại --</option>
-            <option value="independent_delegate" {{ request('category') == 'independent_delegate' ? 'selected' : '' }}>Đại biểu tự do</option>
-            <option value="invited_speaker" {{ request('category') == 'invited_speaker' ? 'selected' : '' }}>Diễn giả khách mời</option>
-            <option value="vduh_staff" {{ request('category') == 'vduh_staff' ? 'selected' : '' }}>Cán bộ BV Việt Đức</option>
-            <option value="vip" {{ request('category') == 'vip' ? 'selected' : '' }}>Khách mời VIP</option>
-        </select>
-
-        <button type="submit" class="px-4 py-2 bg-[#ed680e] hover:bg-[#d55b0a] text-white rounded-lg font-bold">
+        <button type="submit" class="px-4 py-2 bg-[#ed680e] hover:bg-[#d55b0a] text-white rounded-lg font-bold whitespace-nowrap shrink-0">
             Tìm kiếm
         </button>
-        <a href="{{ route('admin.registrations') }}" class="px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg font-bold">
+        <a href="{{ route('admin.registrations') }}" class="px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg font-bold whitespace-nowrap shrink-0">
             Đặt lại
+        </a>
+        <a href="{{ route('admin.registrations.export', request()->only('search')) }}" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-bold shadow-sm transition whitespace-nowrap shrink-0">
+            Xuất Excel
         </a>
     </form>
 

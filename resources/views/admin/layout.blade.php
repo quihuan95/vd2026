@@ -61,14 +61,6 @@
                     <span>👥</span>
                     <span>Đại Biểu Đăng Ký</span>
                 </a>
-                <a href="{{ route('admin.abstracts') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-bold transition {{ request()->routeIs('admin.abstracts*') ? 'bg-[#ed680e] text-white shadow-sm' : 'hover:bg-slate-800 hover:text-white' }}">
-                    <span>📝</span>
-                    <span>Báo Cáo Tóm Tắt (Abstracts)</span>
-                </a>
-                <a href="{{ route('admin.speakers') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-bold transition {{ request()->routeIs('admin.speakers*') ? 'bg-[#ed680e] text-white shadow-sm' : 'hover:bg-slate-800 hover:text-white' }}">
-                    <span>🎙️</span>
-                    <span>Quản Lý Diễn Giả</span>
-                </a>
                 <a href="{{ route('admin.checkin') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-bold transition {{ request()->routeIs('admin.checkin') ? 'bg-emerald-600 text-white shadow-sm' : 'hover:bg-slate-800 hover:text-white' }}">
                     <span>📱</span>
                     <span>Quét QR Check-in Tại Chỗ</span>
