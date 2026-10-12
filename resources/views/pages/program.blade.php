@@ -9,7 +9,7 @@ $locale = $locale ?? app()->getLocale();
 $conferenceScheduleVi = [
     ['07h30 – 07h50', 'Tiếp đón đại biểu', 'Ban Tổ chức'],
     ['07h50 – 08h00', 'Phát biểu Khai mạc', 'PGS. TS. Dương Đức Hùng — Giám đốc Bệnh viện Hữu nghị Việt Đức'],
-    ['08h00 – 10h00', 'Phiên Tổng quan', 'Toàn bộ đại biểu'],
+    ['08h30 – 10h00', 'Phiên Tổng quan', 'Toàn bộ đại biểu'],
     ['10h00 – 10h15', 'Tiệc trà', null],
     ['10h15 – 11h30', 'Phiên 2', 'Toàn bộ đại biểu'],
     ['11h30 – 13h00', 'Ăn trưa', null],
@@ -22,7 +22,7 @@ $conferenceScheduleVi = [
 $conferenceScheduleEn = [
     ['07:30 – 07:50', 'Delegate Reception & Welcome', 'Organizing Committee'],
     ['07:50 – 08:00', 'Opening Remarks', 'Assoc. Prof. Duong Duc Hung, MD, PhD — Director of VDUH'],
-    ['08:00 – 10:00', 'Plenary Session', 'All Delegates'],
+    ['08:30 – 10:00', 'Plenary Session', 'All Delegates'],
     ['10:00 – 10:15', 'Tea Break', null],
     ['10:15 – 11:30', 'Session 2', 'All Delegates'],
     ['11:30 – 13:00', 'Lunch Break', null],
@@ -83,7 +83,7 @@ $hallsData = [
                     ],
                     [
                         'time' => '08h50 – 09h10',
-                        'title' => 'Advances in liver transplant surgery',
+                        'title' => 'Minimally invasive living donor liver transplantation',
                         'speaker' => 'Prof. Kwang – Woong Lee',
                         'org' => 'Department of Hepatobiliary and Pancreatic Surgery, Seoul National University Hospital'
                     ],
@@ -445,7 +445,7 @@ $hallsData = [
                 'items' => [
                     [
                         'time' => '14h40 – 14h50',
-                        'title' => 'Phẫu thuật nội soi sau phúc mạc cắt thận bán phần điều trị u thận thể endophytic hoàn toàn: Báo cáo hai trường hợp',
+                        'title' => 'Phẫu thuật nội soi sau phúc mạc cắt thận bán phần điều trị u thận thể endophytic hoàn toàn: Báo cáo bốn trường hợp',
                         'speaker' => 'TS.BS. Nguyễn Huy Hoàng',
                         'org' => 'Khoa Phẫu thuật Tiết niệu, Bệnh viện Hữu nghị Việt Đức'
                     ],
@@ -612,7 +612,7 @@ $hallsData = [
                     [
                         'time' => '14h00 – 14h10',
                         'title' => 'Gây mê bằng mặt nạ thanh quản thế hệ 2 có camera cho người bệnh phẫu thuật đường tiêu hóa trên tại Bệnh viện Hữu nghị Việt Đức',
-                        'speaker' => 'TS.BS. Đào Thị Kim Dung, ThS.BS. Trần Thị Nương',
+                        'speaker' => 'TS.BS. Đào Thị Kim Dung',
                         'org' => 'Trung tâm Gây mê và Hồi sức ngoại khoa, Bệnh viện Hữu nghị Việt Đức'
                     ],
                     [
@@ -710,16 +710,22 @@ $hallsData = [
                 'time' => '10h15 – 11h30',
                 'items' => [
                     [
-                        'time' => '10h15 – 10h30',
-                        'title' => 'Technique selection in liver transplantation from brain-dead donors',
+                        'time' => '10h15 – 10h25',
+                        'title' => 'Tailored outflow reconstruction in DDLT: How to choose the appropriate approach?',
                         'speaker' => 'Prof. Kwang – Woong Lee',
                         'org' => 'Department of Hepatobiliary and Pancreatic Surgery, Seoul National University Hospital'
                     ],
                     [
-                        'time' => '10h30 – 10h45',
+                        'time' => '10h25 – 10h35',
                         'title' => 'Chiến lược xử trí tổn thương mạch máu khó trong ghép gan: Bí quyết lâm sàng và lưu ý kỹ thuật',
-                        'speaker' => 'PGS.TS. Dương Đức Hùng',
-                        'org' => 'Bệnh viện Hữu nghị Việt Đức'
+                        'speaker' => 'TS.BS. Ninh Việt Khải',
+                        'org' => 'Trung tâm Ghép tạng, Bệnh viện Hữu nghị Việt Đức'
+                    ],
+                    [
+                        'time' => '10h35 – 10h45',
+                        'title' => 'Transplantation hépatique pour métastases hépatiques colorectales non résécables : résultats d’une expérience monocentrique selon le protocole TRANSME',
+                        'speaker' => 'Dr Thanh Tu ALBERT',
+                        'org' => 'Hôpital Pitié Salpêtrière 75013 Paris'
                     ],
                     [
                         'time' => '10h45 – 11h00',
@@ -815,7 +821,7 @@ $hallsData = [
                     ],
                     [
                         'time' => '14h55 – 15h10',
-                        'title' => 'Kinh nghiệm triển khai ghép thận tại Bệnh viện Quân Y 103',
+                        'title' => 'Trì hoãn chức năng thận ghép: chẩn đoán và xử trí',
                         'speaker' => 'PGS.TS. Lê Việt Thắng',
                         'org' => 'Trung tâm Ghép tạng, Bệnh viện Quân Y 103'
                     ],
@@ -1028,8 +1034,8 @@ $hallsData = [
                     [
                         'time' => '15h40 – 15h55',
                         'title' => 'Thực trạng tuân thủ điều trị dự phòng cấp 2 và hiệu quả tư vấn điều trị ở người bệnh nhồi máu não tại Bệnh viện Đa khoa Nông nghiệp năm 2023',
-                        'speaker' => 'ThS.BS. Nguyễn Diệu Thúy',
-                        'org' => 'Khoa Phục hồi chức năng, Bệnh viện Hữu nghị Việt Đức'
+                        'speaker' => 'BSCKII. Trần Thị Lan',
+                        'org' => 'Khoa Nội tổng hợp, Bệnh viện Đa khoa Nông nghiệp (Bệnh viện Hữu nghị Việt Đức)'
                     ],
                     [
                         'time' => '15h55 – 16h15',
@@ -1064,8 +1070,8 @@ $hallsData = [
                     [
                         'time' => '10h15 – 10h25',
                         'title' => 'Ghép khí quản từ đoạn khí quản của người hiến chết não: Kinh nghiệm bước đầu tại Bệnh viện Hữu nghị Việt Đức',
-                        'speaker' => 'PGS.TS. Dương Đức Hùng',
-                        'org' => 'Bệnh viện Hữu nghị Việt Đức'
+                        'speaker' => 'PGS.TS. Phạm Hữu Lư',
+                        'org' => 'Khoa Ngoại Tim mạch và Lồng ngực, Bệnh viện Hữu nghị Việt Đức'
                     ],
                     [
                         'time' => '10h25 – 10h35',
@@ -1122,7 +1128,7 @@ $hallsData = [
             [
                 'session_num' => 3,
                 'name' => 'PHIÊN 3: GAN MẬT – TỤY',
-                'chairs' => 'PGS.TS. Trần Đình Thơ, PGS.TS. Lưu Nguyên Hưng, TS.BS. Ninh Việt Khải',
+                'chairs' => 'PGS.TS. Nguyễn Tiến Quyết, PGS.TS. Trần Đình Thơ, TS.BS. Đỗ Mạnh Hùng',
                 'time' => '13h00 – 14h25',
                 'items' => [
                     [
@@ -1139,9 +1145,9 @@ $hallsData = [
                     ],
                     [
                         'time' => '13h20 – 13h30',
-                        'title' => 'Cập nhật hướng nghiên cứu mới trong ung thư tụy: Ứng dụng sinh học phân tử',
-                        'speaker' => 'PGS.TS. Lưu Nguyên Hưng',
-                        'org' => 'Viện Nghiên cứu Houston Methodist; Houston Methodist Dr. Mary and Ron Neal Cancer Center; Trường Y Weill Cornell'
+                        'title' => 'Duodénopancréatectomie céphalique robotique : faisabilité, sécurité et résultats d’une expérience monocentrique',
+                        'speaker' => 'Dr Thanh Tu ALBERT',
+                        'org' => 'Hôpital Pitié Salpêtrière 75013 Paris'
                     ],
                     [
                         'time' => '13h30 – 13h40',
@@ -1186,8 +1192,8 @@ $hallsData = [
             [
                 'session_num' => 4,
                 'name' => 'PHIÊN 4: GAN MẬT – TỤY',
-                'chairs' => 'PGS.TS. Nguyễn Đức Tiến, PGS.TS. Nguyễn Việt Hoa, TS.BS. Nguyễn Hải Nam',
-                'time' => '14h40 – 16h15',
+                'chairs' => 'PGS.TS. Trần Bảo Long, TS.BS. Đỗ Tuấn Anh, PGS.TS. Nguyễn Quang Nghĩa',
+                'time' => '14h25 – 16h15',
                 'items' => [
                     [
                         'time' => '14h40 – 14h50',
@@ -1221,9 +1227,9 @@ $hallsData = [
                     ],
                     [
                         'time' => '15h30 – 15h40',
-                        'title' => 'Kết quả điều trị sỏi đường mật bằng phẫu thuật nội soi kết hợp tán sỏi laser tại Bệnh viện Hữu nghị Việt Đức',
-                        'speaker' => 'ThS.BS. Nguyễn Mạnh Hùng',
-                        'org' => 'Khoa Phẫu thuật Gan mật, Bệnh viện Hữu nghị Việt Đức'
+                        'title' => 'Quelle place pour la chirurgie robotique dans la cytoréduction et CHIP des carcinoses péritonéales',
+                        'speaker' => 'Dr Thanh Tu ALBERT',
+                        'org' => 'Hôpital Pitié Salpêtrière 75013 Paris'
                     ],
                     [
                         'time' => '15h40 – 15h50',
@@ -1671,7 +1677,7 @@ $hallsData = [
                         'time' => '10h25 – 10h35',
                         'title' => 'Tổng quan về phẫu thuật lồng ngực tại Bệnh viện Đại học Y Hà Nội',
                         'speaker' => 'TS.BS. Nguyễn Duy Thắng',
-                        'org' => 'Khoa Phẫu thuật Tim mạch và Lồng ngực, Bệnh viện Đại học Y Hà Nội'
+                        'org' => 'Trung tâm Tim mạch, Bệnh viện Đại học Y Hà Nội'
                     ],
                     [
                         'time' => '10h35 – 10h45',
@@ -1695,7 +1701,7 @@ $hallsData = [
                         'time' => '11h05 – 11h15',
                         'title' => 'Kết quả điều trị vỡ nhu mô phổi do chấn thương tại Bệnh viện Hữu nghị Việt Đức',
                         'speaker' => 'ThS.BS. Nguyễn Minh Trí',
-                        'org' => 'Khoa Ngoại Tim mạch và Lồng ngực, Bệnh viện Hữu nghị Việt Đức'
+                        'org' => 'Trung tâm Tim mạch và Lồng ngực, Bệnh viện Hữu nghị Việt Đức'
                     ],
                     [
                         'time' => '11h15 – 11h30',
@@ -1716,7 +1722,7 @@ $hallsData = [
             [
                 'session_num' => 3,
                 'name' => 'PHIÊN 3: TIM MẠCH – LỒNG NGỰC (PHẪU THUẬT TIM MẠCH LỒNG NGỰC – ĐỘNG MẠCH CHỦ NGỰC)',
-                'chairs' => 'PGS.TS. Dương Đức Hùng, PGS.TS. Nguyễn Sinh Hiền, TS.BS. Nguyễn Công Hựu, PGS.TS. Phùng Duy Hồng Sơn',
+                'chairs' => 'PGS.TS. Nguyễn Sinh Hiền, TS.BS. Nguyễn Công Hựu, PGS.TS. Phùng Duy Hồng Sơn',
                 'time' => '13h00 – 14h25',
                 'items' => [
                     [
@@ -1740,7 +1746,7 @@ $hallsData = [
                     [
                         'time' => '13h30 – 13h40',
                         'title' => 'Kinh nghiệm phẫu thuật van động mạch chủ không khâu tại Bệnh viện Bạch Mai',
-                        'speaker' => 'TS.BS. Nguyễn Phi Long',
+                        'speaker' => 'TS.BS. Ngô Phi Long',
                         'org' => 'Khoa Phẫu thuật Tim mạch và Hồi sức tích cực sau mổ - Viện Tim mạch, Bệnh viện Bạch Mai'
                     ],
                     [
@@ -1827,7 +1833,7 @@ $hallsData = [
                     ],
                     [
                         'time' => '15h50 – 16h00',
-                        'title' => 'Kinh nghiệm can thiệp nội mạch bệnh lý động mạch chủ ngực tại Bệnh viện E',
+                        'title' => 'Chia sẻ kinh nghiệm điều trị bệnh lý động mạch chủ phức tạp tại Bệnh viện E',
                         'speaker' => 'ThS.BS. Nguyễn Hoàng Nam',
                         'org' => 'Đơn vị Mạch máu, Trung tâm Tim mạch, Bệnh viện E'
                     ],
@@ -1858,26 +1864,14 @@ $hallsData = [
             [
                 'session_num' => 2,
                 'name' => 'PHIÊN 2: CHẨN ĐOÁN HÌNH ẢNH',
-                'chairs' => 'M.D Young Soo Do, PGS.TS. Lê Thanh Dũng, BSCKII. Phạm Hữu Khuyên',
+                'chairs' => 'M.D Sang Yub Le, PGS.TS. Lê Thanh Dũng, BSCKII. Phạm Hữu Khuyên',
                 'time' => '10h15 – 11h30',
                 'items' => [
                     [
-                        'time' => '10h15 – 10h25',
-                        'title' => 'Phát biểu mở đầu phiên Chẩn đoán hình ảnh',
-                        'speaker' => 'M.D Young Soo Do – PGS.TS Lê Thanh Dũng',
-                        'org' => 'Chủ tọa đoàn'
-                    ],
-                    [
-                        'time' => '10h25 – 10h35',
-                        'title' => 'Phân bố các dạng động mạch thận dựa trên hình ảnh MSCT 256 dãy và ứng dụng trong phẫu thuật nội soi: Kết quả 900 trường hợp tại Bệnh viện Hữu nghị Việt Đức',
-                        'speaker' => 'PGS.TS. Lê Nguyên Vũ',
-                        'org' => 'Trung tâm Ghép tạng, Bệnh viện Hữu nghị Việt Đức'
-                    ],
-                    [
-                        'time' => '10h35 – 10h45',
-                        'title' => 'An toàn và hiệu quả của tiêm giảm đau cột sống dưới siêu âm: Tổng quan và báo cáo loạt ca tại Bệnh viện Hữu nghị Việt Đức',
-                        'speaker' => 'TS.BS. Nguyễn Hoàng Long',
-                        'org' => 'Khoa Phẫu thuật Cột sống, Bệnh viện Hữu nghị Việt Đức'
+                        'time' => '10h15 – 10h45',
+                        'title' => 'Endovascular Management of Peripheral AVMs – Imaging, Approaches, and Embolization Agents',
+                        'speaker' => 'M.D Sang Yub Le',
+                        'org' => 'Department of Radiology, Samsung Medical Center, Sungkyunkwan University School of Medicine, Seoul, Korea'
                     ],
                     [
                         'time' => '10h45 – 10h55',
@@ -1980,12 +1974,12 @@ $hallsData = [
             [
                 'session_num' => 4,
                 'name' => 'PHIÊN 4: PHẪU THUẬT TẠO HÌNH – THẨM MỸ',
-                'chairs' => 'PGS.TS. Vũ Ngọc Lâm, TS.BS. Trần Thị Hằng, TS.BS. Bùi Mai Anh',
+                'chairs' => 'PGS.TS. Vũ Ngọc Lâm, TS.BS. Đỗ Thị Ngọc Linh, TS.BS. Bùi Mai Anh',
                 'time' => '14h40 – 16h15',
                 'items' => [
                     [
                         'time' => '14h40 – 14h50',
-                        'title' => 'Ứng dụng công nghệ 3D trong tạo hình sọ mặt',
+                        'title' => 'Cập nhật điều trị u xơ thần kinh thể đám rối',
                         'speaker' => 'TS.BS. Vũ Trung Trực',
                         'org' => 'Khoa Phẫu thuật Hàm mặt - Tạo hình - Thẩm mỹ, Bệnh viện Hữu nghị Việt Đức'
                     ],
