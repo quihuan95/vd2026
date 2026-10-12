@@ -36,28 +36,28 @@ $conferenceSchedule = $locale === 'en' ? $conferenceScheduleEn : $conferenceSche
 
 $hallScheduleVi = [
     ['Phòng Khánh tiết', 'Phiên Tổng quan', 'Chấn thương chỉnh hình', 'Chấn thương chỉnh hình', 'Chấn thương chỉnh hình'],
-    ['Hội trường 1', 'Phiên Tổng quan', 'Cột sống', 'Nam học – Tiết niệu', 'Nam học – Tiết niệu'],
-    ['Hội trường 2', 'Phiên Tổng quan', 'Nội – Cận lâm sàng', 'Gây mê hồi sức', 'Gây mê hồi sức'],
-    ['Hội trường 3', 'Phiên Tổng quan', 'Ghép tạng', 'Ghép tạng', 'Ghép tạng'],
-    ['Hội trường 4', 'Phiên Tổng quan', 'Ghép tạng', 'Phẫu thuật Thần kinh', 'Phẫu thuật Thần kinh'],
-    ['Hội trường 5', 'Phiên Tổng quan', 'Ghép tạng', 'Gan mật – Tụy', 'Gan mật – Tụy'],
-    ['Hội trường 6', 'Phiên Tổng quan', 'Dược lâm sàng', 'Tiêu hóa – Bệnh lý sàn chậu', 'Tiêu hóa – Bệnh lý sàn chậu'],
-    ['Hội trường 7', 'Phiên Tổng quan', 'Điều dưỡng', 'Điều dưỡng', 'Điều dưỡng'],
-    ['Hội trường 8', 'Phiên Tổng quan', 'Tim mạch – Lồng ngực', 'Tim mạch – Lồng ngực', 'Tim mạch – Lồng ngực'],
-    ['Hội trường 9', 'Phiên Tổng quan', 'Chẩn đoán hình ảnh', 'Phẫu thuật Tạo hình – Thẩm mỹ', 'Phẫu thuật Tạo hình – Thẩm mỹ'],
+    ['Phòng 101 (Tầng 1)', '—', 'Cột sống', 'Nam học – Tiết niệu', 'Nam học – Tiết niệu'],
+    ['Phòng 188 (Tầng 1)', '—', 'Nội – Cận lâm sàng', 'Gây mê hồi sức', 'Gây mê hồi sức'],
+    ['Phòng 220 (Tầng 2)', '—', 'Ghép tạng', 'Ghép tạng', 'Ghép tạng'],
+    ['Phòng 218 (Tầng 2)', '—', 'Ghép tạng', 'Phẫu thuật Thần kinh', 'Phẫu thuật Thần kinh'],
+    ['Phòng 216 (Tầng 2)', '—', 'Ghép tạng', 'Gan mật – Tụy', 'Gan mật – Tụy'],
+    ['Phòng 210 (Tầng 2)', '—', 'Dược lâm sàng', 'Tiêu hóa – Bệnh lý sàn chậu', 'Tiêu hóa – Bệnh lý sàn chậu'],
+    ['Phòng 207 (Tầng 2)', '—', 'Điều dưỡng', 'Điều dưỡng', 'Điều dưỡng'],
+    ['Phòng 219 (Tầng 2)', '—', 'Tim mạch – Lồng ngực', 'Tim mạch – Lồng ngực', 'Tim mạch – Lồng ngực'],
+    ['Phòng 217 (Tầng 2)', '—', 'Chẩn đoán hình ảnh', 'Phẫu thuật Tạo hình – Thẩm mỹ', 'Phẫu thuật Tạo hình – Thẩm mỹ'],
 ];
 
 $hallScheduleEn = [
     ['Grand Hall (Khanh Tiet)', 'Plenary Session', 'Orthopaedics & Traumatology', 'Orthopaedics & Traumatology', 'Orthopaedics & Traumatology'],
-    ['Hall 1', 'Plenary Session', 'Spine Surgery', 'Andrology & Urology', 'Andrology & Urology'],
-    ['Hall 2', 'Plenary Session', 'Internal Medicine & Paraclinical', 'Anesthesiology & Resuscitation', 'Anesthesiology & Resuscitation'],
-    ['Hall 3', 'Plenary Session', 'Organ Transplantation', 'Organ Transplantation', 'Organ Transplantation'],
-    ['Hall 4', 'Plenary Session', 'Organ Transplantation', 'Neurosurgery', 'Neurosurgery'],
-    ['Hall 5', 'Plenary Session', 'Organ Transplantation', 'Hepatobiliary & Pancreatic', 'Hepatobiliary & Pancreatic'],
-    ['Hall 6', 'Plenary Session', 'Clinical Pharmacy', 'Gastroenterology & Pelvic Floor', 'Gastroenterology & Pelvic Floor'],
-    ['Hall 7', 'Plenary Session', 'Surgical Nursing', 'Surgical Nursing', 'Surgical Nursing'],
-    ['Hall 8', 'Plenary Session', 'Cardiovascular & Thoracic Surgery', 'Cardiovascular & Thoracic Surgery', 'Cardiovascular & Thoracic Surgery'],
-    ['Hall 9', 'Plenary Session', 'Diagnostic Imaging', 'Plastic & Aesthetic Surgery', 'Plastic & Aesthetic Surgery'],
+    ['Room 101 (1st Floor)', '—', 'Spine Surgery', 'Andrology & Urology', 'Andrology & Urology'],
+    ['Room 188 (1st Floor)', '—', 'Internal Medicine & Paraclinical', 'Anesthesiology & Resuscitation', 'Anesthesiology & Resuscitation'],
+    ['Room 220 (2nd Floor)', '—', 'Organ Transplantation', 'Organ Transplantation', 'Organ Transplantation'],
+    ['Room 218 (2nd Floor)', '—', 'Organ Transplantation', 'Neurosurgery', 'Neurosurgery'],
+    ['Room 216 (2nd Floor)', '—', 'Organ Transplantation', 'Hepatobiliary & Pancreatic', 'Hepatobiliary & Pancreatic'],
+    ['Room 210 (2nd Floor)', '—', 'Clinical Pharmacy', 'Gastroenterology & Pelvic Floor', 'Gastroenterology & Pelvic Floor'],
+    ['Room 207 (2nd Floor)', '—', 'Surgical Nursing', 'Surgical Nursing', 'Surgical Nursing'],
+    ['Room 219 (2nd Floor)', '—', 'Cardiovascular & Thoracic Surgery', 'Cardiovascular & Thoracic Surgery', 'Cardiovascular & Thoracic Surgery'],
+    ['Room 217 (2nd Floor)', '—', 'Diagnostic Imaging', 'Plastic & Aesthetic Surgery', 'Plastic & Aesthetic Surgery'],
 ];
 
 $hallSchedule = $locale === 'en' ? $hallScheduleEn : $hallScheduleVi;
@@ -2076,42 +2076,6 @@ $hallsData = [
     }
 }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
-        <!-- Download Program PDF Option Banner -->
-        <div class="bg-gradient-to-r from-emerald-900 via-emerald-850 to-teal-900 rounded-3xl p-6 sm:p-8 text-white shadow-lg border border-emerald-700/40 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden">
-            <!-- Decorative background accent -->
-            <div class="absolute -right-12 -top-12 w-48 h-48 bg-amber-400/10 rounded-full blur-2xl pointer-events-none"></div>
-            <div class="absolute -left-12 -bottom-12 w-48 h-48 bg-emerald-400/10 rounded-full blur-2xl pointer-events-none"></div>
-
-            <div class="flex items-start sm:items-center gap-4 relative z-10">
-                <div class="w-14 h-14 rounded-2xl bg-amber-400/20 border border-amber-300/40 text-amber-300 flex items-center justify-center text-2xl flex-shrink-0 shadow-inner">
-                    📄
-                </div>
-                <div>
-                    <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-400 text-amber-950 mb-1">
-                        <span>PDF DOWNLOAD</span>
-                    </div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-white">
-                        {{ $locale === 'en' ? 'Download Official Scientific Program (PDF)' : 'Tải Chương trình Khoa học Chi tiết (Bản PDF)' }}
-                    </h2>
-                    <p class="text-xs sm:text-sm text-emerald-100/90 mt-0.5">
-                        {{ $locale === 'en' ? 'Complete schedule booklet with 10 halls, 15 scientific tracks & all presentations.' : 'Tài liệu đầy đủ 10 Hội trường, 15 chuyên đề khoa học.' }}
-                    </p>
-                </div>
-            </div>
-
-            <div class="flex flex-wrap items-center gap-3 relative z-10 w-full md:w-auto">
-                <a 
-                    href="{{ asset('assets/docs/chuong-trinh-hoi-nghi-khoa-hoc-viet-duc-2026.pdf') }}" 
-                    target="_blank" 
-                    download="chuong-trinh-khoa-hoc-vduh-2026.pdf" 
-                    class="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-amber-400 hover:bg-amber-300 text-amber-950 font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition group"
-                >
-                    <svg class="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                    <span>{{ $locale === 'en' ? 'Download PDF' : 'Tải Bản PDF' }}</span>
-                </a>
-            </div>
-        </div>
-
         <!-- Section 1: Chương trình tổng thể Hội nghị Khoa học Quốc tế -->
         <section id="hoi-nghi" aria-labelledby="hoi-nghi-title" class="scroll-mt-32 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
             <div class="p-6 sm:p-8 space-y-3 border-b border-slate-200">
