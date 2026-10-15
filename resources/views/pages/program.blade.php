@@ -35,29 +35,29 @@ $conferenceScheduleEn = [
 $conferenceSchedule = $locale === 'en' ? $conferenceScheduleEn : $conferenceScheduleVi;
 
 $hallScheduleVi = [
-    ['Phòng Khánh tiết', 'Phiên Tổng quan', 'Chấn thương chỉnh hình', 'Chấn thương chỉnh hình', 'Chấn thương chỉnh hình'],
-    ['Phòng 101 (Tầng 1)', '—', 'Cột sống', 'Nam học – Tiết niệu', 'Nam học – Tiết niệu'],
-    ['Phòng 188 (Tầng 1)', '—', 'Nội – Cận lâm sàng', 'Gây mê hồi sức', 'Gây mê hồi sức'],
-    ['Phòng 220 (Tầng 2)', '—', 'Ghép tạng', 'Ghép tạng', 'Ghép tạng'],
-    ['Phòng 218 (Tầng 2)', '—', 'Ghép tạng', 'Phẫu thuật Thần kinh', 'Phẫu thuật Thần kinh'],
-    ['Phòng 216 (Tầng 2)', '—', 'Ghép tạng', 'Gan mật – Tụy', 'Gan mật – Tụy'],
-    ['Phòng 210 (Tầng 2)', '—', 'Dược lâm sàng', 'Tiêu hóa – Bệnh lý sàn chậu', 'Tiêu hóa – Bệnh lý sàn chậu'],
-    ['Phòng 207 (Tầng 2)', '—', 'Điều dưỡng', 'Điều dưỡng', 'Điều dưỡng'],
-    ['Phòng 219 (Tầng 2)', '—', 'Tim mạch – Lồng ngực', 'Tim mạch – Lồng ngực', 'Tim mạch – Lồng ngực'],
-    ['Phòng 217 (Tầng 2)', '—', 'Chẩn đoán hình ảnh', 'Phẫu thuật Tạo hình – Thẩm mỹ', 'Phẫu thuật Tạo hình – Thẩm mỹ'],
+    ['Phòng Khánh tiết - Tầng 1', 'Phiên Tổng quan', 'Chấn thương chỉnh hình', 'Chấn thương chỉnh hình', 'Chấn thương chỉnh hình'],
+    ['Phòng 101 - Tầng 1', '—', 'Cột sống', 'Nam học – Tiết niệu', 'Nam học – Tiết niệu'],
+    ['Phòng 188 - Tầng 1', '—', 'Nội – Cận lâm sàng', 'Gây mê hồi sức', 'Gây mê hồi sức'],
+    ['Phòng 220 - Tầng 2', '—', 'Ghép tạng', 'Ghép tạng', 'Ghép tạng'],
+    ['Phòng 218 - Tầng 2', '—', 'Ghép tạng', 'Phẫu thuật Thần kinh', 'Phẫu thuật Thần kinh'],
+    ['Phòng 216 - Tầng 2', '—', 'Ghép tạng', 'Gan mật – Tụy', 'Gan mật – Tụy'],
+    ['Phòng 210 - Tầng 2', '—', 'Dược lâm sàng', 'Tiêu hóa – Bệnh lý sàn chậu', 'Tiêu hóa – Bệnh lý sàn chậu'],
+    ['Phòng 207 - Tầng 2', '—', 'Điều dưỡng', 'Điều dưỡng', 'Điều dưỡng'],
+    ['Phòng 219 - Tầng 2', '—', 'Tim mạch – Lồng ngực', 'Tim mạch – Lồng ngực', 'Tim mạch – Lồng ngực'],
+    ['Phòng 217 - Tầng 2', '—', 'Chẩn đoán hình ảnh', 'Phẫu thuật Tạo hình – Thẩm mỹ', 'Phẫu thuật Tạo hình – Thẩm mỹ'],
 ];
 
 $hallScheduleEn = [
-    ['Grand Hall (Khanh Tiet)', 'Plenary Session', 'Orthopaedics & Traumatology', 'Orthopaedics & Traumatology', 'Orthopaedics & Traumatology'],
-    ['Room 101 (1st Floor)', '—', 'Spine Surgery', 'Andrology & Urology', 'Andrology & Urology'],
-    ['Room 188 (1st Floor)', '—', 'Internal Medicine & Paraclinical', 'Anesthesiology & Resuscitation', 'Anesthesiology & Resuscitation'],
-    ['Room 220 (2nd Floor)', '—', 'Organ Transplantation', 'Organ Transplantation', 'Organ Transplantation'],
-    ['Room 218 (2nd Floor)', '—', 'Organ Transplantation', 'Neurosurgery', 'Neurosurgery'],
-    ['Room 216 (2nd Floor)', '—', 'Organ Transplantation', 'Hepatobiliary & Pancreatic', 'Hepatobiliary & Pancreatic'],
-    ['Room 210 (2nd Floor)', '—', 'Clinical Pharmacy', 'Gastroenterology & Pelvic Floor', 'Gastroenterology & Pelvic Floor'],
-    ['Room 207 (2nd Floor)', '—', 'Surgical Nursing', 'Surgical Nursing', 'Surgical Nursing'],
-    ['Room 219 (2nd Floor)', '—', 'Cardiovascular & Thoracic Surgery', 'Cardiovascular & Thoracic Surgery', 'Cardiovascular & Thoracic Surgery'],
-    ['Room 217 (2nd Floor)', '—', 'Diagnostic Imaging', 'Plastic & Aesthetic Surgery', 'Plastic & Aesthetic Surgery'],
+    ['Grand Reception Hall - 1st Floor', 'Plenary Session', 'Orthopaedics & Traumatology', 'Orthopaedics & Traumatology', 'Orthopaedics & Traumatology'],
+    ['Room 101 - 1st Floor', '—', 'Spine Surgery', 'Andrology & Urology', 'Andrology & Urology'],
+    ['Room 188 - 1st Floor', '—', 'Internal Medicine & Paraclinical', 'Anesthesiology & Resuscitation', 'Anesthesiology & Resuscitation'],
+    ['Room 220 - 2nd Floor', '—', 'Organ Transplantation', 'Organ Transplantation', 'Organ Transplantation'],
+    ['Room 218 - 2nd Floor', '—', 'Organ Transplantation', 'Neurosurgery', 'Neurosurgery'],
+    ['Room 216 - 2nd Floor', '—', 'Organ Transplantation', 'Hepatobiliary & Pancreatic', 'Hepatobiliary & Pancreatic'],
+    ['Room 210 - 2nd Floor', '—', 'Clinical Pharmacy', 'Gastroenterology & Pelvic Floor', 'Gastroenterology & Pelvic Floor'],
+    ['Room 207 - 2nd Floor', '—', 'Surgical Nursing', 'Surgical Nursing', 'Surgical Nursing'],
+    ['Room 219 - 2nd Floor', '—', 'Cardiovascular & Thoracic Surgery', 'Cardiovascular & Thoracic Surgery', 'Cardiovascular & Thoracic Surgery'],
+    ['Room 217 - 2nd Floor', '—', 'Diagnostic Imaging', 'Plastic & Aesthetic Surgery', 'Plastic & Aesthetic Surgery'],
 ];
 
 $hallSchedule = $locale === 'en' ? $hallScheduleEn : $hallScheduleVi;
@@ -65,9 +65,9 @@ $hallSchedule = $locale === 'en' ? $hallScheduleEn : $hallScheduleVi;
 $hallsData = [
     [
         'id' => 'khanh-tiet',
-        'name' => 'Phòng Khánh tiết',
-        'room' => 'Khánh tiết',
-        'badge' => 'Phiên Toàn thể & Chấn thương chỉnh hình',
+        'name' => $locale === 'en' ? 'Grand Reception Hall - 1st Floor' : 'Phòng Khánh tiết - Tầng 1',
+        'room' => null,
+        'badge' => null,
         'sessions' => [
             [
                 'session_num' => 1,
@@ -305,9 +305,9 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-1',
-        'name' => 'Hội trường 1',
-        'room' => 'P.101',
-        'badge' => 'Cột sống & Nam học – Tiết niệu',
+        'name' => $locale === 'en' ? 'Room 101 - 1st Floor' : 'Phòng 101 - Tầng 1',
+        'room' => null,
+        'badge' => null,
         'sessions' => [
             [
                 'session_num' => 2,
@@ -505,9 +505,9 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-2',
-        'name' => 'Hội trường 2',
-        'room' => 'P.188',
-        'badge' => 'Nội – Cận lâm sàng & Gây mê hồi sức',
+        'name' => $locale === 'en' ? 'Room 188 - 1st Floor' : 'Phòng 188 - Tầng 1',
+        'room' => null,
+        'badge' => null,
         'sessions' => [
             [
                 'session_num' => 2,
@@ -699,9 +699,9 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-3',
-        'name' => 'Hội trường 3',
-        'room' => 'P.220',
-        'badge' => 'Ghép tạng (Ghép gan & Ghép thận)',
+        'name' => $locale === 'en' ? 'Room 220 - 2nd Floor' : 'Phòng 220 - Tầng 2',
+        'room' => null,
+        'badge' => null,
         'sessions' => [
             [
                 'session_num' => 2,
@@ -863,9 +863,9 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-4',
-        'name' => 'Hội trường 4',
-        'room' => 'P.218',
-        'badge' => 'Ghép tạng (Ghép tim) & Phẫu thuật Thần kinh',
+        'name' => $locale === 'en' ? 'Room 218 - 2nd Floor' : 'Phòng 218 - Tầng 2',
+        'room' => null,
+        'badge' => null,
         'sessions' => [
             [
                 'session_num' => 2,
@@ -1057,9 +1057,9 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-5',
-        'name' => 'Hội trường 5',
-        'room' => 'P.216',
-        'badge' => 'Ghép tạng (Ghép phổi & Khí quản) & Gan mật – Tụy',
+        'name' => $locale === 'en' ? 'Room 216 - 2nd Floor' : 'Phòng 216 - Tầng 2',
+        'room' => null,
+        'badge' => null,
         'sessions' => [
             [
                 'session_num' => 2,
@@ -1257,9 +1257,9 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-6',
-        'name' => 'Hội trường 6',
-        'room' => 'P.210',
-        'badge' => 'Dược lâm sàng & Tiêu hóa – Bệnh lý sàn chậu',
+        'name' => $locale === 'en' ? 'Room 210 - 2nd Floor' : 'Phòng 210 - Tầng 2',
+        'room' => null,
+        'badge' => null,
         'sessions' => [
             [
                 'session_num' => 2,
@@ -1451,9 +1451,9 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-7',
-        'name' => 'Hội trường 7',
-        'room' => 'P.207',
-        'badge' => 'Điều dưỡng',
+        'name' => $locale === 'en' ? 'Room 207 - 2nd Floor' : 'Phòng 207 - Tầng 2',
+        'room' => null,
+        'badge' => null,
         'sessions' => [
             [
                 'session_num' => 2,
@@ -1657,9 +1657,9 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-8',
-        'name' => 'Hội trường 8',
-        'room' => 'P.219',
-        'badge' => 'Tim mạch – Lồng ngực',
+        'name' => $locale === 'en' ? 'Room 219 - 2nd Floor' : 'Phòng 219 - Tầng 2',
+        'room' => null,
+        'badge' => null,
         'sessions' => [
             [
                 'session_num' => 2,
@@ -1857,9 +1857,9 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-9',
-        'name' => 'Hội trường 9',
-        'room' => 'P.217',
-        'badge' => 'Chẩn đoán hình ảnh & Phẫu thuật Tạo hình – Thẩm mỹ',
+        'name' => $locale === 'en' ? 'Room 217 - 2nd Floor' : 'Phòng 217 - Tầng 2',
+        'room' => null,
+        'badge' => null,
         'sessions' => [
             [
                 'session_num' => 2,
@@ -2179,7 +2179,7 @@ $hallsData = [
                     {{ $locale === 'en' ? 'Interactive Details' : 'Chi tiết từng bài báo cáo' }}
                 </span>
                 <h3 class="text-xl sm:text-2xl font-bold text-slate-900">
-                    {{ $locale === 'en' ? 'Detailed Presentations by 10 Halls' : 'Chương trình chi tiết theo 10 Hội trường' }}
+                    {{ $locale === 'en' ? 'Detailed Presentations by 10 Meeting Rooms' : 'Chương trình chi tiết theo 10 Phòng họp' }}
                 </h3>
             </div>
 
@@ -2224,7 +2224,7 @@ $hallsData = [
             <!-- Hall Filter Badges -->
             <div>
                 <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2.5">
-                    {{ $locale === 'en' ? 'Filter by Hall / Room:' : 'Lọc theo Hội trường / Phòng họp:' }}
+                    {{ $locale === 'en' ? 'Filter by Room:' : 'Lọc theo Phòng họp:' }}
                 </div>
                 <div class="flex flex-wrap gap-2">
                     <button 
@@ -2233,7 +2233,7 @@ $hallsData = [
                         :class="selectedHall === 'all' ? 'bg-emerald-800 text-white font-bold shadow-sm' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
                         class="px-3.5 py-1.5 rounded-xl text-xs transition"
                     >
-                        {{ $locale === 'en' ? 'All Halls (10)' : 'Tất cả Hội trường (10)' }}
+                        {{ $locale === 'en' ? 'All Rooms (10)' : 'Tất cả Phòng (10)' }}
                     </button>
 
                     @foreach($hallsData as $hall)
@@ -2244,7 +2244,7 @@ $hallsData = [
                         class="px-3 py-1.5 rounded-xl text-xs transition flex items-center gap-1.5"
                     >
                         <span>{{ $hall['name'] }}</span>
-                        @if($hall['room'])
+                        @if(!empty($hall['room']))
                             <span class="text-[10px] opacity-75 font-normal">({{ $hall['room'] }})</span>
                         @endif
                     </button>
@@ -2266,15 +2266,17 @@ $hallsData = [
                     <div class="space-y-1">
                         <div class="flex items-center gap-2.5">
                             <h2 class="text-xl sm:text-2xl font-extrabold tracking-tight">{{ $hall['name'] }}</h2>
-                            @if($hall['room'])
+                            @if(!empty($hall['room']))
                                 <span class="px-2.5 py-0.5 rounded-full bg-white/20 text-white font-semibold text-xs tracking-wide">
                                     {{ $hall['room'] }}
                                 </span>
                             @endif
                         </div>
+                        @if(!empty($hall['badge']))
                         <p class="text-emerald-100 text-xs sm:text-sm font-medium">
                             {{ $hall['badge'] }}
                         </p>
+                        @endif
                     </div>
 
                     <div class="flex items-center gap-2">

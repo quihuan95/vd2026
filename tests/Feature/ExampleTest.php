@@ -71,7 +71,7 @@ class ExampleTest extends TestCase
         $response = $this->get('/vi/program');
         $response->assertStatus(200);
         $response->assertSee('Phòng Khánh tiết');
-        $response->assertSee('Hội trường 1');
+        $response->assertSee('Phòng 101 - Tầng 1');
         $response->assertSee('PGS.TS. Dương Đức Hùng');
     }
 
