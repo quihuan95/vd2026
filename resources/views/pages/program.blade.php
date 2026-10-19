@@ -525,7 +525,7 @@ $hallsData = [
                     ],
                     [
                         'time' => '15h10 – 15h20',
-                        'title' => 'Tổng kết kết quả điều trị ung thư thận bằng phẫu thuật nội soi cắt U bảo tồn thận qua đường sau phúc mạc, trong 5 năm tại bệnh viện Việt Đức, 2020-2025',
+                        'title' => 'Tổng kết kết quả điều trị ung thư thận bằng phẫu thuật nội soi cắt U bảo tồn thận qua đường sau phúc mạc, trong 5 năm tại Bệnh viện Việt Đức, 2020-2025',
                         'speaker' => 'TS.BS. Đỗ Ngọc Sơn',
                         'org' => 'Khoa Phẫu thuật Tiết niệu, Bệnh viện Hữu nghị Việt Đức',
                     ],
