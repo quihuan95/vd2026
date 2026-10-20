@@ -7,22 +7,22 @@
 $locale = $locale ?? app()->getLocale();
 
 $conferenceScheduleVi = [
-    ['07h30 – 07h50', 'Tiếp đón đại biểu', 'Ban Tổ chức'],
+    ['07h30 – 07h50', 'Tiếp đón đại biểu', 'Ban tổ chức'],
     ['07h50 – 08h00', 'Phát biểu Khai mạc', 'PGS. TS. Dương Đức Hùng — Giám đốc Bệnh viện Hữu nghị Việt Đức'],
-    ['08h30 – 10h00', 'Phiên Tổng quan', 'Toàn bộ đại biểu'],
+    ['08h00 – 10h00', 'Phiên Tổng quan', 'Toàn thể đại biểu'],
     ['10h00 – 10h15', 'Tiệc trà', null],
-    ['10h15 – 11h30', 'Phiên 2', 'Toàn bộ đại biểu'],
+    ['10h15 – 11h30', 'Phiên 2', 'Toàn thể đại biểu'],
     ['11h30 – 13h00', 'Ăn trưa', null],
-    ['13h00 – 14h25', 'Phiên 3', 'Toàn bộ đại biểu'],
+    ['13h00 – 14h25', 'Phiên 3', 'Toàn thể đại biểu'],
     ['14h25 – 14h40', 'Tiệc trà', null],
-    ['14h40 – 16h15', 'Phiên 4', 'Toàn bộ đại biểu'],
+    ['14h40 – 16h15', 'Phiên 4', 'Toàn thể đại biểu'],
     ['17h00 – 20h00', 'Tiệc tối', null],
 ];
 
 $conferenceScheduleEn = [
     ['07:30 – 07:50', 'Delegate Reception & Welcome', 'Organizing Committee'],
     ['07:50 – 08:00', 'Opening Remarks', 'Assoc. Prof. Duong Duc Hung, MD, PhD — Director of VDUH'],
-    ['08:30 – 10:00', 'Plenary Session', 'All Delegates'],
+    ['08:00 – 10:00', 'Plenary Session', 'All Delegates'],
     ['10:00 – 10:15', 'Tea Break', null],
     ['10:15 – 11:30', 'Session 2', 'All Delegates'],
     ['11:30 – 13:00', 'Lunch Break', null],
@@ -35,29 +35,29 @@ $conferenceScheduleEn = [
 $conferenceSchedule = $locale === 'en' ? $conferenceScheduleEn : $conferenceScheduleVi;
 
 $hallScheduleVi = [
-    ['Phòng Khánh tiết - Tầng 1', 'Phiên Tổng quan', 'Chấn thương chỉnh hình', 'Chấn thương chỉnh hình', 'Chấn thương chỉnh hình'],
-    ['Phòng 101 - Tầng 1', '—', 'Cột sống', 'Nam học – Tiết niệu', 'Nam học – Tiết niệu'],
-    ['Phòng 188 - Tầng 1', '—', 'Nội – Cận lâm sàng', 'Gây mê hồi sức', 'Gây mê hồi sức'],
-    ['Phòng 220 - Tầng 2', '—', 'Ghép tạng', 'Ghép tạng', 'Ghép tạng'],
-    ['Phòng 218 - Tầng 2', '—', 'Ghép tạng', 'Phẫu thuật Thần kinh', 'Phẫu thuật Thần kinh'],
-    ['Phòng 216 - Tầng 2', '—', 'Ghép tạng', 'Gan mật – Tụy', 'Gan mật – Tụy'],
-    ['Phòng 210 - Tầng 2', '—', 'Dược lâm sàng', 'Tiêu hóa – Bệnh lý sàn chậu', 'Tiêu hóa – Bệnh lý sàn chậu'],
-    ['Phòng 207 - Tầng 2', '—', 'Điều dưỡng', 'Điều dưỡng', 'Điều dưỡng'],
-    ['Phòng 219 - Tầng 2', '—', 'Tim mạch – Lồng ngực', 'Tim mạch – Lồng ngực', 'Tim mạch – Lồng ngực'],
-    ['Phòng 217 - Tầng 2', '—', 'Chẩn đoán hình ảnh', 'Phẫu thuật Tạo hình – Thẩm mỹ', 'Phẫu thuật Tạo hình – Thẩm mỹ'],
+    ['Phòng Khánh tiết', 'Phiên Tổng quan', 'Chấn thương chỉnh hình', 'Chấn thương chỉnh hình', 'Chấn thương chỉnh hình'],
+    ['Phòng 101 (Tầng 1)', '—', 'Cột sống', 'Nam học – Tiết niệu', 'Nam học – Tiết niệu'],
+    ['Phòng 188 (Tầng 1)', '—', 'Nội – Cận lâm sàng', 'Gây mê hồi sức', 'Gây mê hồi sức'],
+    ['Phòng 220 (Tầng 2)', '—', 'Ghép tạng', 'Ghép tạng', 'Ghép tạng'],
+    ['Phòng 218 (Tầng 2)', '—', 'Ghép tạng', 'Phẫu thuật Thần kinh', 'Phẫu thuật Thần kinh'],
+    ['Phòng 216 (Tầng 2)', '—', 'Ghép tạng', 'Gan mật – Tụy', 'Gan mật – Tụy'],
+    ['Phòng 210 (Tầng 2)', '—', 'Dược lâm sàng', 'Tiêu hóa – Bệnh lý sàn chậu', 'Tiêu hóa – Bệnh lý sàn chậu'],
+    ['Phòng 207 (Tầng 2)', '—', 'Điều dưỡng', 'Điều dưỡng', 'Điều dưỡng'],
+    ['Phòng 219 (Tầng 2)', '—', 'Tim mạch – Lồng ngực', 'Tim mạch – Lồng ngực', 'Tim mạch – Lồng ngực'],
+    ['Phòng 217 (Tầng 2)', '—', 'Chẩn đoán hình ảnh', 'Phẫu thuật Tạo hình – Thẩm mỹ', 'Phẫu thuật Tạo hình – Thẩm mỹ'],
 ];
 
 $hallScheduleEn = [
-    ['Grand Reception Hall - 1st Floor', 'Plenary Session', 'Orthopaedics & Traumatology', 'Orthopaedics & Traumatology', 'Orthopaedics & Traumatology'],
-    ['Room 101 - 1st Floor', '—', 'Spine Surgery', 'Andrology & Urology', 'Andrology & Urology'],
-    ['Room 188 - 1st Floor', '—', 'Internal Medicine & Paraclinical', 'Anesthesiology & Resuscitation', 'Anesthesiology & Resuscitation'],
-    ['Room 220 - 2nd Floor', '—', 'Organ Transplantation', 'Organ Transplantation', 'Organ Transplantation'],
-    ['Room 218 - 2nd Floor', '—', 'Organ Transplantation', 'Neurosurgery', 'Neurosurgery'],
-    ['Room 216 - 2nd Floor', '—', 'Organ Transplantation', 'Hepatobiliary & Pancreatic', 'Hepatobiliary & Pancreatic'],
-    ['Room 210 - 2nd Floor', '—', 'Clinical Pharmacy', 'Gastroenterology & Pelvic Floor', 'Gastroenterology & Pelvic Floor'],
-    ['Room 207 - 2nd Floor', '—', 'Surgical Nursing', 'Surgical Nursing', 'Surgical Nursing'],
-    ['Room 219 - 2nd Floor', '—', 'Cardiovascular & Thoracic Surgery', 'Cardiovascular & Thoracic Surgery', 'Cardiovascular & Thoracic Surgery'],
-    ['Room 217 - 2nd Floor', '—', 'Diagnostic Imaging', 'Plastic & Aesthetic Surgery', 'Plastic & Aesthetic Surgery'],
+    ['Grand Reception Hall', 'Plenary Session', 'Orthopaedics & Traumatology', 'Orthopaedics & Traumatology', 'Orthopaedics & Traumatology'],
+    ['Room 101 (1st Floor)', '—', 'Spine Surgery', 'Andrology & Urology', 'Andrology & Urology'],
+    ['Room 188 (1st Floor)', '—', 'Internal Medicine & Paraclinical', 'Anesthesiology & Resuscitation', 'Anesthesiology & Resuscitation'],
+    ['Room 220 (2nd Floor)', '—', 'Organ Transplantation', 'Organ Transplantation', 'Organ Transplantation'],
+    ['Room 218 (2nd Floor)', '—', 'Organ Transplantation', 'Neurosurgery', 'Neurosurgery'],
+    ['Room 216 (2nd Floor)', '—', 'Organ Transplantation', 'Hepatobiliary & Pancreatic', 'Hepatobiliary & Pancreatic'],
+    ['Room 210 (2nd Floor)', '—', 'Clinical Pharmacy', 'Gastroenterology & Pelvic Floor', 'Gastroenterology & Pelvic Floor'],
+    ['Room 207 (2nd Floor)', '—', 'Surgical Nursing', 'Surgical Nursing', 'Surgical Nursing'],
+    ['Room 219 (2nd Floor)', '—', 'Cardiovascular & Thoracic Surgery', 'Cardiovascular & Thoracic Surgery', 'Cardiovascular & Thoracic Surgery'],
+    ['Room 217 (2nd Floor)', '—', 'Diagnostic Imaging', 'Plastic & Aesthetic Surgery', 'Plastic & Aesthetic Surgery'],
 ];
 
 $hallSchedule = $locale === 'en' ? $hallScheduleEn : $hallScheduleVi;
@@ -65,7 +65,7 @@ $hallSchedule = $locale === 'en' ? $hallScheduleEn : $hallScheduleVi;
 $hallsData = [
     [
         'id' => 'khanh-tiet',
-        'name' => $locale === 'en' ? 'Grand Reception Hall - 1st Floor' : 'Phòng Khánh tiết - Tầng 1',
+        'name' => $locale === 'en' ? 'Grand Reception Hall (1st Floor)' : 'Phòng Khánh tiết (Tầng 1)',
         'room' => null,
         'badge' => null,
         'sessions' => [
@@ -367,7 +367,7 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-1',
-        'name' => $locale === 'en' ? 'Room 101 - 1st Floor' : 'Phòng 101 - Tầng 1',
+        'name' => $locale === 'en' ? 'Room 101 (1st Floor)' : 'Phòng 101 (Tầng 1)',
         'room' => null,
         'badge' => null,
         'sessions' => [
@@ -587,7 +587,7 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-2',
-        'name' => $locale === 'en' ? 'Room 188 - 1st Floor' : 'Phòng 188 - Tầng 1',
+        'name' => $locale === 'en' ? 'Room 188 (1st Floor)' : 'Phòng 188 (Tầng 1)',
         'room' => null,
         'badge' => null,
         'sessions' => [
@@ -601,7 +601,7 @@ $hallsData = [
                         'time' => '10h15 – 10h25',
                         'title' => 'Bước đầu đánh giá hiệu quả của quản trị tinh gọn tới quy trình khám bệnh ngoại trú tại phòng khám Tim mạch Lồng ngực Bệnh viện Hữu nghị Việt Đức',
                         'speaker' => 'ThS. Nguyễn Xuân Vinh',
-                        'org' => 'Phòng Quản lý chất lượng, Bệnh viện Hữu nghị Việt Đức',
+                        'org' => 'Trung tâm Tim mạch và Lồng ngực, Bệnh viện Hữu nghị Việt Đức',
                     ],
                     [
                         'time' => '10h25 – 10h35',
@@ -783,7 +783,7 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-3',
-        'name' => $locale === 'en' ? 'Room 220 - 2nd Floor' : 'Phòng 220 - Tầng 2',
+        'name' => $locale === 'en' ? 'Room 220 (2nd Floor)' : 'Phòng 220 (Tầng 2)',
         'room' => null,
         'badge' => null,
         'sessions' => [
@@ -991,7 +991,7 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-4',
-        'name' => $locale === 'en' ? 'Room 218 - 2nd Floor' : 'Phòng 218 - Tầng 2',
+        'name' => $locale === 'en' ? 'Room 218 (2nd Floor)' : 'Phòng 218 (Tầng 2)',
         'room' => null,
         'badge' => null,
         'sessions' => [
@@ -1253,7 +1253,7 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-5',
-        'name' => $locale === 'en' ? 'Room 216 - 2nd Floor' : 'Phòng 216 - Tầng 2',
+        'name' => $locale === 'en' ? 'Room 216 (2nd Floor)' : 'Phòng 216 (Tầng 2)',
         'room' => null,
         'badge' => null,
         'sessions' => [
@@ -1479,7 +1479,7 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-6',
-        'name' => $locale === 'en' ? 'Room 210 - 2nd Floor' : 'Phòng 210 - Tầng 2',
+        'name' => $locale === 'en' ? 'Room 210 (2nd Floor)' : 'Phòng 210 (Tầng 2)',
         'room' => null,
         'badge' => null,
         'sessions' => [
@@ -1693,7 +1693,7 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-7',
-        'name' => $locale === 'en' ? 'Room 207 - 2nd Floor' : 'Phòng 207 - Tầng 2',
+        'name' => $locale === 'en' ? 'Room 207 (2nd Floor)' : 'Phòng 207 (Tầng 2)',
         'room' => null,
         'badge' => null,
         'sessions' => [
@@ -1734,7 +1734,7 @@ $hallsData = [
                         'org' => 'Phòng Điều dưỡng, Bệnh viện Phụ sản Trung ương',
                     ],
                     [
-                        'time' => '11h45 – 12h00',
+                        'time' => '11h30 – 12h00',
                         'title' => 'Thảo luận',
                         'speaker' => null,
                         'org' => null,
@@ -1901,7 +1901,7 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-8',
-        'name' => $locale === 'en' ? 'Room 219 - 2nd Floor' : 'Phòng 219 - Tầng 2',
+        'name' => $locale === 'en' ? 'Room 219 (2nd Floor)' : 'Phòng 219 (Tầng 2)',
         'room' => null,
         'badge' => null,
         'sessions' => [
@@ -2035,7 +2035,7 @@ $hallsData = [
             ],
             [
                 'session_num' => 4,
-                'name' => 'PHIÊN 4: TIM MẠCH – LỒNG NGỰC (PHẪU THUẬT LỒNG NGỰC)',
+                'name' => 'PHIÊN 4: TIM MẠCH – LỒNG NGỰC (PHẪU THUẬT TIM MẠCH LỒNG NGỰC – ĐỘNG MẠCH CHỦ NGỰC)',
                 'chairs' => 'PGS.TS. Phạm Hữu Lư, TS.BS. Nguyễn Duy Thắng, TS.BS. Ngô Gia Khánh',
                 'time' => '14h40 – 16h15',
                 'items' => [
@@ -2133,7 +2133,7 @@ $hallsData = [
     ],
     [
         'id' => 'hoi-truong-9',
-        'name' => $locale === 'en' ? 'Room 217 - 2nd Floor' : 'Phòng 217 - Tầng 2',
+        'name' => $locale === 'en' ? 'Room 217 (2nd Floor)' : 'Phòng 217 (Tầng 2)',
         'room' => null,
         'badge' => null,
         'sessions' => [
@@ -2391,12 +2391,16 @@ $hallsData = [
         <!-- Section 1: Chương trình tổng thể Hội nghị Khoa học Quốc tế -->
         <section id="hoi-nghi" aria-labelledby="hoi-nghi-title" class="scroll-mt-32 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
             <div class="p-6 sm:p-8 space-y-3 border-b border-slate-200">
-                <span class="inline-flex px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800">
-                    {{ $locale === 'en' ? 'Nov 19, 2026 · Overall Timeline' : '19/11/2026 · Khung thời gian tổng thể' }}
-                </span>
-                <h2 id="hoi-nghi-title" class="text-xl sm:text-2xl font-bold text-slate-900">
-                    {{ $locale === 'en' ? 'Viet Duc University Hospital International Scientific Conference 2026 Program' : 'Chương trình Hội nghị Khoa học Quốc tế Bệnh viện Hữu nghị Việt Đức 2026' }}
-                </h2>
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div class="space-y-1.5">
+                        <span class="inline-flex px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800">
+                            {{ $locale === 'en' ? 'Nov 19, 2026 · Overall Timeline' : '19/11/2026 · Khung thời gian tổng thể' }}
+                        </span>
+                        <h2 id="hoi-nghi-title" class="text-xl sm:text-2xl font-bold text-slate-900">
+                            {{ $locale === 'en' ? 'Viet Duc University Hospital International Scientific Conference 2026 Program' : 'Chương trình Hội nghị Khoa học Quốc tế Bệnh viện Hữu nghị Việt Đức 2026' }}
+                        </h2>
+                    </div>
+                </div>
                 <p class="text-sm text-slate-600">
                     <strong class="text-slate-800">{{ $locale === 'en' ? 'Time:' : 'Thời gian:' }}</strong> 
                     {{ $locale === 'en' ? '07:30 – 17:00, Thursday, November 19, 2026' : '07h30 – 17h00, thứ Năm, ngày 19/11/2026' }}
