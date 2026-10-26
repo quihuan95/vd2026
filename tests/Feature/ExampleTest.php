@@ -70,9 +70,10 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/vi/program');
         $response->assertStatus(200);
-        $response->assertSee('Phòng Khánh tiết');
-        $response->assertSee('Phòng 101 (Tầng 1)');
-        $response->assertSee('PGS.TS. Dương Đức Hùng');
+        $response->assertSee('Chương trình chi tiết song ngữ');
+        $response->assertSee('Bilingual Detailed Program');
+        $response->assertSee('PHÒNG KHÁNH TIẾTBANQUET HALL');
+        $response->assertSee('Viet Duc University Hospital: 120 years of formation and development');
     }
 
     public function test_registration_submission_with_doc_fields(): void
