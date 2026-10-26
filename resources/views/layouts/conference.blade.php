@@ -74,15 +74,15 @@
 
                         <!-- Dropdown: Conference Info -->
                         <div class="relative" x-data="{ open: false }" @click.outside="open = false">
-                            <button @click="open = !open" class="px-2.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-800 hover:text-emerald-700 rounded-md transition inline-flex items-center gap-1">
+                            <button @click="open = !open" class="px-2.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-800 hover:text-emerald-700 rounded-md transition inline-flex items-center gap-1 {{ (request()->is('*/about') || request()->is('*/speakers') || request()->is('*/chairs-speakers') || request()->is('*/venue') || request()->is('*/layout')) ? 'text-emerald-700 font-extrabold bg-emerald-50' : '' }}">
                                 <span>{{ __('conference.nav.conference_info') }}</span>
                                 <svg class="w-3.5 h-3.5 transition-transform duration-200" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </button>
                             <div x-show="open" x-cloak x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-100" class="absolute left-0 mt-1 w-64 bg-white rounded-lg shadow-xl border border-slate-200 py-2 z-50">
-                                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'about']) }}" class="block px-4 py-2.5 text-xs text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 font-semibold">{{ __('conference.nav.about') }}</a>
-                                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'speakers']) }}" class="block px-4 py-2.5 text-xs text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 font-semibold">{{ __('conference.nav.speakers') }}</a>
-                                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'venue']) }}" class="block px-4 py-2.5 text-xs text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 font-semibold">{{ __('conference.nav.venue') }}</a>
-                                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'layout']) }}" class="block px-4 py-2.5 text-xs text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 font-semibold">{{ __('conference.nav.layout') }}</a>
+                                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'about']) }}" class="block px-4 py-2.5 text-xs text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 font-semibold {{ request()->is('*/about') ? 'text-emerald-800 bg-emerald-50 font-bold' : '' }}">{{ __('conference.nav.about') }}</a>
+                                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'speakers']) }}" class="block px-4 py-2.5 text-xs text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 font-semibold {{ (request()->is('*/speakers') || request()->is('*/chairs-speakers')) ? 'text-emerald-800 bg-emerald-50 font-bold' : '' }}">{{ __('conference.nav.speakers') }}</a>
+                                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'venue']) }}" class="block px-4 py-2.5 text-xs text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 font-semibold {{ request()->is('*/venue') ? 'text-emerald-800 bg-emerald-50 font-bold' : '' }}">{{ __('conference.nav.venue') }}</a>
+                                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'layout']) }}" class="block px-4 py-2.5 text-xs text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 font-semibold {{ request()->is('*/layout') ? 'text-emerald-800 bg-emerald-50 font-bold' : '' }}">{{ __('conference.nav.layout') }}</a>
                             </div>
                         </div>
 
@@ -125,10 +125,10 @@
             
             <div class="pt-2 border-t border-slate-100">
                 <span class="block px-3 text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">{{ __('conference.nav.conference_info') }}</span>
-                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'about']) }}" class="block px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50">{{ __('conference.nav.about') }}</a>
-                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'speakers']) }}" class="block px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50">{{ __('conference.nav.speakers') }}</a>
-                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'venue']) }}" class="block px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50">{{ __('conference.nav.venue') }}</a>
-                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'layout']) }}" class="block px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50">{{ __('conference.nav.layout') }}</a>
+                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'about']) }}" class="block px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50 {{ request()->is('*/about') ? 'text-emerald-800 bg-emerald-50 font-bold' : '' }}">{{ __('conference.nav.about') }}</a>
+                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'speakers']) }}" class="block px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50 {{ (request()->is('*/speakers') || request()->is('*/chairs-speakers')) ? 'text-emerald-800 bg-emerald-50 font-bold' : '' }}">{{ __('conference.nav.speakers') }}</a>
+                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'venue']) }}" class="block px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50 {{ request()->is('*/venue') ? 'text-emerald-800 bg-emerald-50 font-bold' : '' }}">{{ __('conference.nav.venue') }}</a>
+                <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'layout']) }}" class="block px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50 {{ request()->is('*/layout') ? 'text-emerald-800 bg-emerald-50 font-bold' : '' }}">{{ __('conference.nav.layout') }}</a>
             </div>
 
             <div class="pt-2 border-t border-slate-100 space-y-1">
@@ -224,9 +224,11 @@
                 <div class="flex items-center space-x-4">
                     <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'about']) }}" class="hover:text-white">{{ __('conference.nav.about') }}</a>
                     <span>•</span>
-                    <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'venue']) }}" class="hover:text-white">{{ __('conference.nav.venue') }}</a>
+                    <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'speakers']) }}" class="hover:text-white">{{ __('conference.nav.speakers') }}</a>
                     <span>•</span>
                     <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'program']) }}" class="hover:text-white">{{ __('conference.nav.program') }}</a>
+                    <span>•</span>
+                    <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'venue']) }}" class="hover:text-white">{{ __('conference.nav.venue') }}</a>
                     <span>•</span>
                     <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'contact']) }}" class="hover:text-white">{{ __('conference.nav.contact') }}</a>
                 </div>

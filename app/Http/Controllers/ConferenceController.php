@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Mail\RegistrationConfirmed;
 use App\Models\AbstractSubmission;
 use App\Models\Registration;
-use App\Models\Setting;
 use App\Models\Speaker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -27,6 +26,7 @@ class ConferenceController extends Controller
         'layout',
         'program',
         'speakers',
+        'chairs-speakers',
         'fees',
         'guidelines',
         'abstract-guidelines',
@@ -49,7 +49,7 @@ class ConferenceController extends Controller
      */
     public function home(string $locale = 'vi')
     {
-        if (!in_array($locale, ['vi', 'en'])) {
+        if (! in_array($locale, ['vi', 'en'])) {
             return redirect('/vi');
         }
 
@@ -68,7 +68,7 @@ class ConferenceController extends Controller
      */
     public function page(string $locale, string $page)
     {
-        if (!in_array($locale, ['vi', 'en'])) {
+        if (! in_array($locale, ['vi', 'en'])) {
             return redirect("/vi/{$page}");
         }
 
@@ -76,7 +76,7 @@ class ConferenceController extends Controller
             return redirect("/{$locale}/guidelines");
         }
 
-        if (!in_array($page, $this->whitelist)) {
+        if (! in_array($page, $this->whitelist)) {
             abort(404);
         }
 
@@ -87,7 +87,7 @@ class ConferenceController extends Controller
         // Dedicated handlers for pages that require dynamic data
         return match ($page) {
             'invitation' => $this->invitation($locale),
-            'speakers' => $this->speakersList($locale),
+            'speakers', 'chairs-speakers' => $this->speakersList($locale),
             'sponsorship' => $this->sponsorship($locale),
             'register' => $this->registerView($locale),
             'abstract' => $this->abstractView($locale),
@@ -111,15 +111,25 @@ class ConferenceController extends Controller
     }
 
     /**
-     * Speakers Page
+     * Speakers / Chairs & Presenters Page
      */
     public function speakersList(string $locale)
     {
-        $speakers = Speaker::where('is_published', true)
-            ->orderBy('sort_order')
-            ->get();
+        $jsonPath = resource_path('speakers.json');
+        if (File::exists($jsonPath)) {
+            $speakers = json_decode(File::get($jsonPath), true);
+        } else {
+            $speakers = Speaker::where('is_published', true)
+                ->orderBy('sort_order')
+                ->get()
+                ->toArray();
+        }
 
-        return view('pages.speakers', compact('locale', 'speakers'));
+        return view('pages.speakers', [
+            'locale' => $locale,
+            'page' => 'speakers',
+            'speakers' => $speakers,
+        ]);
     }
 
     /**
@@ -128,6 +138,7 @@ class ConferenceController extends Controller
     public function sponsorship(string $locale)
     {
         $sponsors = $this->getSponsorLogos();
+
         return view('pages.sponsorship', compact('locale', 'sponsors'));
     }
 
@@ -171,7 +182,7 @@ class ConferenceController extends Controller
         ]);
 
         $delegateId = Registration::generateDelegateId();
-        $qrToken = 'VDUH26-' . strtoupper(Str::random(12));
+        $qrToken = 'VDUH26-'.strtoupper(Str::random(12));
         $attendDinner = $request->input('attend_dinner') === '1' || $request->input('attend_dinner') === 'yes' || $request->boolean('attend_dinner');
 
         $registration = Registration::create([
@@ -279,6 +290,7 @@ class ConferenceController extends Controller
     public function checkTicket(string $locale, string $token)
     {
         $registration = Registration::where('qr_code_token', $token)->firstOrFail();
+
         return view('pages.ticket', compact('locale', 'registration'));
     }
 
@@ -301,7 +313,7 @@ class ConferenceController extends Controller
                     if (in_array($ext, ['png', 'jpg', 'jpeg', 'webp', 'svg', 'gif'])) {
                         $files[] = [
                             'name' => pathinfo($file->getFilename(), PATHINFO_FILENAME),
-                            'url' => asset("images/sponsors/{$tier}/" . $file->getFilename()),
+                            'url' => asset("images/sponsors/{$tier}/".$file->getFilename()),
                         ];
                     }
                 }
