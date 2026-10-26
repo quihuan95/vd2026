@@ -38,7 +38,8 @@
                     const posEn = (item.position_en || '').toLowerCase();
                     const orgVi = (item.organization_vi || '').toLowerCase();
                     const orgEn = (item.organization_en || '').toLowerCase();
-                    const stt = String(item.stt || '');
+                    const sessionsText = (item.chair_sessions || []).join(' ').toLowerCase();
+                    const presText = (item.presentations || []).map(p => (p.title || '') + ' ' + (p.time || '')).join(' ').toLowerCase();
 
                     const matched = name.includes(q) ||
                         fullNameVi.includes(q) ||
@@ -49,13 +50,18 @@
                         posEn.includes(q) ||
                         orgVi.includes(q) ||
                         orgEn.includes(q) ||
-                        stt.includes(q);
+                        sessionsText.includes(q) ||
+                        presText.includes(q);
 
                     if (!matched) return false;
                 }
 
                 // Category filter
-                if (this.categoryFilter === 'prof') {
+                if (this.categoryFilter === 'chair') {
+                    if (!item.chair_sessions || item.chair_sessions.length === 0) return false;
+                } else if (this.categoryFilter === 'presenter') {
+                    if (!item.presentations || item.presentations.length === 0) return false;
+                } else if (this.categoryFilter === 'prof') {
                     if (item.degree_group !== 'prof' && item.degree_group !== 'assoc_prof') return false;
                 } else if (this.categoryFilter === 'phd_specialist') {
                     if (item.degree_group !== 'phd_specialist') return false;
@@ -176,6 +182,24 @@
                     class="px-3 py-1.5 rounded-full text-xs transition whitespace-nowrap"
                 >
                     {{ $locale === 'en' ? 'All' : 'Tất cả' }}
+                </button>
+
+                <button 
+                    @click="categoryFilter = 'chair'" 
+                    type="button"
+                    :class="categoryFilter === 'chair' ? 'bg-emerald-800 text-white font-bold shadow-sm' : 'bg-slate-100 text-slate-700 hover:bg-slate-200 font-medium'"
+                    class="px-3 py-1.5 rounded-full text-xs transition whitespace-nowrap"
+                >
+                    {{ $locale === 'en' ? 'Chairs' : 'Chủ toạ' }}
+                </button>
+
+                <button 
+                    @click="categoryFilter = 'presenter'" 
+                    type="button"
+                    :class="categoryFilter === 'presenter' ? 'bg-emerald-800 text-white font-bold shadow-sm' : 'bg-slate-100 text-slate-700 hover:bg-slate-200 font-medium'"
+                    class="px-3 py-1.5 rounded-full text-xs transition whitespace-nowrap"
+                >
+                    {{ $locale === 'en' ? 'Speakers' : 'Báo cáo viên' }}
                 </button>
 
                 <button 
@@ -322,6 +346,28 @@
                         <!-- Card Body -->
                         <div class="p-4 sm:p-5 flex flex-col flex-grow justify-between bg-white">
                             <div>
+                                <!-- Role Badge -->
+                                <div class="mb-2 flex flex-wrap items-center gap-1.5">
+                                    <template x-if="item.role === 'both'">
+                                        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-900 border border-amber-300">
+                                            <span>🎙️</span>
+                                            <span>{{ $locale === 'en' ? 'Chair & Speaker' : 'Chủ toạ & Báo cáo viên' }}</span>
+                                        </span>
+                                    </template>
+                                    <template x-if="item.role === 'chair'">
+                                        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-900 border border-purple-200">
+                                            <span>🏛️</span>
+                                            <span>{{ $locale === 'en' ? 'Session Chair' : 'Chủ toạ' }}</span>
+                                        </span>
+                                    </template>
+                                    <template x-if="item.role === 'presenter'">
+                                        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-900 border border-emerald-200">
+                                            <span>🎤</span>
+                                            <span>{{ $locale === 'en' ? 'Speaker' : 'Báo cáo viên' }}</span>
+                                        </span>
+                                    </template>
+                                </div>
+
                                 <!-- Full Name -->
                                 <h3 
                                     class="text-base sm:text-lg font-extrabold text-slate-950 group-hover:text-emerald-800 transition line-clamp-2 leading-tight"
@@ -343,6 +389,22 @@
                                         class="line-clamp-2"
                                         x-text="{{ $locale === 'en' ? 'item.organization_en || item.organization_vi' : 'item.organization_vi' }}"
                                     ></span>
+                                </div>
+
+                                <!-- Program Activities Counts -->
+                                <div class="mt-2.5 flex flex-wrap gap-1.5 text-[11px]">
+                                    <template x-if="item.chair_sessions && item.chair_sessions.length > 0">
+                                        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-purple-50 text-purple-800 border border-purple-200/60 font-medium">
+                                            <span>🏛️</span>
+                                            <span x-text="item.chair_sessions.length + ' {{ $locale === 'en' ? 'session(s)' : 'phiên chủ toạ' }}'"></span>
+                                        </span>
+                                    </template>
+                                    <template x-if="item.presentations && item.presentations.length > 0">
+                                        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200/60 font-medium">
+                                            <span>🎤</span>
+                                            <span x-text="item.presentations.length + ' {{ $locale === 'en' ? 'topic(s)' : 'bài báo cáo' }}'"></span>
+                                        </span>
+                                    </template>
                                 </div>
                             </div>
 
@@ -422,17 +484,34 @@
                                 </td>
                                 <td class="py-3.5 px-4">
                                     <div class="font-extrabold text-slate-900 text-sm hover:text-emerald-800 transition" x-text="item.name"></div>
-                                    <template x-if="item.degree_vi">
-                                        <span 
-                                            class="inline-block mt-0.5 text-[11px] font-semibold text-emerald-800"
-                                            x-text="{{ $locale === 'en' ? 'item.degree_en || item.degree_vi' : 'item.degree_vi' }}"
-                                        ></span>
-                                    </template>
-                                    <template x-if="item.is_international">
-                                        <span class="inline-block ml-1 text-[10px] px-1.5 py-0.2 rounded bg-blue-100 text-blue-800 font-bold">
-                                            🌐 <span x-text="item.country ? item.country.split('/')[0].trim() : 'Quốc tế'"></span>
-                                        </span>
-                                    </template>
+                                    <div class="mt-1 flex flex-wrap items-center gap-1.5">
+                                        <template x-if="item.degree_vi">
+                                            <span 
+                                                class="inline-block text-[11px] font-semibold text-emerald-800"
+                                                x-text="{{ $locale === 'en' ? 'item.degree_en || item.degree_vi' : 'item.degree_vi' }}"
+                                            ></span>
+                                        </template>
+                                        <template x-if="item.is_international">
+                                            <span class="inline-block text-[10px] px-1.5 py-0.2 rounded bg-blue-100 text-blue-800 font-bold">
+                                                🌐 <span x-text="item.country ? item.country.split('/')[0].trim() : 'Quốc tế'"></span>
+                                            </span>
+                                        </template>
+                                        <template x-if="item.role === 'both'">
+                                            <span class="px-1.5 py-0.2 rounded text-[10px] font-bold bg-amber-100 text-amber-900 border border-amber-200">
+                                                {{ $locale === 'en' ? 'Chair & Speaker' : 'Chủ toạ & Báo cáo viên' }}
+                                            </span>
+                                        </template>
+                                        <template x-if="item.role === 'chair'">
+                                            <span class="px-1.5 py-0.2 rounded text-[10px] font-bold bg-purple-100 text-purple-900 border border-purple-200">
+                                                {{ $locale === 'en' ? 'Chair' : 'Chủ toạ' }}
+                                            </span>
+                                        </template>
+                                        <template x-if="item.role === 'presenter'">
+                                            <span class="px-1.5 py-0.2 rounded text-[10px] font-bold bg-emerald-100 text-emerald-900 border border-emerald-200">
+                                                {{ $locale === 'en' ? 'Speaker' : 'Báo cáo viên' }}
+                                            </span>
+                                        </template>
+                                    </div>
                                 </td>
                                 <td class="py-3.5 px-4 text-xs font-medium text-slate-700 max-w-xs">
                                     <span x-text="{{ $locale === 'en' ? 'item.position_en || item.position_vi || \'—\'' : 'item.position_vi || \'—\'' }}"></span>
@@ -578,19 +657,34 @@
                         <!-- Info Column -->
                         <div class="flex-grow space-y-4 text-left w-full">
                             <div>
-                                <!-- Degree Badge -->
-                                <template x-if="selectedSpeaker && selectedSpeaker.degree_vi">
-                                    <span 
-                                        class="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-300 mb-2"
-                                        x-text="{{ $locale === 'en' ? 'selectedSpeaker.degree_en || selectedSpeaker.degree_vi' : 'selectedSpeaker.degree_vi' }}"
-                                    ></span>
-                                </template>
-                                
-                                <template x-if="selectedSpeaker && selectedSpeaker.is_international">
-                                    <span class="inline-block ml-1 px-2.5 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-900 border border-blue-200 mb-2">
-                                        🌐 <span x-text="selectedSpeaker.country"></span>
-                                    </span>
-                                </template>
+                                <div class="flex flex-wrap items-center gap-1.5 mb-2">
+                                    <!-- Degree Badge -->
+                                    <template x-if="selectedSpeaker && selectedSpeaker.degree_vi">
+                                        <span 
+                                            class="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-300"
+                                            x-text="{{ $locale === 'en' ? 'selectedSpeaker.degree_en || selectedSpeaker.degree_vi' : 'selectedSpeaker.degree_vi' }}"
+                                        ></span>
+                                    </template>
+                                    
+                                    <!-- Role Badge in Modal -->
+                                    <template x-if="selectedSpeaker && selectedSpeaker.role">
+                                        <span 
+                                            :class="{
+                                                'bg-amber-100 text-amber-900 border-amber-300': selectedSpeaker.role === 'both',
+                                                'bg-purple-100 text-purple-900 border-purple-300': selectedSpeaker.role === 'chair',
+                                                'bg-emerald-100 text-emerald-900 border-emerald-300': selectedSpeaker.role === 'presenter'
+                                            }"
+                                            class="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider border"
+                                            x-text="{{ $locale === 'en' ? 'selectedSpeaker.role_en' : 'selectedSpeaker.role_vi' }}"
+                                        ></span>
+                                    </template>
+
+                                    <template x-if="selectedSpeaker && selectedSpeaker.is_international">
+                                        <span class="inline-block px-2.5 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-900 border border-blue-200">
+                                            🌐 <span x-text="selectedSpeaker.country"></span>
+                                        </span>
+                                    </template>
+                                </div>
 
                                 <!-- Full Name -->
                                 <h2 class="text-xl sm:text-2xl font-black text-slate-950" x-text="selectedSpeaker ? selectedSpeaker.name : ''"></h2>
@@ -617,6 +711,53 @@
                                     x-text="{{ $locale === 'en' ? 'selectedSpeaker ? (selectedSpeaker.organization_en || selectedSpeaker.organization_vi) : \'\' ' : 'selectedSpeaker ? selectedSpeaker.organization_vi : \'\' ' }}"
                                 ></div>
                             </div>
+
+                            <!-- Chairing Sessions List in Modal -->
+                            <template x-if="selectedSpeaker && selectedSpeaker.chair_sessions && selectedSpeaker.chair_sessions.length > 0">
+                                <div class="p-3.5 bg-purple-50/80 rounded-xl border border-purple-200 text-xs space-y-2">
+                                    <div class="font-bold text-purple-950 flex items-center gap-1.5 uppercase tracking-wide text-[11px]">
+                                        <span>🏛️</span>
+                                        <span>{{ $locale === 'en' ? 'Chairing Sessions' : 'Phiên chủ tọa trong chương trình' }}</span>
+                                        <span class="ml-auto bg-purple-200 text-purple-900 font-extrabold px-1.5 py-0.2 rounded-full text-[10px]" x-text="selectedSpeaker.chair_sessions.length"></span>
+                                    </div>
+                                    <ul class="space-y-1.5 pl-1">
+                                        <template x-for="(sessionTitle, sIdx) in selectedSpeaker.chair_sessions" :key="sIdx">
+                                            <li class="flex items-start gap-2 text-purple-900 font-medium leading-snug">
+                                                <span class="text-purple-500 font-bold">•</span>
+                                                <span x-text="sessionTitle"></span>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+                            </template>
+
+                            <!-- Presentations List in Modal -->
+                            <template x-if="selectedSpeaker && selectedSpeaker.presentations && selectedSpeaker.presentations.length > 0">
+                                <div class="p-3.5 bg-emerald-50/80 rounded-xl border border-emerald-200 text-xs space-y-2">
+                                    <div class="font-bold text-emerald-950 flex items-center gap-1.5 uppercase tracking-wide text-[11px]">
+                                        <span>🎤</span>
+                                        <span>{{ $locale === 'en' ? 'Scientific Presentations' : 'Bài báo cáo khoa học' }}</span>
+                                        <span class="ml-auto bg-emerald-200 text-emerald-900 font-extrabold px-1.5 py-0.2 rounded-full text-[10px]" x-text="selectedSpeaker.presentations.length"></span>
+                                    </div>
+                                    <ul class="space-y-2 pl-1">
+                                        <template x-for="(pres, pIdx) in selectedSpeaker.presentations" :key="pIdx">
+                                            <li class="space-y-0.5 border-b border-emerald-100 last:border-0 pb-1.5 last:pb-0">
+                                                <div class="flex items-start gap-1.5">
+                                                    <span class="text-emerald-600 font-bold mt-0.5">•</span>
+                                                    <div class="flex-grow">
+                                                        <span class="text-emerald-950 font-semibold leading-snug block" x-text="pres.title"></span>
+                                                        <template x-if="pres.time">
+                                                            <span class="inline-block mt-1 px-2 py-0.5 rounded text-[10px] font-bold bg-white text-emerald-800 border border-emerald-200">
+                                                                ⏰ <span x-text="pres.time"></span>
+                                                            </span>
+                                                        </template>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+                            </template>
 
                             <!-- Bilingual reference info if available -->
                             <div class="p-3 bg-slate-50 rounded-xl border border-slate-200/80 text-xs text-slate-600 space-y-1">
