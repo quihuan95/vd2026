@@ -85,7 +85,9 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Chương trình chi tiết song ngữ');
         $response->assertSee('Bilingual Detailed Program');
-        $response->assertSee('PHÒNG KHÁNH TIẾTBANQUET HALL');
+        $response->assertSee('PHÒNG KHÁNH TIẾT');
+        $response->assertSee('BANQUET HALL');
+        $response->assertDontSee('PHÒNG KHÁNH TIẾTBANQUET HALL');
         $response->assertSee('Viet Duc University Hospital: 120 years of formation and development');
     }
 

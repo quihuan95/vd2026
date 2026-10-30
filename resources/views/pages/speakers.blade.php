@@ -39,7 +39,7 @@
                     const orgVi = (item.organization_vi || '').toLowerCase();
                     const orgEn = (item.organization_en || '').toLowerCase();
                     const sessionsText = (item.chair_sessions || []).join(' ').toLowerCase();
-                    const presText = (item.presentations || []).map(p => (p.title || '') + ' ' + (p.time || '')).join(' ').toLowerCase();
+                    const presText = (item.presentations || []).map(p => (p.title || '') + ' ' + (p.title_en || '') + ' ' + (p.time || '')).join(' ').toLowerCase();
 
                     const matched = name.includes(q) ||
                         fullNameVi.includes(q) ||
@@ -298,6 +298,7 @@
                                 <img 
                                     :src="'/' + item.photo_path" 
                                     :alt="item.name" 
+                                    :style="{ objectPosition: item.photo_position || 'center top' }"
                                     loading="lazy" 
                                     class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                 >
@@ -473,7 +474,7 @@
                                 <td class="py-3.5 px-4">
                                     <div class="w-11 h-11 rounded-lg overflow-hidden bg-slate-100 flex-shrink-0 border border-slate-200">
                                         <template x-if="item.photo_path">
-                                            <img :src="'/' + item.photo_path" :alt="item.name" loading="lazy" class="w-full h-full object-cover object-top">
+                                            <img :src="'/' + item.photo_path" :alt="item.name" :style="{ objectPosition: item.photo_position || 'center top' }" loading="lazy" class="w-full h-full object-cover object-top">
                                         </template>
                                         <template x-if="!item.photo_path">
                                             <div class="w-full h-full bg-emerald-900 flex items-center justify-center text-xs font-bold text-amber-300">
@@ -640,6 +641,7 @@
                             <template x-if="selectedSpeaker && selectedSpeaker.photo_path">
                                 <img 
                                     :src="'/' + selectedSpeaker.photo_path" 
+                                    :style="{ objectPosition: selectedSpeaker.photo_position || 'center top' }"
                                     :alt="selectedSpeaker.name" 
                                     class="w-full h-full object-cover object-top"
                                 >
@@ -746,6 +748,9 @@
                                                     <span class="text-emerald-600 font-bold mt-0.5">•</span>
                                                     <div class="flex-grow">
                                                         <span class="text-emerald-950 font-semibold leading-snug block" x-text="pres.title"></span>
+                                                        <template x-if="pres.title_en && pres.title_en !== pres.title">
+                                                            <span class="mt-1 block leading-snug text-slate-600" lang="en" x-text="pres.title_en"></span>
+                                                        </template>
                                                         <template x-if="pres.time">
                                                             <span class="inline-block mt-1 px-2 py-0.5 rounded text-[10px] font-bold bg-white text-emerald-800 border border-emerald-200">
                                                                 ⏰ <span x-text="pres.time"></span>

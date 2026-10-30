@@ -1,9 +1,11 @@
 import Alpine from 'alpinejs';
+import { createProgramFilter } from './program-filter';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 window.Alpine = Alpine;
 window.Swiper = Swiper;
+Alpine.data('conferenceProgram', createProgramFilter);
 
 // Clipboard helper function
 window.copyToClipboard = function(text, element) {

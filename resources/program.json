@@ -3,7 +3,8 @@
         "kind":  "hall",
         "cells":  [
                       [
-                          "PHÒNG KHÁNH TIẾTBANQUET HALL"
+                          "PHÒNG KHÁNH TIẾT",
+                          "BANQUET HALL"
                       ]
                   ]
     },
@@ -11,9 +12,11 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 1: Tổng quátSession 1: Overview",
-                          "Chủ tọa: PGS.TS Dương Đức Hùng, TS Nguyễn Ngô Quang, PGS.TS Nguyễn Tiến Quyết, GS.TS Trần Bình Giang Chair: Assoc. Prof. Dr. Duong Duc Hung, Nguyen Ngo Quang MD., PhD., Assoc. Prof. Dr. Nguyen Tien Quyet, Prof. Dr. Tran Binh Giang",
-                          "(Thời gian/Time: 08h30 – 10h00)"
+                          "Phiên 1: Tổng quát",
+                          "Session 1: Overview",
+                          "Chủ tọa: PGS.TS Dương Đức Hùng, TS Nguyễn Ngô Quang, PGS.TS Nguyễn Tiến Quyết, GS.TS Trần Bình Giang",
+                          "Chair: Assoc. Prof. Dr. Duong Duc Hung, Nguyen Ngo Quang MD., PhD., Assoc. Prof. Dr. Nguyen Tien Quyet, Prof. Dr. Tran Binh Giang",
+                          "(Thời gian/Time: 08h00 – 10h00)"
                       ]
                   ]
     },
@@ -126,8 +129,8 @@
                       [
                           "Phiên 2: Chấn thương chỉnh hình",
                           "Session 2: Orthopedics",
-                          "Chủ tọa: PGS.TS. Nguyễn Mạnh Khánh, PGS.TS. Đào Xuân Thành, TS. Lê Mạnh Sơn",
-                          "Chairs: Assoc.Prof. Nguyen Manh Khanh, Assoc.Prof. Dao Xuan Thanh, Le Manh Son MD.,PhD.",
+                          "Chủ tọa: PGS.TS. Nguyễn Mạnh Khánh, PGS.TS. Đào Xuân Thành, BSCKII. Đoàn Việt Quân",
+                          "Chairs: Assoc.Prof. Nguyen Manh Khanh, Assoc.Prof. Dao Xuan Thanh, Dr Specialist II. Doan Viet Quan",
                           "(Thời gian / Time: 10h15 – 12h15)"
                       ]
                   ]
@@ -269,8 +272,8 @@
                       [
                           "Phiên 3: Chấn thương chỉnh hình",
                           "Session 3: Orthopedics",
-                          "Chủ tọa: PGS.TS. Đặng Hoàng Anh, BSCKII. Đoàn Việt Quân, TS. Nguyễn Văn Học",
-                          "Chairs: Assoc.Prof. Dang Hoang Anh, Dr. Doan Viet Quan MD., Nguyen Van Hoc MD., PhD.",
+                          "Chủ tọa: PGS.TS. Đặng Hoàng Anh, TS. Lê Mạnh Sơn, TS. Nguyễn Văn Học",
+                          "Chairs: Assoc.Prof. Dang Hoang Anh, Le Manh Son MD., PhD., Nguyen Van Hoc MD., PhD.",
                           "(Thời gian / Time: 13h00 – 14h25)"
                       ]
                   ]
@@ -444,7 +447,7 @@
                           "Phiên 4: Chấn thương chỉnh hình",
                           "Session 4: Orthopedics",
                           "Chủ tọa:  TS.BS. Nguyễn Việt Nam, BSCK II. Nguyễn Tiến Sơn, PGS.TS Dương Đình Toàn",
-                          "Chairs: Nguyen Viet Nam MD., PhD., Dr. Nguyen Tien Son, Assoc.Prof. Duong Dinh Toan",
+                          "Chairs: Nguyen Viet Nam MD., PhD., Dr Specialist II. Nguyen Tien Son, Assoc.Prof. Duong Dinh Toan",
                           "(Thời gian / Time: 14h40 – 16h15)"
                       ]
                   ]
@@ -634,7 +637,7 @@
                       ],
                       [
                           "PGS.TS Đinh Ngọc Sơn",
-                          "Prof. Dinh Ngoc Son"
+                          "Assoc Prof. Dinh Ngoc Son"
                       ],
                       [
                           "Trung tâm Phẫu thuật Cột sống, Bệnh viện Hữu nghị Việt Đức",
@@ -654,7 +657,7 @@
                       ],
                       [
                           "PGS.TS Đinh Ngọc Sơn",
-                          "Prof. Dinh Ngoc Son"
+                          "Assoc Prof. Dinh Ngoc Son"
                       ],
                       [
                           "Trung tâm Phẫu thuật Cột sống, Bệnh viện Hữu nghị Việt Đức",
@@ -694,7 +697,7 @@
                       ],
                       [
                           "PGS.TS Đinh Ngọc Sơn",
-                          "Prof. Dinh Ngoc Son"
+                          "Assoc Prof. Dinh Ngoc Son"
                       ],
                       [
                           "Trung tâm Phẫu thuật Cột sống, Bệnh viện Hữu nghị Việt Đức",
@@ -917,7 +920,7 @@
                       ],
                       [
                           "PGS.TS Đỗ Trường Thành",
-                          "Assoc. Prof. Do Trương Thanh"
+                          "Assoc. Prof. Do Truong Thanh"
                       ],
                       [
                           "Khoa Phẫu thuật Tiết niệu, Bệnh viện Hữu nghị Việt Đức",
@@ -971,7 +974,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Huy Hoàng",
-                          "Nguyễn Huy Hoàng MD., PhD."
+                          "Nguyen Huy Hoang MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Tiết niệu, Bệnh viện Hữu nghị Việt Đức",
@@ -991,7 +994,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Huy Hoàng",
-                          "Nguyễn Huy Hoàng MD., PhD."
+                          "Nguyen Huy Hoang MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Tiết niệu, Bệnh viện Hữu nghị Việt Đức",
@@ -1011,7 +1014,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Đức Minh",
-                          "Nguyễn Đức Minh MD., PhD."
+                          "Nguyen Duc Minh MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Tiết niệu, Bệnh viện Hữu nghị Việt Đức",
@@ -1031,7 +1034,7 @@
                       ],
                       [
                           "TS.BS Đỗ Ngọc Sơn",
-                          "Đỗ Ngọc Sơn MD., PhD."
+                          "Do Ngoc Son MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Tiết niệu, Bệnh viện Hữu nghị Việt Đức",
@@ -1051,7 +1054,7 @@
                       ],
                       [
                           "PGS.TS Nguyễn Việt Hoa",
-                          "Assoc.Prof. Nguyễn Việt Hoa"
+                          "Assoc.Prof. Nguyen Viet Hoa"
                       ],
                       [
                           "Khoa Phẫu thuật Nhi \u0026 Trẻ sơ sinh, Bệnh viện Hữu nghị Việt Đức",
@@ -1071,7 +1074,7 @@
                       ],
                       [
                           "TS.BS Trần Chí Thanh",
-                          "Trần Chí Thanh MD., PhD."
+                          "Tran Chi Thanh MD., PhD."
                       ],
                       [
                           "Khoa Điều trị theo yêu cầu, Bệnh viện Hữu nghị Việt Đức",
@@ -1091,7 +1094,7 @@
                       ],
                       [
                           "TS.BS Trần Thị Ngọc Anh",
-                          "Trần Thị Ngọc Anh MD., PhD."
+                          "Tran Thi Ngoc Anh MD., PhD."
                       ],
                       [
                           "Khoa Sinh hóa – Huyết học –, Bệnh viện Hữu nghị Việt Đức",
@@ -1126,7 +1129,7 @@
                           "Phiên 2: Nội - Cận lâm sàng",
                           "Session 2: Internal Medicine \u0026 Subclinical",
                           "Chủ tọa: PGS.TS. Hà Phan Hải An, TS. Trần Thị Hằng, BSCK II. Đỗ Thế Hùng",
-                          "Chairs: Assoc. Prof. Ha Phan Hai An, Tran Thi Hang MD., PhD., Dr. Do The Hung",
+                          "Chairs: Assoc. Prof. Ha Phan Hai An, Tran Thi Hang MD., PhD., Dr Specialist II. Do The Hung",
                           "(Thời gian / Time: 10h15 – 12h15)"
                       ]
                   ]
@@ -1143,7 +1146,7 @@
                       ],
                       [
                           "ThS.BS Lưu Thị Tố Uyên",
-                          "Lưu Thị Tố Uyên MD."
+                          "Luu Thi To Uyen MD."
                       ],
                       [
                           "Trung tâm Truyền máu, Bệnh viện Hữu nghị Việt Đức",
@@ -1163,7 +1166,7 @@
                       ],
                       [
                           "BS Nguyễn Vân Trang",
-                          "Dr. Nguyễn Vân Trang"
+                          "Dr. Nguyen Van Trang"
                       ],
                       [
                           "Trung tâm Truyền máu, Bệnh viện Hữu nghị Việt Đức",
@@ -1183,7 +1186,7 @@
                       ],
                       [
                           "BS Phạm Thị Hồng Trang",
-                          "Dr. Phạm Thị Hồng Trang"
+                          "Dr. Pham Thi Hong Trang"
                       ],
                       [
                           "Trung tâm Truyền máu, Bệnh viện Hữu nghị Việt Đức",
@@ -1203,7 +1206,7 @@
                       ],
                       [
                           "ThS Nguyễn Xuân Vinh",
-                          "Nguyễn Xuân Vinh. MsN"
+                          "Nguyen Xuan Vinh. MsN"
                       ],
                       [
                           "Trung tâm Tim mạch \u0026 Lồng ngực, Bệnh viện Hữu nghị Việt Đức",
@@ -1223,7 +1226,7 @@
                       ],
                       [
                           "BSCKII Hà Thị Kim Thanh",
-                          "Dr. Hà Thị Kim Thanh"
+                          "Dr Specialist I  Ha Thi Kim Thanh"
                       ],
                       [
                           "Khoa Nội tim mạch – Nội tiết, Bệnh viện Đa khoa Nông Nghiệp",
@@ -1243,7 +1246,7 @@
                       ],
                       [
                           "ThS.BS Lê Thị Việt Hà",
-                          "Lê Thị Việt Hà MD."
+                          "Le Thi Viet Ha MD."
                       ],
                       [
                           "Khoa Nhi, Bệnh viện Đa khoa Nông Nghiệp",
@@ -1307,7 +1310,7 @@
                       ],
                       [
                           "ThS.BS Nguyễn Thị Thủy",
-                          "Nguyễn Thị Thủy MD."
+                          "Nguyen Thi Thuy MD."
                       ],
                       [
                           "Trung tâm Gây mê \u0026 Hồi sức ngoại khoa, Bệnh viện Hữu nghị Việt Đức",
@@ -1327,7 +1330,7 @@
                       ],
                       [
                           "ThS.BS Vũ Văn Trịnh",
-                          "Vũ Văn Trịnh MD."
+                          "Vu Van Trinh MD."
                       ],
                       [
                           "Trung tâm Gây mê \u0026 Hồi sức ngoại khoa, Bệnh viện Hữu nghị Việt Đức",
@@ -1347,7 +1350,7 @@
                       ],
                       [
                           "BS Hoàng Thị Hoài Thu",
-                          "Hoàng Thị Hoài Thu MD."
+                          "Hoang Thi Hoai Thu MD."
                       ],
                       [
                           "Trung tâm Gây mê \u0026 Hồi sức ngoại khoa, Bệnh viện Hữu nghị Việt Đức",
@@ -1367,7 +1370,7 @@
                       ],
                       [
                           "BS Nguyễn Hoàng Hải",
-                          "Dr. Nguyễn Hoàng Hải"
+                          "Dr. Nguyen Hoang Hai"
                       ],
                       [
                           "Trung tâm Gây mê \u0026 Hồi sức ngoại khoa, Bệnh viện Hữu nghị Việt Đức",
@@ -1387,7 +1390,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Thị Thuý Ngân",
-                          "Nguyễn Thị Thuý Ngân MD., PhD."
+                          "Nguyen Thi Thuy Ngan MD., PhD."
                       ],
                       [
                           "Trung tâm Gây mê \u0026 Hồi sức ngoại khoa, Bệnh viện Hữu nghị Việt Đức",
@@ -1407,7 +1410,7 @@
                       ],
                       [
                           "TS.BS Đào Thị Kim Dung",
-                          "Đào Thị Kim Dung MD., PhD."
+                          "Dao Thi Kim Dung MD., PhD."
                       ],
                       [
                           "Trung tâm Gây mê \u0026 Hồi sức ngoại khoa, Bệnh viện Hữu nghị Việt Đức",
@@ -1461,7 +1464,7 @@
                       ],
                       [
                           "BS. Nguyễn Văn Hoan",
-                          "Dr. Nguyễn Văn Hoan"
+                          "Dr. Nguyen Van Hoan"
                       ],
                       [
                           "Trung tâm Gây mê \u0026 Hồi sức ngoại khoa, Bệnh viện Hữu nghị Việt Đức",
@@ -1481,7 +1484,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Bá Tuân",
-                          "Nguyễn Bá Tuân MD., PhD."
+                          "Nguyen Ba Tuan MD., PhD."
                       ],
                       [
                           "Trung tâm Gây mê \u0026 Hồi sức ngoại khoa, Bệnh viện Hữu nghị Việt Đức",
@@ -1501,7 +1504,7 @@
                       ],
                       [
                           "BS Đặng Hải Sơn",
-                          "Dr. Đặng Hải Sơn"
+                          "Dr. Dang Hai Son"
                       ],
                       [
                           "Trung tâm Khám bệnh Cấp cứu \u0026 Điều trị ban ngày, Bệnh viện Hữu nghị Việt Đức",
@@ -1521,7 +1524,7 @@
                       ],
                       [
                           "BS Đoàn Mạnh Tuấn",
-                          "Dr. Đoàn Mạnh Tuấn"
+                          "Dr. Doan Manh Tuan"
                       ],
                       [
                           "Khoa Hồi sức tích cực, Bệnh viện Đa khoa Nông nghiệp",
@@ -1541,7 +1544,7 @@
                       ],
                       [
                           "ThS.BS Vũ Ngọc Linh",
-                          "Vũ Ngọc Linh MD., PhD."
+                          "Vu Ngoc Linh MD."
                       ],
                       [
                           "Khoa Nội Tim mạch – Nội tiết, Bệnh viện Đa khoa Nông nghiệp",
@@ -1561,7 +1564,7 @@
                       ],
                       [
                           "ThS.BS Man Thị Thu Hương",
-                          "Man Thị Thu Hương MD., PhD."
+                          "Man Thi Thu Huong MD."
                       ],
                       [
                           "Khoa Thận – Lọc máu, Bệnh viện Hữu nghị Việt Đức",
@@ -1580,8 +1583,8 @@
                           "Outcomes of endoscopic balloon dilation for tracheal stenosis scarring at Viet Duc University Hospital"
                       ],
                       [
-                          "BS Nguyễn Văn Chung",
-                          "Dr. Nguyễn Văn Chung"
+                          "BSCKII Nguyễn Văn Chung",
+                          "Dr. Specialist II. Nguyen Van Chung"
                       ],
                       [
                           "Trung tâm Khám bệnh Cấp cứu \u0026 Điều trị ban ngày, Bệnh viện Hữu nghị Việt Đức",
@@ -1675,7 +1678,7 @@
                       [
                           "TS. BS Ninh Việt Khải",
                           "PGS.TS. Dương Đức Hùng",
-                          "Ninh Việt Khải MD., PhD.Assoc. Prof. Dương Đức Hùng"
+                          "Ninh Viet Khai MD., PhD.Assoc. Prof. Duong Duc Hung"
                       ],
                       [
                           "Bệnh viện Hữu nghị Việt Đức",
@@ -1695,7 +1698,7 @@
                       ],
                       [
                           "PGS. TS Nguyễn Quang Nghĩa",
-                          "Assoc. Prof. Nguyễn Quang Nghĩa"
+                          "Assoc. Prof. Nguyen Quang Nghia"
                       ],
                       [
                           "Trung tâm Ghép tạng, Bệnh viện Hữu nghị Việt Đức",
@@ -1715,7 +1718,7 @@
                       ],
                       [
                           "ThS. BS Hoàng Tuấn",
-                          "Hoàng Tuấn MD., PhD."
+                          "Hoang Tuan MD."
                       ],
                       [
                           "Trung tâm Ghép tạng, Bệnh viện Hữu nghị Việt Đức",
@@ -1738,9 +1741,10 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 3: Ghép tạngSession 3: Organ Transplantation",
+                          "Phiên 3: Ghép tạng",
+                          "Session 3: Organ Transplantation",
                           "Chủ tọa, GS. Sung Shin, PGS.TS. Lê Nguyên Vũ, TS.BS. Nguyễn Việt Hải, TS.BS. Đỗ Ngọc Sơn.",
-                          "Chairs: Prof. Sung Shin, Assoc.Prof. Le Nguyen Vu, Nguyên Viet Hai MD., PhD., Do Ngoc Son MD., PhD.",
+                          "Chairs: Prof. Sung Shin, Assoc.Prof. Le Nguyen Vu, Nguyen Viet Hai MD., PhD., Do Ngoc Son MD., PhD.",
                           "(Thời gian/Time: 13h00 – 14h25)"
                       ]
                   ]
@@ -1757,7 +1761,7 @@
                       ],
                       [
                           "PGS.TS Lê Nguyên Vũ",
-                          "Assoc.Prof.. Lê Nguyên Vũ"
+                          "Assoc.Prof. Le Nguyen Vu"
                       ],
                       [
                           "Trung tâm Ghép tạng, Bệnh viện Hữu nghị Việt Đức",
@@ -1777,7 +1781,7 @@
                       ],
                       [
                           "BS Nguyễn Thu Trang",
-                          "Dr. Nguyễn Thu Trang"
+                          "Dr. Nguyen Thu Trang"
                       ],
                       [
                           "Khoa Thận - Lọc máu, Bệnh viện Hữu nghị Việt Đức",
@@ -1818,7 +1822,7 @@
                       ],
                       [
                           "ThS.BS Trần Đình Dũng",
-                          "Trần Đình Dũng MD."
+                          "Tran Dinh Dung MD."
                       ],
                       [
                           "Trung tâm Ghép tạng, Bệnh viện Hữu nghị Việt Đức",
@@ -1852,9 +1856,10 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 4: Ghép tạngSesision: Organ Transplantation",
+                          "Phiên 4: Ghép tạng",
+                          "Sesision 4: Organ Transplantation",
                           "Chủ tọa: PGS.TS Lê Việt Thắng, PGS.TS Hà Phan Hải An, TS.BS Nguyễn Thế Cường, TS.BS Huỳnh Ngọc Phương Thảo",
-                          "Chairs: Assoc.Prof. Le Viet Thang, Assoc.Prof. Ha Phan Hai An, Nguyen The Cuong MD., PhD., Huynh Ngoc Phương Thao MD., PhD.",
+                          "Chairs: Assoc.Prof. Le Viet Thang, Assoc.Prof. Ha Phan Hai An, Nguyen The Cuong MD., PhD., Huynh Ngoc Phuong Thao MD., PhD.",
                           "(Thời gian/Time: 14h40 – 16h45)"
                       ]
                   ]
@@ -1871,7 +1876,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Thế Cường",
-                          "Nguyễn Thế Cường MD., PhD."
+                          "Nguyen The Cuong MD., PhD."
                       ],
                       [
                           "Khoa Thận - Lọc máu, Bệnh viện Hữu nghị Việt Đức",
@@ -1891,7 +1896,7 @@
                       ],
                       [
                           "PGS.TS Lê Việt Thắng",
-                          "Assoc. Prof. Lê Việt Thắng"
+                          "Assoc. Prof. Le Viet Thang"
                       ],
                       [
                           "Trung tâm Ghép tạng, Bệnh viện Quân Y 103",
@@ -1911,7 +1916,7 @@
                       ],
                       [
                           "BS Hoàng Thị Điểm",
-                          "Dr. Hoàng Thị Điểm"
+                          "Dr. Hoang Thi Diem"
                       ],
                       [
                           "Khoa Thận - Lọc máu, Bệnh viện Hữu nghị Việt Đức",
@@ -1930,8 +1935,8 @@
                           "Selection of induction regimens in kidney transplantation"
                       ],
                       [
-                          "BS Huỳnh Ngọc Phương Thảo",
-                          "Dr. Huỳnh Ngọc Phương Thảo"
+                          "TS. BS Huỳnh Ngọc Phương Thảo",
+                          "Huynh Ngoc Phuong Thao MD., PhD."
                       ],
                       [
                           "Khoa Nội thận – Thận nhân tạo, Bệnh viện Đại học Y Dược TP. Hồ Chí Minh",
@@ -1951,7 +1956,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Thế Cường",
-                          "Nguyễn Thế Cường MD., PhD."
+                          "Nguyen The Cuong MD., PhD."
                       ],
                       [
                           "Khoa Thận - Lọc máu, Bệnh viện Hữu nghị Việt Đức",
@@ -1971,7 +1976,7 @@
                       ],
                       [
                           "BSCKII Nguyễn Thị Thủy",
-                          "Dr. Specialist II. Nguyễn Thu Thủy"
+                          "Dr. Specialist II. Nguyen Thi Thuy"
                       ],
                       [
                           "Khoa Thận - Lọc máu, Bệnh viện Hữu nghị Việt Đức",
@@ -2003,10 +2008,11 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 2: Ghép tạngSession 2: Organ Transplantation",
+                          "Phiên 2: Ghép tạng",
+                          "Session 2: Organ Transplantation",
                           "Chủ tọa: PGS.TS Dương Đức Hùng, GS.TS Nguyễn Hoàng Định, TS.BS Ngô Vi Hải, PGS.TS Phùng Duy Hồng Sơn",
-                          "Chairs: Assoc.Prof. Duong Duc Hung, Prof. Nguyen Hoang Dinh, Assoc.Prof. Phung Duy Hong Son",
-                          "(Thời gian/Time: 10h15 – 12h15)"
+                          "Chairs: Assoc.Prof. Duong Duc Hung, Prof. Nguyen Hoang Dinh, Ngo Vi Hai MD., PhD,.Assoc.Prof. Phung Duy Hong Son",
+                          "(Thời gian /Time: 10h15 – 12h15)"
                       ]
                   ]
     },
@@ -2022,7 +2028,7 @@
                       ],
                       [
                           "ThS.BS Đinh Thị Trang",
-                          "Đinh Thị Trang MD."
+                          "Dinh Thi Trang MD."
                       ],
                       [
                           "Khoa Nội, Can thiệp Tim mạch – Hô hấp, Bệnh viện Hữu nghị Việt Đức",
@@ -2042,7 +2048,7 @@
                       ],
                       [
                           "TS.BS Ngô Vi Hải",
-                          "Ngô Vi Hải MD., PhD."
+                          "Ngo Vi Hai MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Tim mạch, Bệnh viện TƯ Quân đội 108",
@@ -2062,7 +2068,7 @@
                       ],
                       [
                           "GS.TS Nguyễn Hoàng Định",
-                          "Prof. Nguyễn Hoàng Định"
+                          "Prof. Nguyen Hoang Dinh"
                       ],
                       [
                           "Bệnh viện Đại học Y Dược TP. Hồ Chí Minh",
@@ -2082,7 +2088,7 @@
                       ],
                       [
                           "ThS.BS Khổng Tiến Bình",
-                          "Khổng Tiến Bình MD."
+                          "Khong Tien Binh  MD."
                       ],
                       [
                           "Khoa Nội, Can thiệp Tim mạch – Hô hấp, Bệnh viện Hữu nghị Việt Đức",
@@ -2122,7 +2128,7 @@
                       ],
                       [
                           "TS.BS Phạm Tiến Quân",
-                          "Phạm Tiến Quân MD., PhD."
+                          "Pham Tien Quan MD., PhD."
                       ],
                       [
                           "Khoa Hồi sức Tích cực Tim mạch \u0026 Lồng ngực, Bệnh viện Hữu nghị Việt Đức",
@@ -2145,9 +2151,10 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 3: Phẫu thuật Thần kinhSession 3: Neurosurgery",
+                          "Phiên 3: Phẫu thuật Thần kinh",
+                          "Session 3: Neurosurgery",
                           "Chủ tọa: PGS.TS. Đồng Văn Hệ, TS.BS Nguyễn Thành Bắc, BSCKII Nguyễn Tiến Dũng",
-                          "Chairs: Asssoc.Prof. Dong Van He, Nguyen Thanh Bac MD., PhD., Dr. Nguyen Tien Dung",
+                          "Chairs: Assoc.Prof. Dong Van He, Nguyen Thanh Bac MD., PhD., Dr. Nguyen Tien Dung",
                           "(Thời gian/Time: 13h00 – 14h25)"
                       ]
                   ]
@@ -2164,7 +2171,7 @@
                       ],
                       [
                           "PGS.TS Đồng Văn Hệ",
-                          "Assoc.Prof. Đồng Văn Hệ"
+                          "Assoc.Prof. Dong Van He"
                       ],
                       [
                           "Trung tâm Phẫu thuật Thần kinh, Bệnh viện Hữu nghị Việt Đức",
@@ -2184,7 +2191,7 @@
                       ],
                       [
                           "PGS.TS Phạm Anh Tuấn",
-                          "Assoc. Prof. Phạm Anh Tuấn)"
+                          "Assoc. Prof. Pham Anh Tuan"
                       ],
                       [
                           "Khoa Ngoại Thần kinh, Bệnh viện Nguyễn Tri Phương",
@@ -2204,7 +2211,7 @@
                       ],
                       [
                           "BSCKII Đoàn Xuân Trường",
-                          "Dr. Specialist II. Đoàn Xuân Trường"
+                          "Dr. Specialist II Doan Xuan Truong"
                       ],
                       [
                           "Khoa Phẫu thuật Thần kinh 1, Bệnh viện Hữu nghị Việt Đức",
@@ -2224,7 +2231,7 @@
                       ],
                       [
                           "TS.BS Phạm Hoàng Anh",
-                          "Phạm Hoàng Anh MD., PhD."
+                          "Pham Hoang Anh MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Thần kinh 1, Bệnh viện Hữu nghị Việt Đức",
@@ -2244,7 +2251,7 @@
                       ],
                       [
                           "BS Đồng Văn Sơn",
-                          "Dr.  Đồng Văn Sơn"
+                          "Dr. Dong Van Son"
                       ],
                       [
                           "Khoa Phẫu thuật Thần kinh 1, Bệnh viện Hữu nghị Việt Đức",
@@ -2264,7 +2271,7 @@
                       ],
                       [
                           "ThS.BS Văn Đức Hạnh",
-                          "Văn Đức Hạnh MD."
+                          "Van Duc Hanh MD."
                       ],
                       [
                           "Khoa Phẫu thuật Thần kinh 1, Bệnh viện Hữu nghị Việt Đức",
@@ -2284,7 +2291,7 @@
                       ],
                       [
                           "ThS.BS Nguyễn Mạnh Tiến",
-                          "Nguyễn Mạnh Tiến MD."
+                          "Nguyen Manh Tien MD."
                       ],
                       [
                           "Khoa Phẫu thuật Thần kinh 1, Bệnh viện Hữu nghị Việt Đức",
@@ -2318,7 +2325,8 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 4: Phẫu thuật Thần kinhSession 4: Neurosurgery",
+                          "Phiên 4: Phẫu thuật Thần kinh",
+                          "Session 4: Neurosurgery",
                           "Chủ tọa: PGS.TS. Dương Đại Hà, PGS.TS. Nguyễn Văn Sơn, TS.BS. Nguyễn Duy Tuyển",
                           "Chairs: Assoc.Prof. Duong Dai Ha, Assoc.Prof. Nguyen Van Son, Nguyen Duy Tuyen MD., PhD.",
                           "(Thời gian/Time: 14h40– 16h15)"
@@ -2337,7 +2345,7 @@
                       ],
                       [
                           "ThS.BS Phạm Ngọc Huy",
-                          "Phạm Ngọc Huy MD."
+                          "Pham Ngoc Huy MD."
                       ],
                       [
                           "Khoa Phẫu thuật Thần kinh 1, Bệnh viện Hữu nghị Việt Đức",
@@ -2357,7 +2365,7 @@
                       ],
                       [
                           "PGS.TS Dương Đại Hà",
-                          "Assoc.Prof. Dương Đại Hà)"
+                          "Assoc.Prof. Duong Dai Ha"
                       ],
                       [
                           "Khoa Phẫu thuật Thần kinh 1, Bệnh viện Hữu nghị Việt Đức",
@@ -2377,7 +2385,7 @@
                       ],
                       [
                           "TS.BS Trần Đạt",
-                          "Trần Đạt MD., PhD."
+                          "Tran Dat MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Thần kinh 1, Bệnh viện Hữu nghị Việt Đức",
@@ -2397,7 +2405,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Duy Tuyển",
-                          "Nguyễn Duy Tuyển MD., PhD."
+                          "Nguyen Duy Tuyen MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Thần kinh 2, Bệnh viện Hữu nghị Việt Đức",
@@ -2417,7 +2425,7 @@
                       ],
                       [
                           "TS.BS Bùi Huy Mạnh",
-                          "Bùi Huy Mạnh MD., PhD."
+                          "Bui Huy Manh MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Thần kinh 2, Bệnh viện Hữu nghị Việt Đức",
@@ -2437,7 +2445,7 @@
                       ],
                       [
                           "ThS.BS Nguyễn Diệu Thúy",
-                          "Nguyễn Diệu Thúy MD., PhD."
+                          "Nguyen Dieu Thuy MD."
                       ],
                       [
                           "Khoa Phục hồi chức năng, Bệnh viện Hữu nghị Việt Đức",
@@ -2449,7 +2457,7 @@
         "kind":  "presentation",
         "cells":  [
                       [
-                          "15h40 - 15h5"
+                          "15h40 - 15h50"
                       ],
                       [
                           "Thực trạng tuân thủ điều trị dự phòng cấp 2 và hiệu quả tư vấn điều trị ở người bệnh nhồi máu não tại Bệnh viện Đa khoa Nông nghiệp năm 2023",
@@ -2457,7 +2465,7 @@
                       ],
                       [
                           "BSCKII Trần Thị Lan",
-                          "Dr. Specialist II  Trần Thị Lan"
+                          "Dr. Specialist II  Tran Thi Lan"
                       ],
                       [
                           "Khoa Nội tổng hợp, Bệnh viện Đa khoa Nông nghiệp",
@@ -2489,9 +2497,10 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 2: Ghép tạngSession: Organ Transplantation",
+                          "Phiên 2: Ghép tạng",
+                          "Session: Organ Transplantation",
                           "Chủ tọa: PGS.TS. Dương Đức Hùng, PGS.TS. Phạm Hữu Lư, TS.BS Phạm Tiến Quân",
-                          "Chairs: Assoc.Prof. Duong Duc Hung, Assoc.Prof. Pham Huu Lu",
+                          "Chairs: Assoc.Prof. Duong Duc Hung, Assoc.Prof. Pham Huu Lu, Pham Tien Quan MD.,PhD.",
                           "(Thời gian/Time: 10h15 – 12h15)"
                       ]
                   ]
@@ -2508,7 +2517,7 @@
                       ],
                       [
                           "PGS.TS Phạm Hữu Lư",
-                          "Assoc.Prof. Phạm Hữu Lư"
+                          "Assoc.Prof. Pham Huu Lu"
                       ],
                       [
                           "Khoa Ngoại Tim mạch \u0026 Lồng ngực, Bệnh viện Hữu nghị Việt Đức",
@@ -2528,7 +2537,7 @@
                       ],
                       [
                           "PGS.TS Phạm Hữu Lư",
-                          "Assoc.Prof.  Phạm Hữu Lư"
+                          "Assoc.Prof.  Pham Huu Lu"
                       ],
                       [
                           "Khoa Ngoại Tim mạch \u0026 Lồng ngực, Bệnh viện Hữu nghị Việt Đức",
@@ -2548,7 +2557,7 @@
                       ],
                       [
                           "TS.BS Phạm Tiến Quân",
-                          "Phạm Tiến Quân MD.,PhD."
+                          "Pham Tien Quan MD.,PhD."
                       ],
                       [
                           "Trung tâm Gây mê \u0026 Hồi sức ngoại khoa, Bệnh viện Hữu nghị Việt Đức",
@@ -2567,8 +2576,8 @@
                           "Procurement of lung and heart-lung blocks from brain-dead multi-organ donors at Viet Duc University Hospital"
                       ],
                       [
-                          "ThS.BS Nguyễn Việt Anh",
-                          "Nguyễn Việt Anh MD., PhD."
+                          "TS.BS Nguyễn Việt Anh",
+                          "Nguyen Viet Anh MD.,PhD."
                       ],
                       [
                           "Khoa Ngoại Tim mạch \u0026 Lồng ngực, Bệnh viện Hữu nghị Việt Đức",
@@ -2588,7 +2597,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Thị Định",
-                          "Nguyễn Thị Định MD., PhD."
+                          "Nguyen Thi Dinh MD., PhD."
                       ],
                       [
                           "Trung tâm Tế bào gốc – Ngân hàng mô \u0026 Y học tái tạo, Bệnh viện Hữu nghị Việt Đức",
@@ -2608,7 +2617,7 @@
                       ],
                       [
                           "ThS.BS Vũ Văn Thời",
-                          "Vũ Văn Thời MD., PhD."
+                          "Vu Van Thoi MD."
                       ],
                       [
                           "Khoa Nội, Can thiệp Tim mạch – Hô hấp, Bệnh viện Hữu nghị Việt Đức",
@@ -2628,7 +2637,7 @@
                       ],
                       [
                           "ThS.BS Trần Hữu Nghị",
-                          "Trần Hữu Nghị MD."
+                          "Tran Huu Nghi MD."
                       ],
                       [
                           "Khoa Nội, Can thiệp Tim mạch – Hô hấp, Bệnh viện Hữu nghị Việt Đức",
@@ -2651,7 +2660,8 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 3: Gan mật – TụySession 3: Hepatobiliary \u0026 Pancreatic Surgery",
+                          "Phiên 3: Gan mật – Tụy",
+                          "Session 3: Hepatobiliary \u0026 Pancreatic Surgery",
                           "Chủ tọa: PGS.TS Nguyễn Tiến Quyết, PGS.TS. Trần Đình Thơ, TS.BS Đỗ Mạnh Hùng",
                           "Chairs: Assoc.Prof. Nguyen Tien Quyet, Assoc.Prof. Tran Dinh Tho, Do Manh Hung MD., PhD.",
                           "(Thời gian/Time: 13h00 – 14h25 )"
@@ -2670,7 +2680,7 @@
                       ],
                       [
                           "BSCKII Nguyễn Đình Song Huy",
-                          "Dr. Specialist II Nguyễn Đình Song Huy"
+                          "Dr. Specialist II Nguyen Dinh Song Huy"
                       ],
                       [
                           "Trung tâm Ung Bướu, Bệnh viện Chợ Rẫy",
@@ -2690,7 +2700,7 @@
                       ],
                       [
                           "BSCKII Nguyễn Đình Song Huy",
-                          "Dr. Specialist II Nguyễn Đình Song Huy"
+                          "Dr. Specialist II Nguyen Dinh Song Huy"
                       ],
                       [
                           "Trung tâm Ung Bướu, Bệnh viện Chợ Rẫy",
@@ -2730,7 +2740,7 @@
                       ],
                       [
                           "BSCKII Mẫn Văn Chung",
-                          "Dr. Specialist II. Mẫn Văn Chung"
+                          "Dr. Specialist II. Man Van Chung"
                       ],
                       [
                           "Khoa Phẫu thuật Gan mật, Bệnh viện Hữu nghị Việt Đức",
@@ -2750,7 +2760,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Thị Lan",
-                          "Dr. Nguyễn Thị Lan MD., PhD."
+                          "Nguyen Thi Lan MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Gan mật, Bệnh viện Hữu nghị Việt Đức",
@@ -2770,7 +2780,7 @@
                       ],
                       [
                           "PGS.TS Trần Đình Thơ",
-                          "Assoc.Prof. Trần Đình Thơ)"
+                          "Assoc.Prof. Tran Dinh Tho"
                       ],
                       [
                           "Khoa Phẫu thuật Gan mật, Bệnh viện Hữu nghị Việt Đức",
@@ -2790,7 +2800,7 @@
                       ],
                       [
                           "ThS.BSNT Phạm Thanh Tùng",
-                          "Phạm Thanh Tùng MD."
+                          "Pham Thanh Tung  MD."
                       ],
                       [
                           "Khoa Ung bướu \u0026 Xạ trị, Bệnh viện Hữu nghị Việt Đức",
@@ -2824,7 +2834,8 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 4: Gan mật – TụySession 4: Hepatobiliary \u0026 Pancreatic Surgery",
+                          "Phiên 4: Gan mật – Tụy",
+                          "Session 4: Hepatobiliary \u0026 Pancreatic Surgery",
                           "Chủ tọa: PGS.TS Trần Bảo Long, TS.BS Đỗ Tuấn Anh, PGS.TS Nguyễn Quang Nghĩa",
                           "Chairs: Assoc.Prof. Tran Bao Long, Do Tuan Anh MD., PhD., Assoc. Prof. Nguyen Quang Nghia",
                           "(Thời gian/Time: 14h25 – 16h15 )"
@@ -2843,7 +2854,7 @@
                       ],
                       [
                           "ThS.BS Trần Minh Hiếu",
-                          "Trần Minh Hiếu MD., PhD."
+                          "Tran Minh Hieu MD."
                       ],
                       [
                           "Trung tâm Phẫu thuật Tiêu hóa \u0026 Bệnh lý sàn chậu, Bệnh viện Hữu nghị Việt Đức",
@@ -2863,7 +2874,7 @@
                       ],
                       [
                           "TS.BS Hồng Quý Quân",
-                          "Hồng Quý Quân MD., PhD."
+                          "Hong Quy Quan MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Nhi \u0026 Trẻ sơ sinh, Bệnh viện Hữu nghị Việt Đức",
@@ -2883,7 +2894,7 @@
                       ],
                       [
                           "TS.BS Ninh Việt Khải",
-                          "Ninh Việt Khải MD., PhD."
+                          "Ninh Viet Khai MD., PhD."
                       ],
                       [
                           "Trung tâm Ghép tạng, Bệnh viện Hữu nghị Việt Đức",
@@ -2903,7 +2914,7 @@
                       ],
                       [
                           "PGS.TS Nguyễn Quang Nghĩa",
-                          "Assoc. Prof. Nguyễn Quang Nghĩa"
+                          "Assoc. Prof. Nguyen Quang Nghia"
                       ],
                       [
                           "Trung tâm Ghép tạng, Bệnh viện Hữu nghị Việt Đức",
@@ -2923,7 +2934,7 @@
                       ],
                       [
                           "TS.BS Ninh Việt Khải",
-                          "Ninh Việt Khải MD., PhD."
+                          "Ninh Viet Khai MD., PhD."
                       ],
                       [
                           "Trung tâm Ghép tạng, Bệnh viện Hữu nghị Việt Đức",
@@ -2943,7 +2954,7 @@
                       ],
                       [
                           "TS.BS Ninh Việt Khải",
-                          "Ninh Việt Khải MD., PhD."
+                          "Ninh Viet Khai MD., PhD."
                       ],
                       [
                           "Trung tâm Ghép tạng, Bệnh viện Hữu nghị Việt Đức",
@@ -2963,7 +2974,7 @@
                       ],
                       [
                           "ThS.BS Chu Minh Phúc",
-                          "Chu Minh Phúc MD."
+                          "Chu Minh Phuc MD."
                       ],
                       [
                           "Khoa Phẫu thuật Gan mật, Bệnh viện Hữu nghị Việt Đức",
@@ -2995,7 +3006,8 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 2: Dược lâm sàngSession 2: Clinical Pharmacy",
+                          "Phiên 2: Dược lâm sàng",
+                          "Session 2: Clinical Pharmacy",
                           "Chủ tọa: PGS.TS Vũ Đình Hòa, DSCKII Nguyễn Thanh Hiền, TS.BS Nguyễn Thị Vân",
                           "Chairs: Assoc. Prof. Vu Dinh Hoa; Nguyen Thanh Hien Specialist Level II Pharm; Nguyen Thi Van, MD, PhD",
                           "(Thời gian/Time: 10h15 – 11h30)"
@@ -3014,7 +3026,7 @@
                       ],
                       [
                           "PGS.TS Vũ Đình Hòa",
-                          "Assoc. Prof.  Vũ Đình Hòa"
+                          "Assoc. Prof.  Vu Dinh Hoa"
                       ],
                       [
                           "Khoa Dược lâm sàng, Trường Đại học Dược Hà Nội",
@@ -3034,7 +3046,7 @@
                       ],
                       [
                           "DSCKII Nguyễn Thanh Hiền",
-                          "Pharmacist Specialist II.  Nguyễn Thanh Hiền"
+                          "Pharmacist Specialist II.  Nguyen Thanh Hien"
                       ],
                       [
                           "Khoa Dược, Bệnh viện Hữu nghị Việt Đức",
@@ -3054,7 +3066,7 @@
                       ],
                       [
                           "BSCKII Trần Hải Yến",
-                          "Dr. Specialist II. Trần Hải Yến"
+                          "Dr. Specialist II. Tran Hai Yen"
                       ],
                       [
                           "Khoa Vi sinh, Bệnh viện Hữu nghị Việt Đức",
@@ -3074,7 +3086,7 @@
                       ],
                       [
                           "ThS Lê Hương Giang",
-                          "Lê Hương Giang MD."
+                          "Le Huong Giang MD."
                       ],
                       [
                           "Khoa Dược, Bệnh viện Hữu nghị Việt Đức",
@@ -3094,7 +3106,7 @@
                       ],
                       [
                           "ThS Chu Thị Kim Phương",
-                          "Chu Thị Kim Phương MD."
+                          "Chu Thi Kim Phuong MD."
                       ],
                       [
                           "Khoa Dược, Bệnh viện Hữu nghị Việt Đức",
@@ -3114,7 +3126,7 @@
                       ],
                       [
                           "DS Võ Thị Hương Thảo",
-                          "Pharmacist Võ Thị Hương Thả)"
+                          "Pharmacist Vo Thi Huong Thao"
                       ],
                       [
                           "Khoa Dược, Bệnh viện Hữu nghị Việt Đức",
@@ -3137,7 +3149,8 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 3: Tiêu hóa - Bệnh lý sàn chậuSession 3: Gastroenterology \u0026 Pelvic Floor Disorders",
+                          "Phiên 3: Tiêu hóa - Bệnh lý sàn chậu",
+                          "Session 3: Gastroenterology \u0026 Pelvic Floor Disorders",
                           "Chủ tọa: PGS.TS Nguyễn Đức Tiến, PGS. TS. Lê Tư Hoàng, TS.BS Đỗ Tất Thành",
                           "Chairs: Assoc. Prof. Nguyen Duc Tien; Assoc. Prof. Le Tu Hoang; Do Tat Thanh, PhD, MD",
                           "(Thời gian/Time: 13h00 – 14h25)"
@@ -3156,7 +3169,7 @@
                       ],
                       [
                           "PGS.TS Nguyễn Quốc Tuấn",
-                          "Assoc.Prof. Nguyễn Quốc Tuấn)"
+                          "Assoc.Prof. Nguyen Quoc Tuan"
                       ],
                       [
                           "Bệnh viện Phụ sản Trung ương - Trường Đại học Y Hà Nội",
@@ -3176,7 +3189,7 @@
                       ],
                       [
                           "CNDD Chu Thị Trang",
-                          "B. Nutrition.  Chu Thị Trang"
+                          "B. Nutrition. Chu Thi Trang"
                       ],
                       [
                           "Khoa Dinh Dưỡng, Bệnh viện Hữu nghị Việt Đức",
@@ -3196,7 +3209,7 @@
                       ],
                       [
                           "PGS.TS Lê Tư Hoàng",
-                          "Asssoc. Prof.  Lê Tư Hoàng)"
+                          "Assoc. Prof.  Le Tu Hoang"
                       ],
                       [
                           "Khoa Điều trị theo yêu cầu, Bệnh viện Hữu nghị Việt Đức",
@@ -3212,11 +3225,12 @@
                       ],
                       [
                           "Đánh giá đặc điểm dịch tễ học, lâm sàng và cận lâm sàng của túi thừa đại tràng tại Bệnh viện Hữu nghị Việt Đức giai đoạn 2024–2025",
-                          "Epidemiological, clinical, and subclinical characteristics of colonic diverticulosis at Viet Duc University Hospital 2024-2025"
+                          "Epidemiological, clinical, and subclinical characteristics of colonic diverticulosis at Viet Duc University Hospital",
+                          "2024-2025"
                       ],
                       [
-                          "ThS.BS Hoàng Mạnh Huy",
-                          "Hoàng Mạnh Huy MD."
+                          "PGS.TS. Lê Tư Hoàng",
+                          "Assoc. Prof.  Le Tu Hoang"
                       ],
                       [
                           "Khoa Điều trị theo yêu cầu, Bệnh viện Hữu nghị Việt Đức",
@@ -3231,16 +3245,16 @@
                           "13h45 – 13h55"
                       ],
                       [
-                          "Đánh giá kết quả sớm phẫu thuật nội soi nạo vét hạch có sử dụng ICG trong điều trị ung thư đại tràng sigma và trực tràng cao",
-                          "Early outcomes of laparoscopic lymph node dissection using ICG in sigmoid and high rectal cancer treatment"
+                          "Đánh giá kết quả điều trị đứt cơ thắt hậu môn do đẻ thường bằng phương pháp Musset",
+                          "Evaluation of anal sphincter tear treatment following vaginal delivery using the Musset method"
                       ],
                       [
-                          "TS.BS Quách Văn Kiên",
-                          "Quách Văn Kiên MD., PhD."
+                          "TS.BS Đỗ Tất Thành",
+                          "Do Tat Thanh MD., PhD."
                       ],
                       [
-                          "Khoa Phẫu thuật Tiêu hóa, Bệnh viện Hữu nghị Việt Đức",
-                          "Department of Digestive Surgery, Viet Duc University Hospital"
+                          "Trung tâm Phẫu thuật Tiêu hóa \u0026 Bệnh lý sàn chậu, Bệnh viện Hữu nghị Việt Đức",
+                          "Center for Digestive Surgery \u0026 Pelvic Floor Disorders, Viet Duc University Hospital"
                       ]
                   ]
     },
@@ -3256,11 +3270,11 @@
                       ],
                       [
                           "ThS.BS Nguyễn Thị Thanh Tâm",
-                          "Nguyễn Thị Thanh Tâm MD."
+                          "Nguyen Thi Thanh Tam MD."
                       ],
                       [
-                          "Khoa Phẫu thuật Tiêu hóa, Bệnh viện Hữu nghị Việt Đức",
-                          "Department of Digestive Surgery, Viet Duc University Hospital"
+                          "Trung tâm Phẫu thuật Tiêu hóa \u0026 Bệnh lý sàn chậu, Bệnh viện Hữu nghị Việt Đức",
+                          "Center for Digestive Surgery \u0026 Pelvic Floor Disorders, Viet Duc University Hospital"
                       ]
                   ]
     },
@@ -3276,11 +3290,11 @@
                       ],
                       [
                           "TS.BS Nguyễn Xuân Hòa",
-                          "Nguyễn Xuân Hòa MD., PhD."
+                          "Nguyen Xuan Hoa MD., PhD."
                       ],
                       [
-                          "Khoa Phẫu thuật Tiêu hóa, Bệnh viện Hữu nghị Việt Đức",
-                          "Department of Digestive Surgery, Viet Duc University Hospital"
+                          "Trung tâm Phẫu thuật Tiêu hóa \u0026 Bệnh lý sàn chậu, Bệnh viện Hữu nghị Việt Đức",
+                          "Center for Digestive Surgery \u0026 Pelvic Floor Disorders, Viet Duc University Hospital"
                       ]
                   ]
     },
@@ -3310,9 +3324,10 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 4: Tiêu hóa - Bệnh lý sàn chậuSession 4: Gastroenterology \u0026 Pelvic Floor Disorders",
+                          "Phiên 4: Tiêu hóa - Bệnh lý sàn chậu",
+                          "Session 4: Gastroenterology \u0026 Pelvic Floor Disorders",
                           "Chủ tọa: GS.TS. Trịnh Hồng Sơn, PGS. TS. Nguyễn Đức Chính, TS.BS. Dương Trọng Hiền",
-                          "Chairs: Prof. Trinh Hong Son, Assoc.Prof. Nguyen Duc Chinh, Dương Trong Hien MD., PhD.",
+                          "Chairs: Prof. Trinh Hong Son, Assoc.Prof. Nguyen Duc Chinh, Duong Trong Hien MD., PhD.",
                           "(Thời gian/Time: 14h40 – 16h15)"
                       ]
                   ]
@@ -3324,12 +3339,12 @@
                           "14h40 – 14h50"
                       ],
                       [
-                          "Đánh giá kết quả điều trị đứt cơ thắt hậu môn do đẻ thường bằng phương pháp Musset",
-                          "Evaluation of anal sphincter tear treatment following vaginal delivery using the Musset method"
+                          "Đánh giá kết quả sớm phẫu thuật nội soi nạo vét hạch có sử dụng ICG trong điều trị ung thư đại tràng sigma và trực tràng cao",
+                          "Early outcomes of laparoscopic lymph node dissection using ICG in sigmoid and high rectal cancer treatment"
                       ],
                       [
-                          "TS.BS Đỗ Tất Thành",
-                          "Đỗ Tất Thành MD., PhD."
+                          "TS.BS Quách Văn Kiên",
+                          "Quach Van Kien MD., PhD."
                       ],
                       [
                           "Trung tâm Phẫu thuật Tiêu hóa \u0026 Bệnh lý sàn chậu, Bệnh viện Hữu nghị Việt Đức",
@@ -3349,7 +3364,7 @@
                       ],
                       [
                           "BSCKII Lê Nhật Huy",
-                          "Dr.Specialist II.  Lê Nhật Huy"
+                          "Dr.Specialist II.  Le Nhat Huy"
                       ],
                       [
                           "Trung tâm Phẫu thuật Tiêu hóa \u0026 Bệnh lý sàn chậu, Bệnh viện Hữu nghị Việt Đức",
@@ -3369,7 +3384,7 @@
                       ],
                       [
                           "BSCKII Nguyễn Đắc Thao",
-                          "Dr.Specialist II Nguyễn Đắc Thao"
+                          "Dr.Specialist II Nguyen Dac Thao"
                       ],
                       [
                           "Trung tâm Phẫu thuật Tiêu hóa \u0026 Bệnh lý sàn chậu, Bệnh viện Hữu nghị Việt Đức",
@@ -3389,10 +3404,11 @@
                       ],
                       [
                           "BSCKII Nguyễn Đắc Thao",
-                          "Dr.Specialist II Nguyễn Đắc Thao"
+                          "Dr.Specialist II Nguyen Dac Thao"
                       ],
                       [
-                          "Trung tâm Phẫu thuật Tiêu hóa \u0026 Bệnh lý sàn chậu, Bệnh viện Hữu nghị Việt ĐứcCenter for Digestive Surgery \u0026 Pelvic Floor Disorders, Viet Duc University Hospital"
+                          "Trung tâm Phẫu thuật Tiêu hóa \u0026 Bệnh lý sàn chậu, Bệnh viện Hữu nghị Việt Đức",
+                          "Center for Digestive Surgery \u0026 Pelvic Floor Disorders, Viet Duc University Hospital"
                       ]
                   ]
     },
@@ -3408,7 +3424,7 @@
                       ],
                       [
                           "BSCKII Phạm Phúc Khánh",
-                          "Dr.Specialist II. Phạm Phúc Khánh"
+                          "Dr.Specialist II. Pham Phuc Khanh"
                       ],
                       [
                           "Trung tâm Phẫu thuật Tiêu hóa \u0026 Bệnh lý sàn chậu, Bệnh viện Hữu nghị Việt Đức",
@@ -3448,7 +3464,7 @@
                       ],
                       [
                           "ThS.BS Nguyễn Thị Lý",
-                          "Nguyễn Thị Lý MD."
+                          "Nguyen Thi Ly MD."
                       ],
                       [
                           "Trung tâm Phẫu thuật Tiêu hóa \u0026 Bệnh lý sàn chậu, Bệnh viện Hữu nghị Việt Đức",
@@ -3480,10 +3496,11 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 2: Điều dưỡngSession 2: Nursing",
+                          "Phiên 2: Điều dưỡng",
+                          "Session 2: Nursing",
                           "Chủ toạ: ThS Phạm Đức Mục, TS  Hà Thị Kim Phượng, PGS. TS Nguyễn Hoàng Long, TS.ĐD Trần Văn Oánh",
                           "Chairs: MSN. Pham Duc Muc, PND. Ha Thi Kim Phuong, Assoc. Prof. Nguyen Hoang Long, PND. Tran Van Oanh",
-                          "(Thời gian từ:  10h15 – 12h15)"
+                          "(Thời gian/Time:  10h15 – 12h15)"
                       ]
                   ]
     },
@@ -3499,7 +3516,7 @@
                       ],
                       [
                           "ThS Phạm Đức Mục",
-                          "Phạm Đức Mục MSN"
+                          "Pham Duc Muc MSN"
                       ],
                       [
                           "Hiệp hội Điều dưỡng Việt Nam",
@@ -3560,7 +3577,7 @@
                       ],
                       [
                           "ThS. Chu Văn Long",
-                          "Chu Văn Long MSN"
+                          "Chu Van Long MSN"
                       ],
                       [
                           "Phòng Điều dưỡng, Bệnh viện Hữu nghị Việt Đức",
@@ -3580,7 +3597,7 @@
                       ],
                       [
                           "ĐD Phạm Duy Thắng",
-                          "Nurse Phạm Duy Thắng"
+                          "Nurse Pham Duy Thang"
                       ],
                       [
                           "Khoa Hồi sức Cấp cứu, Bệnh viện Quân y 103",
@@ -3600,7 +3617,7 @@
                       ],
                       [
                           "ĐD Lê Thị Thái Vân",
-                          "Nurse Lê Thị Thái Vân"
+                          "Nurse Le Thi Thai Van"
                       ],
                       [
                           "Phòng Điều dưỡng, Bệnh viện Phụ sản Trung ương",
@@ -3623,7 +3640,8 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 3: Điều dưỡngSession 3: Nursing",
+                          "Phiên 3: Điều dưỡng",
+                          "Session 3: Nursing",
                           "Chủ toạ: TS Phan Thị Dung, TS Nguyễn Thị Lan Anh, TS Đào Đức Hạnh, ThS Chu Văn Long",
                           "Chairs: Phan Thi Dung PND., Nguyen Thi Lan Anh PND., Dao Duc Hanh PND., Chu Van Long MSN.",
                           "(Thời gian/Time: 13h00 – 15h00)"
@@ -3642,7 +3660,7 @@
                       ],
                       [
                           "TS Đỗ Thị Thu Hiền",
-                          "Đỗ Thị Thu Hiền MSN."
+                          "Do Thi Thu Hien PND."
                       ],
                       [
                           "Khoa Điều dưỡng, Trường Đại học Kỹ thuật Y tế Hải Dương",
@@ -3662,7 +3680,7 @@
                       ],
                       [
                           "ĐD Nguyễn Huỳnh Ngọc Phúc",
-                          "Nurse Nguyễn Huỳnh Ngọc Phúc"
+                          "Nurse Nguyen Huynh Ngoc Phuc"
                       ],
                       [
                           "Khoa Điều trị giảm nhẹ, Bệnh viện Chợ Rẫy",
@@ -3682,7 +3700,7 @@
                       ],
                       [
                           "ĐD Phan Thế Anh",
-                          "Nurse Phan Thế Anh"
+                          "Nurse Phan The Anh"
                       ],
                       [
                           "Khoa Gây mê Hồi sức Cấp cứu, Bệnh viện Đà Nẵng",
@@ -3702,7 +3720,7 @@
                       ],
                       [
                           "ĐD Huỳnh Thị Thu Thảo",
-                          "Nurse Huỳnh Thị Thu Thảo"
+                          "Nurse Huynh Thi Thu Thao"
                       ],
                       [
                           "Khoa Chấn thương, Bệnh viện Trung ương Huế",
@@ -3722,7 +3740,7 @@
                       ],
                       [
                           "ĐDCKI Vũ Mai Lan",
-                          "Specialist I Nurse Vũ Mai Lan"
+                          "Specialist I Nurse Vu Mai Lan"
                       ],
                       [
                           "Phòng Điều dưỡng, Bệnh viện Phổi Trung ương",
@@ -3742,7 +3760,7 @@
                       ],
                       [
                           "ThS.ĐD Đinh Thị Thanh Huệ",
-                          "Nurse Đinh Thị Thanh Huệ"
+                          "Nurse Dinh Thi Thanh Hue"
                       ],
                       [
                           "Khoa Cấp cứu \u0026 Hồi sức tích cực, Bệnh viện Đại học Y Hà Nội",
@@ -3762,7 +3780,7 @@
                       ],
                       [
                           "ĐD Bùi Vân Dung",
-                          "Nurse Bùi Vân Dung"
+                          "Nurse Bui Van Dung"
                       ],
                       [
                           "Khoa Chấn thương Chỉnh hình Cột sống, Bệnh viện TƯ Quân đội 108",
@@ -3782,7 +3800,7 @@
                       ],
                       [
                           "ĐD Nguyễn Thành Ninh",
-                          "Nurse Nguyễn Thành Ninh"
+                          "Nurse Nguyen Thanh Ninh"
                       ],
                       [
                           "Khoa Phẫu thuật Thần kinh, Bệnh viện Đa khoa Xanh Pôn",
@@ -3802,7 +3820,7 @@
                       ],
                       [
                           "ĐD Đỗ Mạnh Quyền",
-                          "Nurse Đỗ Mạnh Quyền"
+                          "Nurse Do Manh Quyen"
                       ],
                       [
                           "Khoa Ngoại tổng hợp, Bệnh viện Giao thông Vận tải",
@@ -3836,10 +3854,11 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 4: Điều dưỡngSession 4: Nursing",
+                          "Phiên 4: Điều dưỡng",
+                          "Session 4: Nursing",
                           "Chủ tọa: TS Nguyễn Thị Minh Chính, TS Bùi Minh Thu, ThS Nguyễn Thị Oanh, ThS Bùi Thị Kim Nhung",
                           "Chairs: Nguyen Thi Minh Chinh PND., Bui Minh Thu PND., Nguyen Thi Oanh MSN, Bui Thi Kim Nhung MSN.",
-                          "(Thời gian từ: 15h00 – 16h45)"
+                          "(Thời gian/Time: 15h00 – 16h45)"
                       ]
                   ]
     },
@@ -3854,7 +3873,7 @@
                       ],
                       [
                           "TS Nguyễn Thị Hương Giang",
-                          "Nguyễn Thị Hương Giang PND."
+                          "Nguyen Thi Huong Giang  PND."
                       ],
                       [
                           "Phòng Điều dưỡng \u0026 Chăm sóc người bệnh, Bệnh viện Bạch Mai",
@@ -3876,7 +3895,8 @@
                           "M.SN Mohammad Ahmad Toma Guzo"
                       ],
                       [
-                          "Trung tâm Ung bướu, Bệnh viện Đa khoa Quốc tế Vinmec Central ParkOncology Center, Vinmec Central Park International Hospital"
+                          "Trung tâm Ung bướu, Bệnh viện Đa khoa Quốc tế Vinmec Central Park",
+                          "Oncology Center, Vinmec Central Park International Hospital"
                       ]
                   ]
     },
@@ -3891,7 +3911,7 @@
                       ],
                       [
                           "TS.ĐD Trần Văn Oánh",
-                          "Trần Văn Oánh PND."
+                          "Tran Van Oanh PND."
                       ],
                       [
                           "Trưởng phòng Điều dưỡng, Bệnh viện Hữu nghị Việt Đức",
@@ -3910,7 +3930,7 @@
                       ],
                       [
                           "TS Trần Thị Ngọc Xuyến",
-                          "Trần Thị Ngọc Xuyến PND."
+                          "Tran Thi Ngoc Xuyen  PND."
                       ],
                       [
                           "Viện Cơ Xương Khớp, Bệnh viện Bạch Mai",
@@ -3929,7 +3949,7 @@
                       ],
                       [
                           "ThS Phạm Thị Kiên",
-                          "Phạm Thị Kiên MSN."
+                          "Pham Thi Kien MSN."
                       ],
                       [
                           "Khoa Điều dưỡng, Trường Đại học Phan Châu Trinh",
@@ -3948,7 +3968,7 @@
                       ],
                       [
                           "TS Lê Đỗ Phương Uyên",
-                          "Lê Đỗ Phương Uyên PND."
+                          "Le Do Phuong Uyen PND."
                       ],
                       [
                           "Phòng Điều dưỡng, Bệnh viện Quốc tế COLUMBIA ASIA Bình Dương",
@@ -3967,7 +3987,7 @@
                       ],
                       [
                           "ThS Nguyễn Thị Dân",
-                          "Nguyễn Thị Dân MSN."
+                          "Nguyen Thi Dan MSN."
                       ],
                       [
                           "Bộ môn Điều dưỡng \u0026 Huấn luyện kỹ năng, Trường ĐHYD – ĐHQGHN",
@@ -3986,7 +4006,7 @@
                       ],
                       [
                           "ThS.ĐD Nguyễn Thị Chinh",
-                          "Nguyễn Thị Chinh MSN."
+                          "Nguyen Thi Chinh MSN."
                       ],
                       [
                           "Phòng Điều dưỡng, Bệnh viện Hữu nghị Việt Đức",
@@ -4018,9 +4038,10 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 2: Tim mạch – Lồng ngực (Phẫu thuật Tim mạch Lồng ngực – Động mạch chủ ngực)Session 2: Cardiovascular \u0026 Thoracic (Cardiovascular \u0026 Thoracic Surgery - Thoracic Aorta)",
+                          "Phiên 2: Tim mạch – Lồng ngực (Phẫu thuật Tim mạch Lồng ngực – Động mạch chủ ngực)",
+                          "Session 2: Cardiovascular \u0026 Thoracic (Cardiovascular \u0026 Thoracic Surgery - Thoracic Aorta)",
                           "Chủ tọa: PGS TS Dương Đức Hùng, TS.BS Nguyễn Thái An, ThS.BS Nguyễn Tùng Sơn",
-                          "Chairs: Assoc. Prof. Duong Duc Hung, Nguyen Thai An MD., PhD, Nguyen Tung Son MD., PhD",
+                          "Chairs: Assoc. Prof. Duong Duc Hung, Nguyen Thai An MD., PhD, Nguyen Tung Son MD.",
                           "(Thời gian/Time: 10h15 – 12h15)"
                       ]
                   ]
@@ -4037,7 +4058,7 @@
                       ],
                       [
                           "TS.BS Ngô Tuấn Anh",
-                          "Ngô Tuấn Anh MD., PhD."
+                          "Ngo Tuan Anh MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Tim mạch, Bệnh viện TƯ Quân đội 108",
@@ -4057,7 +4078,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Thái An",
-                          "Nguyễn Thái An MD., PhD."
+                          "Nguyen Thai An MD., PhD."
                       ],
                       [
                           "Khoa Hồi sức – Phẫu thuật Tim, Bệnh viện Chợ Rẫy",
@@ -4076,8 +4097,8 @@
                           "Experience in endovascular stent-graft placement for traumatic thoracic aortic injury at Viet Duc University Hospital"
                       ],
                       [
-                          "BS Nguyễn Tùng Sơn",
-                          "Dr. Nguyễn Tùng Sơn"
+                          "ThS. BS Nguyễn Tùng Sơn",
+                          "Nguyen Tung Son MD."
                       ],
                       [
                           "Khoa Nội, Can thiệp Tim mạch – Hô hấp, Bệnh viện Hữu nghị Việt Đức",
@@ -4097,7 +4118,7 @@
                       ],
                       [
                           "TS.BS Lâm Văn Nút",
-                          "Lâm Văn Nút MD., PhD."
+                          "Lam Van Nut MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Mạch máu, Bệnh viện Chợ Rẫy",
@@ -4117,7 +4138,7 @@
                       ],
                       [
                           "ThS.BS Lê Hữu Khánh",
-                          "Lê Hữu Khánh MD., PhD."
+                          "Le Huu Khanh MD."
                       ],
                       [
                           "Khoa Chẩn đoán \u0026 Can thiệp Tim mạch, Bệnh viện TƯ Quân đội 108",
@@ -4137,7 +4158,7 @@
                       ],
                       [
                           "TS.BS Phạm Trần Việt Chương",
-                          "Phạm Trần Việt Chương MD., PhD."
+                          "Pham Tran Viet Chuong MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Tim mạch, Bệnh viện Đại học Y dược TP.HCM",
@@ -4157,7 +4178,7 @@
                       ],
                       [
                           "ThS.BS Nguyễn Hoàng Nam",
-                          "Nguyễn Hoàng Nam MD."
+                          "Nguyen Hoang Nam MD."
                       ],
                       [
                           "Đơn vị Mạch máu, Trung tâm Tim mạch, Bệnh viện E",
@@ -4180,9 +4201,11 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 3: Tim mạch – Lồng ngực (Phẫu thuật Tim mạch Lồng ngực – Động mạch chủ ngực)Session: Cardiovascular \u0026 Thoracic (Cardiovascular \u0026 Thoracic Surgery - Thoracic Aorta)",
+                          "Phiên 3: Tim mạch – Lồng ngực (Phẫu thuật Tim mạch Lồng ngực – Động mạch chủ ngực)",
+                          "Session: Cardiovascular \u0026 Thoracic (Cardiovascular \u0026 Thoracic Surgery - Thoracic Aorta)",
                           "Chủ tọa: PGS TS Nguyễn Sinh Hiền, TS.BS Nguyễn Công Hựu, PGS.TS Phùng Duy Hồng Sơn",
-                          "Chairs: Assoc. Prof. Nguyen Sinh Hien; Nguyen Cong Huu, MD, PhD; Assoc. Prof. Phung Duy Hong Son(Thời gian/Time: 13h00 – 14h25)"
+                          "Chairs: Assoc. Prof. Nguyen Sinh Hien; Nguyen Cong Huu, MD, PhD; Assoc. Prof. Phung Duy Hong Son",
+                          "(Thời gian/Time: 13h00 – 14h25)"
                       ]
                   ]
     },
@@ -4198,7 +4221,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Công Hựu",
-                          "Nguyễn Công Hựu MD., PhD."
+                          "Nguyen Cong Huu MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Tim mạch \u0026 Lồng ngực, Bệnh viện E",
@@ -4218,7 +4241,7 @@
                       ],
                       [
                           "PGS.TS Nguyễn Sinh Hiền",
-                          "Assoc.Prof. Nguyễn Sinh Hiền"
+                          "Assoc.Prof. Nguyen Sinh Hien"
                       ],
                       [
                           "Bệnh viện Tim Hà Nội",
@@ -4238,7 +4261,7 @@
                       ],
                       [
                           "TS.BS Vũ Đức Thắng",
-                          "Vũ Đức Thắng MD., PhD."
+                          "Vu Duc Thang MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Tim mạch, Bệnh viện Quân y 103",
@@ -4258,7 +4281,7 @@
                       ],
                       [
                           "TS.BS Ngô Phi Long",
-                          "Ngô Phi Long MD., PhD."
+                          "Ngo Phi Long MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Tim mạch \u0026 HSTC sau mổ, Bệnh viện Bạch Mai",
@@ -4278,7 +4301,7 @@
                       ],
                       [
                           "PGS.TS Phùng Duy Hồng Sơn",
-                          "Assso.Prof. Phùng Duy Hồng Sơn"
+                          "Assoc.Prof. Phung Duy Hong Son"
                       ],
                       [
                           "Khoa Phẫu thuật Tim mạch \u0026 Lồng ngực, Bệnh viện Hữu nghị Việt Đức",
@@ -4298,7 +4321,7 @@
                       ],
                       [
                           "ThS.BS Hoàng Trọng Hải",
-                          "Hoàng Trọng Hải MD."
+                          "Hoang Trong Hai MD."
                       ],
                       [
                           "Khoa Ngoại Tim mạch \u0026 Lồng ngực, Bệnh viện Hữu nghị Việt Đức",
@@ -4318,7 +4341,7 @@
                       ],
                       [
                           "TS.BS Dương Ngọc Thắng",
-                          "Dương Ngọc Thắng MD., PhD."
+                          "Duong Ngoc Thang MD., PhD."
                       ],
                       [
                           "Khoa Ngoại Tim mạch \u0026 Lồng ngực, Bệnh viện Hữu nghị Việt Đức",
@@ -4352,7 +4375,8 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 4: Tim mạch – Lồng ngực (Phẫu thuật Lồng ngực)Session 4: Cardiovascular \u0026 Thoracic (Thoracic Surgery)",
+                          "Phiên 4: Tim mạch – Lồng ngực (Phẫu thuật Lồng ngực)",
+                          "Session 4: Cardiovascular \u0026 Thoracic (Thoracic Surgery)",
                           "Chủ tọa: PGS.TS. Phạm Hữu Lư, TS. Nguyễn Duy Thắng, TS. Ngô Gia Khánh",
                           "Chairs: Assoc. Prof. Pham Huu Lu; Nguyen Duy Thang MD., PhD; Ngo Gia Khanh MD., PhD",
                           "(Thời gian/Time: 14h40 – 16h15)"
@@ -4371,7 +4395,7 @@
                       ],
                       [
                           "PGS.TS Phạm Hữu Lư",
-                          "Asssoc.Prof. Phạm Hữu Lư"
+                          "Assoc.Prof. Pham Huu Lu"
                       ],
                       [
                           "Khoa Ngoại Tim mạch \u0026 Lồng ngực, Bệnh viện Hữu nghị Việt Đức",
@@ -4391,7 +4415,7 @@
                       ],
                       [
                           "TS.BS Nguyễn Duy Thắng",
-                          "Nguyễn Duy Thắng MD., PhD."
+                          "Nguyen Duy Thang MD., PhD."
                       ],
                       [
                           "Khoa Ngoại Tim mạch \u0026 Lồng ngực, Bệnh viện Đại học Y Hà Nội",
@@ -4411,7 +4435,7 @@
                       ],
                       [
                           "TS.BS Ngô Gia Khánh",
-                          "Ngô Gia Khánh MD., PhD."
+                          "Ngo Gia Khanh MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Lồng ngực, Bệnh viện Bạch Mai",
@@ -4430,8 +4454,8 @@
                           "Pectus carinatum surgery at Viet Duc University Hospital"
                       ],
                       [
-                          "BSCKII Nguyễn Việt Anh",
-                          "Dr. Specialist II. Nguyễn Việt Anh"
+                          "TS.BS Nguyễn Việt Anh",
+                          "Nguyen Viet Anh MD.,PhD"
                       ],
                       [
                           "Khoa Ngoại Tim mạch \u0026 Lồng ngực, Bệnh viện Hữu nghị Việt Đức",
@@ -4451,7 +4475,7 @@
                       ],
                       [
                           "ThS.BS Đồng Minh Hùng",
-                          "Đồng Minh Hùng MD."
+                          "Dong Minh Hung MD."
                       ],
                       [
                           "Khoa Phẫu thuật Lồng ngực, Bệnh viện Bạch Mai",
@@ -4471,7 +4495,7 @@
                       ],
                       [
                           "ThS.BS Nguyễn Minh Trí",
-                          "Nguyễn Minh Trí MD."
+                          "Nguyen Minh Tri MD."
                       ],
                       [
                           "Trung tâm Tim mạch \u0026 Lồng ngực, Bệnh viện Hữu nghị Việt Đức",
@@ -4503,9 +4527,10 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 2: Chẩn đoán hình ảnhSession 2: Diagnostic Imaging / Radiology",
-                          "Chủ tọa: ThS. Sang Yub Le, PGS.TS. Lê Thanh Dũng, BSCK II. Phạm Hữu Khuyên.",
-                          "Chairs: Sang Yub Le M.D., Assoc. Prof. Le Thanh Dung., Dr. Specialist Level II Pham Huu Khuyen.",
+                          "Phiên 2: Chẩn đoán hình ảnh",
+                          "Session 2: Diagnostic Imaging / Radiology",
+                          "Chủ tọa: ThS. Sang Yub Lee, PGS.TS. Lê Thanh Dũng, BSCK II. Phạm Hữu Khuyên.",
+                          "Chairs: Sang Yub Lee M.D., Assoc. Prof. Le Thanh Dung., Dr. Specialist Level II Pham Huu Khuyen.",
                           "(Thời gian/Time: 10h15 – 12h15)"
                       ]
                   ]
@@ -4521,8 +4546,8 @@
                           "Endovascular Management of Peripheral AVMs – Imaging, Approaches, and Embolization Agents"
                       ],
                       [
-                          "BS. Sang Yub Le",
-                          "Sang Yub Le MD."
+                          "BS. Sang Yub Lee",
+                          "Sang Yub Lee MD."
                       ],
                       [
                           "Khoa Chẩn đoán hình ảnh, Trung tâm Y tế Samsung, Trường Y Đại học Sungkyunkwan, Seoul, Hàn Quốc",
@@ -4534,7 +4559,7 @@
         "kind":  "presentation",
         "cells":  [
                       [
-                          "10h45 – 111h00"
+                          "10h45 – 11h00"
                       ],
                       [
                           "Can thiệp nội mạch điều trị dị dạng mạch máu vùng đầu, mặt, cổ: Từ lý thuyết đến thực tiễn tại Bệnh viện Hữu nghị Việt Đức",
@@ -4542,7 +4567,7 @@
                       ],
                       [
                           "ThS.BS Đào Xuân Hải",
-                          "Đào Xuân Hải MD."
+                          "Dao Xuan Hai MD."
                       ],
                       [
                           "Khoa Chẩn đoán hình ảnh, Bệnh viện Hữu nghị Việt Đức",
@@ -4562,7 +4587,7 @@
                       ],
                       [
                           "TS.BS Thân Văn Sỹ",
-                          "Thân Văn Sỹ MD., PhD."
+                          "Than Van Sy MD., PhD."
                       ],
                       [
                           "Khoa Chẩn đoán hình ảnh, Bệnh viện Hữu nghị Việt Đức",
@@ -4582,7 +4607,7 @@
                       ],
                       [
                           "ThS.BS Vũ Hoài Linh",
-                          "Vũ Hoài Linh MD."
+                          "Vu Hoai Linh MD."
                       ],
                       [
                           "Khoa Chẩn đoán hình ảnh, Bệnh viện Hữu nghị Việt Đức",
@@ -4602,7 +4627,7 @@
                       ],
                       [
                           "ThS.BS Trần Quang Lộc",
-                          "Trần Quang Lộc MD."
+                          "Tran Quang Loc MD."
                       ],
                       [
                           "Khoa Chẩn đoán hình ảnh, Bệnh viện Hữu nghị Việt Đức",
@@ -4625,7 +4650,8 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 3: Phẫu thuật Tạo hình - Thẩm mỹSession 3: Plastic \u0026 Reconstructive Surgery",
+                          "Phiên 3: Phẫu thuật Tạo hình - Thẩm mỹ",
+                          "Session 3: Plastic \u0026 Reconstructive Surgery",
                           "Chủ tọa: GS. Ömer Özkan, PGS.TS. Nguyễn Hồng Hà, TS.BS. Vũ Trung Trực",
                           "Chairs: Prof. Ömer Özkan, Assoc. Prof. Nguyen Hong Ha, Vu Trung Truc MD., PhD.",
                           "(Thời gian/Time: 13h00 – 14h40)"
@@ -4664,7 +4690,7 @@
                       ],
                       [
                           "PGS.TS. Nguyễn Hồng Hà",
-                          "Assoc. Prof. Nguyễn Hồng Hà"
+                          "Assoc. Prof. Nguyen Hong Ha"
                       ],
                       [
                           "Khoa Phẫu thuật Hàm mặt – Tạo hình – Thẩm mỹ, Bệnh viện Hữu nghị Việt Đức",
@@ -4684,10 +4710,11 @@
                       ],
                       [
                           "TS.BS Bùi Mai Anh",
-                          "Bùi Mai Anh MD., PhD."
+                          "Bui Mai Anh MD., PhD."
                       ],
                       [
-                          "Khoa Phẫu thuật Hàm mặt – Tạo hình – Thẩm mỹ, Bệnh viện Hữu nghị Việt ĐứcDepartment of Maxillofacial, Plastic \u0026 Aesthetic Surgery, Viet Duc University Hospital"
+                          "Khoa Phẫu thuật Hàm mặt – Tạo hình – Thẩm mỹ, Bệnh viện Hữu nghị Việt Đức",
+                          "Department of Maxillofacial, Plastic \u0026 Aesthetic Surgery, Viet Duc University Hospital"
                       ]
                   ]
     },
@@ -4703,7 +4730,7 @@
                       ],
                       [
                           "TS.BS Đào Văn Giang",
-                          "Đào Văn Giang MD., PhD."
+                          "Dao Van Giang MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Hàm mặt – Tạo hình – Thẩm mỹ, Bệnh viện Hữu nghị Việt Đức",
@@ -4722,8 +4749,10 @@
                           "Report of three cases of urethral reconstruction using penile skin flap for recurrent urethral stricture with urethral loss: Discussing the applicability of pedicled bladder flap in complex cases"
                       ],
                       [
-                          "TS.BS Đỗ Ngọc SơnBS Nguyễn Đạo Uyên",
-                          "Đỗ Ngọc Sơn MD., PhD.Dr. Nguyễn Đạo Uyên"
+                          "TS.BS Đỗ Ngọc Sơn",
+                          "BS Nguyễn Đạo Uyên",
+                          "Do Ngoc Son MD., PhD.",
+                          "Dr. Nguyen Dao Uyen"
                       ],
                       [
                           "Khoa Phẫu thuật Tiết niệu, Bệnh viện Hữu nghị Việt Đức",
@@ -4742,8 +4771,8 @@
                           "Overview of obstructive sleep apnea treatment using mandibular advancement devices"
                       ],
                       [
-                          "BS Nguyễn Hoàng Hải",
-                          "Dr. Nguyễn Hoàng Hải"
+                          "BSCKII Nguyễn Hoàng Hải",
+                          "Dr. Specialist II  Nguyen Hoang Hai"
                       ],
                       [
                           "Trung tâm Khám bệnh Cấp cứu \u0026 Điều trị ban ngày, Bệnh viện Hữu nghị Việt Đức",
@@ -4777,7 +4806,8 @@
         "kind":  "session",
         "cells":  [
                       [
-                          "Phiên 4: Phẫu thuật Tạo hình - Thẩm mỹSession 4: Plastic \u0026 Reconstructive Surgery",
+                          "Phiên 4: Phẫu thuật Tạo hình - Thẩm mỹ",
+                          "Session 4: Plastic \u0026 Reconstructive Surgery",
                           "Chủ tọa: PGS.TS. Vũ Ngọc Lâm, TS.BS Đỗ Thị Ngọc Linh, TS.BS Bùi Mai Anh",
                           "Chairs: Assoc. Prof. Vu Ngoc Lam; Do Thi Ngoc Linh, PhD, MD; Bui Mai Anh, PhD, MD",
                           "(Thời gian/Time: 15h00 – 16h20)"
@@ -4796,7 +4826,7 @@
                       ],
                       [
                           "TS.BS Vũ Trung Trực",
-                          "Vũ Trung Trực MD., PhD."
+                          "Vu Trung Truc MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Hàm mặt – Tạo hình – Thẩm mỹ, Bệnh viện Hữu nghị Việt Đức",
@@ -4816,7 +4846,7 @@
                       ],
                       [
                           "TS.BS Đỗ Thị Ngọc Linh",
-                          "Đỗ Thị Ngọc Linh MD., PhD."
+                          "Do Thi Ngoc Linh MD., PhD."
                       ],
                       [
                           "Khoa Phẫu thuật Hàm mặt – Tạo hình – Thẩm mỹ, Bệnh viện Hữu nghị Việt Đức",
@@ -4836,7 +4866,7 @@
                       ],
                       [
                           "ThS.BS Thịnh Thái",
-                          "Thịnh Thái MD."
+                          "Thinh Thai MD."
                       ],
                       [
                           "Khoa Phẫu thuật Hàm mặt – Tạo hình – Thẩm mỹ, Bệnh viện Hữu nghị Việt Đức",
@@ -4856,7 +4886,7 @@
                       ],
                       [
                           "ThS.BS Dương Công Nguyên",
-                          "Dương Công Nguyên MD."
+                          "Duong Cong Nguyen MD."
                       ],
                       [
                           "Trung tâm Tế bào gốc – Ngân hàng mô \u0026 Y học tái tạo, Bệnh viện Hữu nghị Việt Đức",
@@ -4876,7 +4906,7 @@
                       ],
                       [
                           "ThS.BS Nguyễn Thị Thu Hằng",
-                          "Nguyễn Thị Thu Hằng MD.,"
+                          "Nguyen Thi Thu Hang MD.,"
                       ],
                       [
                           "Khoa Phẫu thuật Hàm mặt – Tạo hình – Thẩm mỹ, Bệnh viện Hữu nghị Việt Đức",
@@ -4896,7 +4926,7 @@
                       ],
                       [
                           "BSCK I.  Dương Hồng Quân",
-                          "Dr. Specialist I. Dương Hồng Quân"
+                          "Dr. Specialist I. Duong Hong Quan"
                       ],
                       [
                           "Khoa Phẫu thuật Hàm mặt – Tạo hình – Thẩm mỹ, Bệnh viện Hữu nghị Việt Đức",
@@ -4916,7 +4946,7 @@
                       ],
                       [
                           "ThS Nguyễn Văn Chỉnh",
-                          "Nguyễn Văn Chỉnh"
+                          "Nguyen Van Chinh MSc."
                       ],
                       [
                           "Khoa Sinh hóa – Huyết học, Bệnh viện Hữu nghị Việt Đức",
