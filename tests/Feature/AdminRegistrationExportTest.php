@@ -55,6 +55,39 @@ class AdminRegistrationExportTest extends TestCase
         $this->assertSame(18, substr_count($worksheet, '<c '));
     }
 
+    public function test_export_lists_registrations_in_ascending_id_order(): void
+    {
+        $admin = User::factory()->create();
+        Registration::create($this->registrationAttributes([
+            'delegate_id' => 'VDUH26-DEL-0001',
+            'full_name' => 'Người Đăng Ký Trước',
+            'email' => 'truoc@example.com',
+            'qr_code_token' => 'qr-token-0001',
+        ]));
+        Registration::create($this->registrationAttributes([
+            'delegate_id' => 'VDUH26-DEL-0002',
+            'full_name' => 'Người Đăng Ký Sau',
+            'email' => 'sau@example.com',
+            'qr_code_token' => 'qr-token-0002',
+        ]));
+
+        $response = $this->actingAs($admin)->get('/admin/registrations-export');
+
+        $response->assertOk();
+
+        $archive = new ZipArchive;
+        $this->assertTrue($archive->open($response->baseResponse->getFile()->getPathname()));
+        $worksheet = $archive->getFromName('xl/worksheets/sheet1.xml');
+        $archive->close();
+
+        $this->assertIsString($worksheet);
+        $earlier = strpos($worksheet, 'Người Đăng Ký Trước');
+        $later = strpos($worksheet, 'Người Đăng Ký Sau');
+        $this->assertIsInt($earlier);
+        $this->assertIsInt($later);
+        $this->assertLessThan($later, $earlier);
+    }
+
     public function test_guest_is_redirected_when_exporting_registrations(): void
     {
         $response = $this->get('/admin/registrations-export');

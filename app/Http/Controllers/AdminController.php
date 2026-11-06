@@ -87,7 +87,7 @@ class AdminController extends Controller
         }
 
         $excelExport->export(
-            $this->registrationQuery($request)->orderByDesc('id')->cursor(),
+            $this->registrationQuery($request)->orderBy('id')->cursor(),
             $temporaryPath,
         );
 
