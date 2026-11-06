@@ -3,7 +3,8 @@
         "kind": "hall",
         "cells": [
             [
-                "PHÒNG KHÁNH TIẾTBANQUET HALL"
+                "PHÒNG KHÁNH TIẾT",
+                "BANQUET HALL"
             ]
         ]
     },
@@ -11,7 +12,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 1: Tổng quátSession 1: Overview",
+                "Phiên 1: Tổng quát",
+                "Session 1: Overview",
                 "Chủ tọa: PGS.TS Dương Đức Hùng, TS Nguyễn Ngô Quang, PGS.TS Nguyễn Tiến Quyết, GS.TS Trần Bình Giang Chair: Assoc. Prof. Dr. Duong Duc Hung, Nguyen Ngo Quang MD., PhD., Assoc. Prof. Dr. Nguyen Tien Quyet, Prof. Dr. Tran Binh Giang"
             ]
         ]
@@ -610,7 +612,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 2: Điều dưỡngSession 2: Nursing",
+                "Phiên 2: Điều dưỡng",
+                "Session 2: Nursing",
                 "Chủ toạ: ThS Phạm Đức Mục, TS Hà Thị Kim Phượng, PGS. TS Nguyễn Hoàng Long, TS.ĐD Trần Văn Oánh",
                 "Chairs: MSN. Pham Duc Muc, PND. Ha Thi Kim Phuong, Assoc. Prof. Nguyen Hoang Long, PND. Tran Van Oanh"
             ]
@@ -752,7 +755,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 3: Điều dưỡngSession 3: Nursing",
+                "Phiên 3: Điều dưỡng",
+                "Session 3: Nursing",
                 "Chủ toạ: TS Phan Thị Dung, TS Nguyễn Thị Lan Anh, TS Đào Đức Hạnh, ThS Chu Văn Long",
                 "Chairs: Phan Thi Dung PND., Nguyen Thi Lan Anh PND., Dao Duc Hanh PND., Chu Van Long MSN."
             ]
@@ -964,7 +968,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 4: Điều dưỡngSession 4: Nursing",
+                "Phiên 4: Điều dưỡng",
+                "Session 4: Nursing",
                 "Chủ tọa: TS Nguyễn Thị Minh Chính, TS Bùi Minh Thu, ThS Nguyễn Thị Oanh, ThS Bùi Thị Kim Nhung",
                 "Chairs: Nguyen Thi Minh Chinh PND., Bui Minh Thu PND., Nguyen Thi Oanh MSN, Bui Thi Kim Nhung MSN."
             ]
@@ -1756,7 +1761,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 3: Ghép tạngSession 3: Organ Transplantation",
+                "Phiên 3: Ghép tạng",
+                "Session 3: Organ Transplantation",
                 "Chủ tọa, GS. Sung Shin, PGS.TS. Lê Nguyên Vũ, TS.BS. Nguyễn Việt Hải, TS.BS. Đỗ Ngọc Sơn.",
                 "Chairs: Prof. Sung Shin, Assoc.Prof. Le Nguyen Vu, Nguyên Viet Hai MD., PhD., Do Ngoc Son MD., PhD."
             ]
@@ -2019,7 +2025,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 2: Ghép tạngSession 2: Organ Transplantation",
+                "Phiên 2: Ghép tạng",
+                "Session 2: Organ Transplantation",
                 "Chủ tọa: PGS.TS Dương Đức Hùng, GS.TS Nguyễn Hoàng Định, TS.BS Ngô Vi Hải, PGS.TS Phùng Duy Hồng Sơn",
                 "Chairs: Assoc.Prof. Duong Duc Hung, Prof. Nguyen Hoang Dinh, Assoc.Prof. Phung Duy Hong Son"
             ]
@@ -2160,7 +2167,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 3: Phẫu thuật Thần kinhSession 3: Neurosurgery",
+                "Phiên 3: Phẫu thuật Thần kinh",
+                "Session 3: Neurosurgery",
                 "Chủ tọa: PGS.TS. Đồng Văn Hệ, TS.BS Nguyễn Thành Bắc, BSCKII Nguyễn Tiến Dũng",
                 "Chairs: Asssoc.Prof. Dong Van He, Nguyen Thanh Bac MD., PhD., Dr. Nguyen Tien Dung"
             ]
@@ -2332,7 +2340,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 4: Phẫu thuật Thần kinhSession 4: Neurosurgery",
+                "Phiên 4: Phẫu thuật Thần kinh",
+                "Session 4: Neurosurgery",
                 "Chủ tọa: PGS.TS. Dương Đại Hà, PGS.TS. Nguyễn Văn Sơn, TS.BS. Nguyễn Duy Tuyển",
                 "Chairs: Assoc.Prof. Duong Dai Ha, Assoc.Prof. Nguyen Van Son, Nguyen Duy Tuyen MD., PhD."
             ]
@@ -2663,7 +2672,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 3: Gan mật – TụySession 3: Hepatobiliary & Pancreatic Surgery",
+                "Phiên 3: Gan mật – Tụy",
+                "Session 3: Hepatobiliary & Pancreatic Surgery",
                 "Chủ tọa: PGS.TS Nguyễn Tiến Quyết, PGS.TS. Trần Đình Thơ, TS.BS Đỗ Mạnh Hùng",
                 "Chairs: Assoc.Prof. Nguyen Tien Quyet, Assoc.Prof. Tran Dinh Tho, Do Manh Hung MD., PhD."
             ]
@@ -2835,7 +2845,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 4: Gan mật – TụySession 4: Hepatobiliary & Pancreatic Surgery",
+                "Phiên 4: Gan mật – Tụy",
+                "Session 4: Hepatobiliary & Pancreatic Surgery",
                 "Chủ tọa: PGS.TS Trần Bảo Long, TS.BS Đỗ Tuấn Anh, PGS.TS Nguyễn Quang Nghĩa",
                 "Chairs: Assoc.Prof. Tran Bao Long, Do Tuan Anh MD., PhD., Assoc. Prof. Nguyen Quang Nghia"
             ]
@@ -3005,7 +3016,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 2: Dược lâm sàngSession 2: Clinical Pharmacy",
+                "Phiên 2: Dược lâm sàng",
+                "Session 2: Clinical Pharmacy",
                 "Chủ tọa: PGS.TS Vũ Đình Hòa, DSCKII Nguyễn Thanh Hiền, TS.BS Nguyễn Thị Vân",
                 "Chairs: Assoc. Prof. Vu Dinh Hoa; Nguyen Thanh Hien Specialist Level II Pharm; Nguyen Thi Van, MD, PhD"
             ]
@@ -3146,7 +3158,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 3: Tiêu hóa - Bệnh lý sàn chậuSession 3: Gastroenterology & Pelvic Floor Disorders",
+                "Phiên 3: Tiêu hóa - Bệnh lý sàn chậu",
+                "Session 3: Gastroenterology & Pelvic Floor Disorders",
                 "Chủ tọa: PGS.TS Nguyễn Đức Tiến, PGS. TS. Lê Tư Hoàng, TS.BS Đỗ Tất Thành",
                 "Chairs: Assoc. Prof. Nguyen Duc Tien; Assoc. Prof. Le Tu Hoang; Do Tat Thanh, PhD, MD"
             ]
@@ -3318,7 +3331,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 4: Tiêu hóa - Bệnh lý sàn chậuSession 4: Gastroenterology & Pelvic Floor Disorders",
+                "Phiên 4: Tiêu hóa - Bệnh lý sàn chậu",
+                "Session 4: Gastroenterology & Pelvic Floor Disorders",
                 "Chủ tọa: GS.TS. Trịnh Hồng Sơn, PGS. TS. Nguyễn Đức Chính, TS.BS. Dương Trọng Hiền",
                 "Chairs: Prof. Trinh Hong Son, Assoc.Prof. Nguyen Duc Chinh, Dương Trong Hien MD., PhD."
             ]
@@ -3993,7 +4007,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 2: Tim mạch – Lồng ngực (Phẫu thuật Tim mạch Lồng ngực – Động mạch chủ ngực)Session 2: Cardiovascular & Thoracic (Cardiovascular & Thoracic Surgery - Thoracic Aorta)",
+                "Phiên 2: Tim mạch – Lồng ngực (Phẫu thuật Tim mạch Lồng ngực – Động mạch chủ ngực)",
+                "Session 2: Cardiovascular & Thoracic (Cardiovascular & Thoracic Surgery - Thoracic Aorta)",
                 "Chủ tọa: PGS TS Dương Đức Hùng, TS.BS Nguyễn Thái An, ThS.BS Nguyễn Tùng Sơn",
                 "Chairs: Assoc. Prof. Duong Duc Hung, Nguyen Thai An MD., PhD, Nguyen Tung Son MD., PhD"
             ]
@@ -4326,7 +4341,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 4: Tim mạch – Lồng ngực (Phẫu thuật Lồng ngực)Session 4: Cardiovascular & Thoracic (Thoracic Surgery)",
+                "Phiên 4: Tim mạch – Lồng ngực (Phẫu thuật Lồng ngực)",
+                "Session 4: Cardiovascular & Thoracic (Thoracic Surgery)",
                 "Chủ tọa: PGS.TS. Phạm Hữu Lư, TS. Nguyễn Duy Thắng, TS. Ngô Gia Khánh",
                 "Chairs: Assoc. Prof. Pham Huu Lu; Nguyen Duy Thang MD., PhD; Ngo Gia Khanh MD., PhD"
             ]
@@ -4476,7 +4492,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 2: Chẩn đoán hình ảnhSession 2: Diagnostic Imaging / Radiology",
+                "Phiên 2: Chẩn đoán hình ảnh",
+                "Session 2: Diagnostic Imaging / Radiology",
                 "Chủ tọa: ThS. Sang Yub Le, PGS.TS. Lê Thanh Dũng, BSCK II. Phạm Hữu Khuyên.",
                 "Chairs: Sang Yub Le M.D., Assoc. Prof. Le Thanh Dung., Dr. Specialist Level II Pham Huu Khuyen."
             ]
@@ -4597,7 +4614,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 3: Phẫu thuật Tạo hình - Thẩm mỹSession 3: Plastic & Reconstructive Surgery",
+                "Phiên 3: Phẫu thuật Tạo hình - Thẩm mỹ",
+                "Session 3: Plastic & Reconstructive Surgery",
                 "Chủ tọa: GS. Ömer Özkan, PGS.TS. Nguyễn Hồng Hà, TS.BS. Vũ Trung Trực",
                 "Chairs: Prof. Ömer Özkan, Assoc. Prof. Nguyen Hong Ha, Vu Trung Truc MD., PhD."
             ]
@@ -4748,7 +4766,8 @@
         "kind": "session",
         "cells": [
             [
-                "Phiên 4: Phẫu thuật Tạo hình - Thẩm mỹSession 4: Plastic & Reconstructive Surgery",
+                "Phiên 4: Phẫu thuật Tạo hình - Thẩm mỹ",
+                "Session 4: Plastic & Reconstructive Surgery",
                 "Chủ tọa: PGS. TS. Nguyễn Quang Đức, TS.BS Đỗ Thị Ngọc Linh, TS.BS Bùi Mai Anh",
                 "Chairs: Assoc. Prof. Nguyen Quang Duc; Do Thi Ngoc Linh, PhD, MD; Bui Mai Anh, PhD, MD"
             ]

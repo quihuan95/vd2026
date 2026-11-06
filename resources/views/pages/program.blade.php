@@ -15,14 +15,24 @@
 
 <main
     class="bg-slate-50 py-10 sm:py-14"
-    x-data="{
-        searchQuery: '',
-        matches(value) {
-            return !this.searchQuery.trim() || value.toLocaleLowerCase('vi').includes(this.searchQuery.trim().toLocaleLowerCase('vi'));
-        }
-    }"
+    x-data="conferenceProgram({{ Js::from($programRows) }})"
+    x-effect="visibleRowIndices = matchingRowIndices()"
 >
     <div class="mx-auto max-w-7xl space-y-6 px-4 sm:px-6">
+        <section aria-labelledby="program-overview-title" class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <h2 id="program-overview-title" class="text-xl font-extrabold text-slate-950">Khung thời gian tổng thể / Program Overview</h2>
+            <dl class="mt-5 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-2xl bg-emerald-50 p-5">
+                    <dt class="font-bold text-emerald-800">10h15 – 12h15</dt>
+                    <dd class="mt-2 font-semibold text-slate-900">Phiên 2 / Session 2</dd>
+                </div>
+                <div class="rounded-2xl bg-amber-50 p-5">
+                    <dt class="font-bold text-amber-800">12h15 – 13h00</dt>
+                    <dd class="mt-2 font-semibold text-slate-900">Ăn trưa / Lunch</dd>
+                </div>
+            </dl>
+        </section>
+
         <section class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
             <div class="flex flex-col gap-5 border-b border-slate-200 p-6 sm:p-8 lg:flex-row lg:items-end lg:justify-between">
                 <div class="space-y-3">
@@ -55,7 +65,33 @@
                 </label>
             </div>
 
-            <div class="overflow-x-auto" tabindex="0" role="region" aria-label="Chương trình hội thảo song ngữ">
+            <div class="space-y-5 border-b border-slate-200 bg-slate-50 p-6 sm:px-8">
+                <fieldset>
+                    <legend class="mb-3 text-xs font-bold uppercase tracking-wide text-slate-600">Chọn phòng / Choose a room</legend>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" @click="selectedRoom = ''" :aria-pressed="selectedRoom === ''" :class="selectedRoom === '' ? 'border-emerald-800 bg-emerald-800 text-white' : 'border-slate-300 bg-white text-slate-700 hover:border-emerald-700'" class="rounded-xl border px-4 py-2.5 text-sm font-semibold transition">Tất cả phòng / All rooms</button>
+                        <template x-for="room in rooms" :key="room.id">
+                            <button type="button" @click="selectedRoom = room.id" :aria-pressed="selectedRoom === room.id" :class="selectedRoom === room.id ? 'border-emerald-800 bg-emerald-800 text-white' : 'border-slate-300 bg-white text-slate-700 hover:border-emerald-700'" class="rounded-xl border px-4 py-2.5 text-left text-sm font-semibold transition" x-text="room.label"></button>
+                        </template>
+                    </div>
+                </fieldset>
+                <div class="flex flex-col gap-4 border-t border-slate-200 pt-4 sm:flex-row sm:items-end sm:justify-between">
+                    <fieldset>
+                        <legend class="mb-3 text-xs font-bold uppercase tracking-wide text-slate-600">Khung phiên / Session</legend>
+                        <div class="flex flex-wrap gap-2">
+                            <button type="button" @click="selectedSession = ''" :aria-pressed="selectedSession === ''" :class="selectedSession === '' ? 'border-emerald-800 bg-emerald-800 text-white' : 'border-slate-300 bg-white text-slate-700 hover:border-emerald-700'" class="rounded-xl border px-4 py-2.5 text-sm font-semibold transition">Tất cả phiên / All sessions</button>
+                        @foreach (range(1, 4) as $sessionNumber)
+                            <button type="button" @click="selectedSession = '{{ $sessionNumber }}'" :aria-pressed="selectedSession === '{{ $sessionNumber }}'" :class="selectedSession === '{{ $sessionNumber }}' ? 'border-emerald-800 bg-emerald-800 text-white' : 'border-slate-300 bg-white text-slate-700 hover:border-emerald-700'" class="rounded-xl border px-4 py-2.5 text-sm font-semibold transition">Phiên {{ $sessionNumber }} / Session {{ $sessionNumber }}</button>
+                        @endforeach
+                        </div>
+                    </fieldset>
+                    <button type="button" @click="resetFilters()" class="shrink-0 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-emerald-800 hover:bg-emerald-50">Đặt lại bộ lọc / Reset filters</button>
+                </div>
+            </div>
+
+            <p x-cloak x-show="visibleRowIndices.length === 0" role="status" class="p-8 text-center text-sm text-slate-600">Không tìm thấy nội dung phù hợp. Hãy đổi phòng, phiên hoặc từ khóa. / No matching results. Try another room, session, or keyword.</p>
+
+            <div x-show="visibleRowIndices.length > 0" class="overflow-x-auto" tabindex="0" role="region" aria-label="Chương trình hội thảo song ngữ">
                 <table class="w-full min-w-[980px] border-collapse text-left text-sm">
                     <thead class="sticky top-0 z-10 bg-emerald-900 text-white">
                         <tr>
@@ -66,9 +102,9 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-200">
-                        @foreach ($programRows as $row)
+                        @foreach ($programRows as $rowIndex => $row)
                             @if ($row['kind'] === 'hall')
-                                <tr class="bg-emerald-950 text-white">
+                                <tr x-show="visibleRowIndices.includes({{ $rowIndex }})" class="bg-emerald-950 text-white">
                                     <th colspan="4" class="px-5 py-5 text-base font-extrabold sm:text-lg">
                                         @foreach ($row['cells'][0] as $line)
                                             <span class="block {{ $loop->first ? '' : 'mt-1 text-sm font-semibold text-emerald-100' }}">{{ $line }}</span>
@@ -76,7 +112,7 @@
                                     </th>
                                 </tr>
                             @elseif ($row['kind'] === 'session')
-                                <tr class="bg-emerald-50 text-slate-900">
+                                <tr x-show="visibleRowIndices.includes({{ $rowIndex }})" class="bg-emerald-50 text-slate-900">
                                     <th colspan="4" class="px-5 py-4">
                                         @foreach ($row['cells'][0] as $line)
                                             <span class="block {{ $loop->first ? 'font-extrabold text-emerald-950' : 'mt-1 text-xs font-semibold text-slate-600' }}">{{ $line }}</span>
@@ -84,12 +120,8 @@
                                     </th>
                                 </tr>
                             @else
-                                @php
-                                    $searchableRow = implode(' ', array_merge(...$row['cells']));
-                                @endphp
                                 <tr
-                                    x-show="matches($el.dataset.search)"
-                                    data-search="{{ $searchableRow }}"
+                                    x-show="visibleRowIndices.includes({{ $rowIndex }})"
                                     class="odd:bg-white even:bg-slate-50/70 hover:bg-emerald-50/60"
                                 >
                                     @foreach ($row['cells'] as $cellIndex => $paragraphs)
