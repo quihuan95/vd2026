@@ -268,26 +268,22 @@
     </div>
 </section>
 
-<!-- Section 4: Nhà tài trợ (Update thông tin sau from Google Doc) -->
+<!-- Section 4: Nhà tài trợ -->
 <section class="py-14 bg-white border-t border-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="bg-gradient-to-br from-amber-50/50 via-slate-50 to-emerald-50/30 rounded-3xl p-8 sm:p-10 border border-amber-200/80 text-center space-y-4">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-800">
-                <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-2">
                 {{ __('conference.sponsorship_page.badge') }}
             </span>
-            <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                 {{ __('conference.sponsorship_page.title') }}
             </h2>
-            <p class="text-xs sm:text-sm text-slate-600 max-w-lg mx-auto">
+            <p class="mt-3 text-sm text-slate-600">
                 {{ __('conference.sponsorship_page.status') }}
             </p>
-            <div class="pt-2">
-                <a href="mailto:{{ __('conference.secretariat_email') }}" class="btn-secondary text-xs">
-                    {{ $locale === 'en' ? 'Contact Secretariat for Partnership' : 'Liên hệ Ban Tổ chức về Tài trợ' }} ✉️
-                </a>
-            </div>
         </div>
+
+        <x-sponsor-logos :sponsors="$sponsors" />
     </div>
 </section>
 

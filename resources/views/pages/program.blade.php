@@ -98,7 +98,7 @@
                                             class="px-{{ $cellIndex === 0 ? '4' : '5' }} py-4 align-top {{ $cellIndex === 0 ? 'whitespace-nowrap font-bold text-emerald-800' : '' }} {{ $row['kind'] === 'break' ? 'bg-amber-50/70 font-semibold text-amber-950' : '' }}"
                                         >
                                             @forelse ($paragraphs as $line)
-                                                <span class="block leading-relaxed {{ $loop->first ? 'font-semibold text-slate-900' : 'mt-1 border-t border-slate-200/70 pt-1 text-xs text-slate-600' }}">{{ $line }}</span>
+                                                <span class="block leading-relaxed {{ $loop->first ? 'font-semibold text-slate-900' : 'mt-1 border-t border-slate-200/70 pt-1 text-xs text-slate-600' }}">{!! preg_replace('/\*\*(.+?)\*\*/u', '<strong class="font-extrabold text-slate-950">$1</strong>', e($line)) !!}</span>
                                             @empty
                                                 <span class="text-slate-400">—</span>
                                             @endforelse

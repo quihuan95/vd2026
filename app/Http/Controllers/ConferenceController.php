@@ -295,68 +295,42 @@ class ConferenceController extends Controller
     }
 
     /**
-     * Helper to scan sponsor folders
+     * @return array<string, array<int, array{name: string, url: string}>>
      */
     protected function getSponsorLogos(): array
     {
-        $tiers = ['diamond', 'gold', 'silver', 'bronze', 'co_sponsor'];
+        $tiers = ['diamond', 'platinum', 'gold', 'silver', 'bronze', 'co_sponsor'];
         $results = [];
 
         foreach ($tiers as $tier) {
             $dir = public_path("images/sponsors/{$tier}");
-            $files = [];
+            if (! File::isDirectory($dir)) {
+                continue;
+            }
 
-            if (File::isDirectory($dir)) {
-                $allFiles = File::files($dir);
-                foreach ($allFiles as $file) {
-                    $ext = strtolower($file->getExtension());
-                    if (in_array($ext, ['png', 'jpg', 'jpeg', 'webp', 'svg', 'gif'])) {
-                        $files[] = [
-                            'name' => pathinfo($file->getFilename(), PATHINFO_FILENAME),
-                            'url' => asset("images/sponsors/{$tier}/".$file->getFilename()),
-                        ];
-                    }
+            $files = File::files($dir);
+            usort($files, fn ($left, $right): int => strnatcasecmp($left->getFilename(), $right->getFilename()));
+
+            $logos = [];
+            foreach ($files as $file) {
+                $extension = strtolower($file->getExtension());
+                if (! in_array($extension, ['png', 'jpg', 'jpeg', 'webp', 'svg', 'gif'], true)) {
+                    continue;
                 }
+
+                $name = preg_replace('/^\d+-/', '', pathinfo($file->getFilename(), PATHINFO_FILENAME)) ?? '';
+
+                $logos[] = [
+                    'name' => $name,
+                    'url' => asset("images/sponsors/{$tier}/".rawurlencode($file->getFilename())),
+                ];
             }
 
-            // Provide default sponsor placeholders if folder is empty so sponsors display nicely
-            if (empty($files)) {
-                $files = $this->getDefaultSponsorsForTier($tier);
+            if ($logos !== []) {
+                $results[$tier] = $logos;
             }
-
-            $results[$tier] = $files;
         }
 
         return $results;
-    }
-
-    protected function getDefaultSponsorsForTier(string $tier): array
-    {
-        return match ($tier) {
-            'diamond' => [
-                ['name' => 'Medtronic Vietnam', 'type' => 'Medical Technology'],
-                ['name' => 'Johnson & Johnson MedTech', 'type' => 'Surgical Equipment'],
-            ],
-            'gold' => [
-                ['name' => 'GE HealthCare', 'type' => 'Precision Care & Imaging'],
-                ['name' => 'Siemens Healthineers', 'type' => 'Diagnostic & Therapeutics'],
-                ['name' => 'Roche Diagnostics', 'type' => 'Laboratory & Diagnostics'],
-            ],
-            'silver' => [
-                ['name' => 'Olympus Medical', 'type' => 'Endoscopy Systems'],
-                ['name' => 'Karl Storz', 'type' => 'Endoscopy & Surgical Devices'],
-                ['name' => 'B. Braun Vietnam', 'type' => 'Healthcare Solutions'],
-                ['name' => 'Stryker Medical', 'type' => 'Orthopaedics & Surgical'],
-            ],
-            'bronze' => [
-                ['name' => 'Mindray Medical', 'type' => 'Patient Monitoring'],
-                ['name' => 'Terumo Asia Holdings', 'type' => 'Cardiovascular Systems'],
-            ],
-            'co_sponsor' => [
-                ['name' => 'Vietcombank', 'type' => 'Financial Partner'],
-                ['name' => 'BIDV', 'type' => 'Payment Partner'],
-            ],
-            default => [],
-        };
     }
 }

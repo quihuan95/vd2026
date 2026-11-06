@@ -190,7 +190,7 @@ return [
     'sponsorship_page' => [
         'badge' => 'NHÀ TÀI TRỢ',
         'title' => 'Nhà tài trợ',
-        'status' => 'Update thông tin sau (Đang cập nhật thông tin)',
+        'status' => 'Trân trọng cảm ơn các nhà tài trợ đã đồng hành cùng Hội nghị.',
     ],
 
     'footer' => [

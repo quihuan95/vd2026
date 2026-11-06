@@ -171,7 +171,7 @@ return [
     'sponsorship_page' => [
         'badge' => 'SPONSORSHIP',
         'title' => 'Sponsors & Partners',
-        'status' => 'Information will be updated soon (Updating)',
+        'status' => 'With sincere thanks to the sponsors accompanying the conference.',
     ],
 
     'footer' => [

@@ -58,12 +58,29 @@ class ExampleTest extends TestCase
 
     public function test_updating_pages_display_updating_component(): void
     {
-        $pages = ['committees', 'sponsorship', 'layout', 'fees', 'guidelines', 'abstract', 'travel'];
+        $pages = ['committees', 'layout', 'fees', 'guidelines', 'abstract', 'travel'];
         foreach ($pages as $page) {
             $response = $this->get("/vi/{$page}");
             $response->assertStatus(200);
             $response->assertSee('Đang cập nhật');
         }
+    }
+
+    public function test_sponsorship_page_displays_sponsor_logos(): void
+    {
+        $response = $this->get('/vi/sponsorship');
+        $response->assertStatus(200);
+        $response->assertSee('Kim cương');
+        $response->assertSee('Bạch kim');
+        $response->assertSee('Đồng tài trợ');
+        $response->assertSee('Astellas');
+        $response->assertSee('Novartis');
+        $response->assertSee('Pfizer');
+        $response->assertDontSee('Medtronic Vietnam');
+
+        $home = $this->get('/vi');
+        $home->assertSee('Astellas');
+        $home->assertSee('Đồng tài trợ');
     }
 
     public function test_speakers_page_displays_chairs_and_speakers_directory(): void
