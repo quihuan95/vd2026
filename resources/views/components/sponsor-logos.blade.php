@@ -13,7 +13,12 @@
     ];
 @endphp
 
-<div class="space-y-8">
+<div
+    class="space-y-8"
+    x-data="{ active: null }"
+    x-effect="document.body.classList.toggle('overflow-hidden', active !== null)"
+    @keydown.escape.window="active = null"
+>
     @foreach ($tiers as $key => $tier)
         @continue(empty($sponsors[$key]))
 
@@ -26,16 +31,57 @@
 
             <div class="grid gap-4 {{ $tier['grid'] }}">
                 @foreach ($sponsors[$key] as $logo)
-                    <div class="flex min-h-0 items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm {{ $tier['card'] }}">
-                        <img
-                            src="{{ $logo['url'] }}"
-                            alt="{{ $logo['name'] }}"
-                            class="h-full w-full min-h-0 object-contain"
-                            loading="lazy"
+                    @if (! empty($logo['posts']))
+                        <button
+                            type="button"
+                            class="group relative flex min-h-0 cursor-pointer items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:border-emerald-700 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700 {{ $tier['card'] }}"
+                            aria-label="Xem bài đăng {{ $logo['name'] }}"
+                            @click="active = {{ \Illuminate\Support\Js::from(['name' => $logo['name'], 'posts' => $logo['posts']]) }}"
                         >
-                    </div>
+                            <img
+                                src="{{ $logo['url'] }}"
+                                alt="{{ $logo['name'] }}"
+                                class="h-full w-full min-h-0 object-contain transition duration-200 group-hover:scale-105"
+                                loading="lazy"
+                            >
+                            <span class="pointer-events-none absolute inset-x-3 bottom-3 rounded-full bg-emerald-800 px-3 py-1 text-xs font-bold text-white opacity-100 transition sm:opacity-0 sm:group-hover:opacity-100">Xem bài đăng</span>
+                        </button>
+                    @else
+                        <div class="flex min-h-0 items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm {{ $tier['card'] }}">
+                            <img
+                                src="{{ $logo['url'] }}"
+                                alt="{{ $logo['name'] }}"
+                                class="h-full w-full min-h-0 object-contain"
+                                loading="lazy"
+                            >
+                        </div>
+                    @endif
                 @endforeach
             </div>
         </section>
     @endforeach
+
+    <template x-teleport="body">
+        <div
+            x-show="active"
+            x-cloak
+            class="fixed inset-0 z-50 overflow-y-auto p-4 sm:p-8"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="sponsor-post-title"
+        >
+            <button type="button" class="fixed inset-0 bg-slate-950/70" @click="active = null" aria-label="Đóng bài đăng"></button>
+            <div class="relative z-10 mx-auto w-full max-w-3xl rounded-3xl bg-white p-4 shadow-2xl sm:p-6">
+                <div class="mb-4 flex items-start justify-between gap-4">
+                    <h3 id="sponsor-post-title" class="text-lg font-extrabold text-slate-950" x-text="active?.name"></h3>
+                    <button type="button" class="shrink-0 rounded-full bg-slate-100 px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-slate-200" @click="active = null">Đóng</button>
+                </div>
+                <div class="space-y-4">
+                    <template x-for="(page, index) in active?.posts ?? []" :key="index">
+                        <img :src="page" :alt="active?.name" class="w-full rounded-xl border border-slate-200">
+                    </template>
+                </div>
+            </div>
+        </div>
+    </template>
 </div>

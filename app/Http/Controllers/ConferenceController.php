@@ -295,11 +295,12 @@ class ConferenceController extends Controller
     }
 
     /**
-     * @return array<string, array<int, array{name: string, url: string}>>
+     * @return array<string, array<int, array{name: string, url: string, posts: array<int, string>}>
      */
     protected function getSponsorLogos(): array
     {
         $tiers = ['diamond', 'platinum', 'gold', 'silver', 'bronze', 'co_sponsor'];
+        $posts = $this->sponsorPosts();
         $results = [];
 
         foreach ($tiers as $tier) {
@@ -318,11 +319,12 @@ class ConferenceController extends Controller
                     continue;
                 }
 
-                $name = preg_replace('/^\d+-/', '', pathinfo($file->getFilename(), PATHINFO_FILENAME)) ?? '';
+                $name = trim(preg_replace('/^\d+-/', '', pathinfo($file->getFilename(), PATHINFO_FILENAME)) ?? '');
 
                 $logos[] = [
                     'name' => $name,
                     'url' => asset("images/sponsors/{$tier}/".rawurlencode($file->getFilename())),
+                    'posts' => $posts[$name] ?? [],
                 ];
             }
 
@@ -332,5 +334,35 @@ class ConferenceController extends Controller
         }
 
         return $results;
+    }
+
+    /**
+     * @return array<string, array<int, string>>
+     */
+    protected function sponsorPosts(): array
+    {
+        $path = public_path('images/sponsor-posts/index.json');
+        if (! File::exists($path)) {
+            return [];
+        }
+
+        $catalog = json_decode(File::get($path), true);
+        if (! is_array($catalog)) {
+            return [];
+        }
+
+        $posts = [];
+        foreach ($catalog as $name => $pages) {
+            if (! is_string($name) || ! is_array($pages)) {
+                continue;
+            }
+
+            $posts[$name] = array_values(array_map(
+                fn (string $page): string => asset($page),
+                array_filter($pages, 'is_string'),
+            ));
+        }
+
+        return $posts;
     }
 }

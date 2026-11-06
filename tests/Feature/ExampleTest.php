@@ -76,6 +76,8 @@ class ExampleTest extends TestCase
         $response->assertSee('Astellas');
         $response->assertSee('Novartis');
         $response->assertSee('Pfizer');
+        $response->assertSee('Xem bài đăng');
+        $response->assertSee('sponsor-posts', false);
         $response->assertDontSee('Medtronic Vietnam');
 
         $home = $this->get('/vi');
