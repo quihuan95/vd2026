@@ -107,6 +107,10 @@ class ExampleTest extends TestCase
         $response->assertSee('PHÒNG KHÁNH TIẾT');
         $response->assertSee('BANQUET HALL');
         $response->assertDontSee('PHÒNG KHÁNH TIẾTBANQUET HALL');
+        $response->assertDontSee('Khung thời gian tổng thể');
+        $response->assertSee('BSCKII. Đoàn Việt Quân, PGS.TS. Đào Xuân Thành');
+        $response->assertSee('người hiến chết não (DDLT)');
+        $response->assertSee('GS. Sang Yub Lee');
         $response->assertSee('Viet Duc University Hospital: 120 years of formation and development');
     }
 

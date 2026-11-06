@@ -19,20 +19,6 @@
     x-effect="visibleRowIndices = matchingRowIndices()"
 >
     <div class="mx-auto max-w-7xl space-y-6 px-4 sm:px-6">
-        <section aria-labelledby="program-overview-title" class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-            <h2 id="program-overview-title" class="text-xl font-extrabold text-slate-950">Khung thời gian tổng thể / Program Overview</h2>
-            <dl class="mt-5 grid gap-4 sm:grid-cols-2">
-                <div class="rounded-2xl bg-emerald-50 p-5">
-                    <dt class="font-bold text-emerald-800">10h15 – 12h15</dt>
-                    <dd class="mt-2 font-semibold text-slate-900">Phiên 2 / Session 2</dd>
-                </div>
-                <div class="rounded-2xl bg-amber-50 p-5">
-                    <dt class="font-bold text-amber-800">12h15 – 13h00</dt>
-                    <dd class="mt-2 font-semibold text-slate-900">Ăn trưa / Lunch</dd>
-                </div>
-            </dl>
-        </section>
-
         <section class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
             <div class="flex flex-col gap-5 border-b border-slate-200 p-6 sm:p-8 lg:flex-row lg:items-end lg:justify-between">
                 <div class="space-y-3">

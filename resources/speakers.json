@@ -307,9 +307,9 @@
                 "title_en": "Minimally invasive living donor liver transplantation"
             },
             {
-                "title": "Tái tạo đường thoát máu được cá thể hóa trong ghép gan từ người hiến sống (LDLT): Làm thế nào để chọn phương pháp phù hợp?",
+                "title": "Tái tạo đường thoát máu được cá thể hóa trong ghép gan từ người hiến chết não (DDLT): Làm thế nào để chọn phương pháp phù hợp?",
                 "time": "10h15 - 10h45",
-                "title_en": "Tailored outflow reconstruction in DDLT: How to choose the appropriate apprach?"
+                "title_en": "Tailored outflow reconstruction in DDLT: How to choose the appropriate approach?"
             }
         ]
     },
@@ -390,10 +390,10 @@
         "stt": 14,
         "folder": "014_Sang Yub Lee",
         "name": "Sang Yub Lee",
-        "degree_vi": "PGS.BS",
-        "degree_en": "Assoc. Prof. MD",
-        "full_name_vi": "PGS.BS. Sang Yub Lee",
-        "full_name_en": "Sang Yub Lee MD.",
+        "degree_vi": "GS",
+        "degree_en": "Prof.",
+        "full_name_vi": "GS. Sang Yub Lee",
+        "full_name_en": "Prof. Sang Yub Lee",
         "position_vi": "",
         "position_en": "",
         "organization_vi": "Khoa Chẩn đoán hình ảnh, Trung tâm Y tế Samsung , Trường Đại học Y khoa Sungkyunkwan, Seoul, Hàn Quốc",
@@ -1280,7 +1280,7 @@
         "chair_sessions": [],
         "presentations": [
             {
-                "title": "Can thiệp nội mạch điều trị phình động mạch chủ bụng có giải phẫu cổ túi phình phức tại kinh nghiệm Bệnh viện Chợ Rẫy",
+                "title": "Can thiệp nội mạch điều trị phình động mạch chủ bụng có giải phẫu cổ túi phình phức tạp: kinh nghiệm Bệnh viện Chợ Rẫy",
                 "time": "11h00 – 11h15",
                 "title_en": "Endovascular treatment for abdominal aortic aneurysms with complex neck anatomy: Cho Ray Hospital experience"
             }
@@ -1711,12 +1711,10 @@
         "is_vduh": true,
         "degree_group": "phd_specialist",
         "country": "",
-        "role": "chair",
-        "role_vi": "Chủ toạ",
-        "role_en": "Chair",
-        "chair_sessions": [
-            "Phiên 3: Chấn thương chỉnh hình / Session 3: Orthopedics"
-        ],
+        "role": "presenter",
+        "role_vi": "Báo cáo viên",
+        "role_en": "Speaker",
+        "chair_sessions": [],
         "presentations": []
     },
     {
@@ -1767,10 +1765,12 @@
         "is_vduh": true,
         "degree_group": "phd_specialist",
         "country": "",
-        "role": "presenter",
-        "role_vi": "Báo cáo viên",
-        "role_en": "Speaker",
-        "chair_sessions": [],
+        "role": "both",
+        "role_vi": "Chủ toạ & Báo cáo viên",
+        "role_en": "Chair & Speaker",
+        "chair_sessions": [
+            "Phiên 3: Chấn thương chỉnh hình / Session 3: Orthopedics"
+        ],
         "presentations": [
             {
                 "title": "Tổng kết 15 năm nghiên cứu ghép mô gân, xương đồng loài tại Bệnh viện Hữu nghị Việt Đức",
@@ -2411,12 +2411,10 @@
         "is_vduh": true,
         "degree_group": "prof",
         "country": "",
-        "role": "chair",
-        "role_vi": "Chủ toạ",
-        "role_en": "Chair",
-        "chair_sessions": [
-            "Phiên 4: Nam học – Tiết niệu"
-        ],
+        "role": "presenter",
+        "role_vi": "Báo cáo viên",
+        "role_en": "Speaker",
+        "chair_sessions": [],
         "presentations": []
     },
     {
@@ -2436,10 +2434,12 @@
         "is_vduh": true,
         "degree_group": "phd_specialist",
         "country": "",
-        "role": "presenter",
-        "role_vi": "Báo cáo viên",
-        "role_en": "Speaker",
-        "chair_sessions": [],
+        "role": "both",
+        "role_vi": "Chủ toạ & Báo cáo viên",
+        "role_en": "Chair & Speaker",
+        "chair_sessions": [
+            "Phiên 4: Nam học – Tiết niệu / Session 4: Andrology & Urology"
+        ],
         "presentations": [
             {
                 "title": "Kết quả gần và chiến lược xử trí trong phẫu thuật nội soi cắt u bảo tồn thận đối với khối u thận có mức độ phức tạp trung bình đến cao theo thang điểm RENAL tại Bệnh viện Hữu nghị Việt Đức",
@@ -3377,7 +3377,7 @@
         "degree_vi": "ThS.BS",
         "degree_en": "MD.",
         "full_name_vi": "ThS.BS. Nguyễn Thu Trang",
-        "full_name_en": "Dr. Nguyen Thu Trang",
+        "full_name_en": "Nguyen Thu Trang MD.",
         "position_vi": "",
         "position_en": "",
         "organization_vi": "Khoa Thận lọc máu, Bệnh viện Hữu nghị Việt Đức",
@@ -6118,10 +6118,10 @@
         "stt": 209,
         "folder": "209_Nguyễn Thị Dân",
         "name": "Nguyễn Thị Dân",
-        "degree_vi": "ThS",
-        "degree_en": "MD. In Nurse",
-        "full_name_vi": "ThS. Nguyễn Thị Dân",
-        "full_name_en": "Nguyen Thi Dan MSN.",
+        "degree_vi": "TS",
+        "degree_en": "PND.",
+        "full_name_vi": "TS. Nguyễn Thị Dân",
+        "full_name_en": "Nguyen Thi Dan PND.",
         "position_vi": "",
         "position_en": "",
         "organization_vi": "Trường Đại học Y Dược – Đại học Quốc gia Hà Nội",
@@ -6129,7 +6129,7 @@
         "photo_path": "images/speakers/209. Nguyễn Thị Dân.jpeg",
         "is_international": false,
         "is_vduh": false,
-        "degree_group": "msc_md",
+        "degree_group": "phd_specialist",
         "country": "",
         "role": "presenter",
         "role_vi": "Báo cáo viên",
