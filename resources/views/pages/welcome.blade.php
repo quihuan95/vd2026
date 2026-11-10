@@ -229,27 +229,15 @@
                     </div>
                 </div>
 
-                <!-- Updating notices for Parking & Room layout -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="p-5 rounded-2xl bg-white border border-amber-200/80 shadow-2xs space-y-2">
-                        <div class="flex items-center gap-2 text-amber-800 font-bold text-xs uppercase">
-                            <span>🚗</span>
-                            <span>{{ __('conference.venue_page.parking_map_title') }}</span>
-                        </div>
-                        <p class="text-xs text-slate-500">
-                            {{ __('conference.venue_page.parking_map_status') }}
-                        </p>
+                <!-- Parking notice and published room layout -->
+                <div class="p-5 rounded-2xl bg-white border border-amber-200/80 shadow-2xs space-y-2">
+                    <div class="flex items-center gap-2 text-amber-800 font-bold text-xs uppercase">
+                        <span>🚗</span>
+                        <span>{{ __('conference.venue_page.parking_map_title') }}</span>
                     </div>
-
-                    <div class="p-5 rounded-2xl bg-white border border-amber-200/80 shadow-2xs space-y-2">
-                        <div class="flex items-center gap-2 text-amber-800 font-bold text-xs uppercase">
-                            <span>🏛️</span>
-                            <span>{{ __('conference.venue_page.rooms_map_title') }}</span>
-                        </div>
-                        <p class="text-xs text-slate-500">
-                            {{ __('conference.venue_page.rooms_map_status') }}
-                        </p>
-                    </div>
+                    <p class="text-xs text-slate-500">
+                        {{ __('conference.venue_page.parking_map_status') }}
+                    </p>
                 </div>
             </div>
 
@@ -264,6 +252,10 @@
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
+        </div>
+
+        <div class="rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm sm:p-8">
+            <x-meeting-rooms :rooms="$meetingRooms" />
         </div>
     </div>
 </section>

@@ -58,49 +58,28 @@
             </div>
         </div>
 
-        <!-- Updating notices: Bản đồ hướng dẫn gửi xe & Sơ đồ phòng họp -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Parking Map updating -->
-            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200/80 shadow-2xs space-y-4">
-                <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-3 py-1 rounded-full">
-                        ⏳ {{ $locale === 'en' ? 'Updating' : 'Đang cập nhật' }}
-                    </span>
-                    <span class="text-2xl">🚗</span>
-                </div>
-                <h3 class="text-lg font-bold text-slate-900">
-                    {{ __('conference.venue_page.parking_map_title') }}
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    {{ $locale === 'en' 
-                        ? 'Detailed delegate parking instructions (automobile and motorcycle bays) are being prepared and will be released prior to the event.'
-                        : 'Sơ đồ luồng di chuyển và vị trí bãi đỗ xe ô tô, xe máy dành riêng cho đại biểu đang được Ban Hậu cần cập nhật và sẽ thông báo trước ngày diễn ra sự kiện.' }}
-                </p>
-                <div class="text-xs text-amber-700 font-medium pt-2 border-t border-slate-100">
-                    {{ __('conference.venue_page.parking_map_status') }}
-                </div>
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200/80 shadow-2xs space-y-4">
+            <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-3 py-1 rounded-full">
+                    ⏳ {{ $locale === 'en' ? 'Updating' : 'Đang cập nhật' }}
+                </span>
+                <span class="text-2xl">🚗</span>
             </div>
+            <h3 class="text-lg font-bold text-slate-900">
+                {{ __('conference.venue_page.parking_map_title') }}
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                {{ $locale === 'en'
+                    ? 'Detailed delegate parking instructions (automobile and motorcycle bays) are being prepared and will be released prior to the event.'
+                    : 'Sơ đồ luồng di chuyển và vị trí bãi đỗ xe ô tô, xe máy dành riêng cho đại biểu đang được Ban Hậu cần cập nhật và sẽ thông báo trước ngày diễn ra sự kiện.' }}
+            </p>
+            <div class="text-xs text-amber-700 font-medium pt-2 border-t border-slate-100">
+                {{ __('conference.venue_page.parking_map_status') }}
+            </div>
+        </div>
 
-            <!-- Rooms Map updating -->
-            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200/80 shadow-2xs space-y-4">
-                <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-3 py-1 rounded-full">
-                        ⏳ {{ $locale === 'en' ? 'Updating' : 'Đang cập nhật' }}
-                    </span>
-                    <span class="text-2xl">🏛️</span>
-                </div>
-                <h3 class="text-lg font-bold text-slate-900">
-                    {{ __('conference.venue_page.rooms_map_title') }}
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    {{ $locale === 'en' 
-                        ? 'Floor plan allocation for 15 specialized tracks at the National Convention Center is being finalized by the Organizing Committee.'
-                        : 'Sơ đồ phân bổ chi tiết các phòng họp cho 15 chuyên đề tại Trung tâm Hội nghị Quốc gia đang được Ban Tổ chức hoàn thiện.' }}
-                </p>
-                <div class="text-xs text-amber-700 font-medium pt-2 border-t border-slate-100">
-                    {{ __('conference.venue_page.rooms_map_status') }}
-                </div>
-            </div>
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-200 shadow-2xs">
+            <x-meeting-rooms :rooms="$meetingRooms" />
         </div>
 
     </div>

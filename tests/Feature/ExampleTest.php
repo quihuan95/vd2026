@@ -20,6 +20,10 @@ class ExampleTest extends TestCase
         $home = $this->get('/vi');
         $home->assertStatus(200);
         $home->assertSee('Hội nghị Khoa học Quốc tế Bệnh viện Hữu nghị Việt Đức 2026');
+        $home->assertSee('Sơ đồ phòng họp');
+        $home->assertSee('PHÒNG 210');
+        $home->assertSee('IDMED');
+        $home->assertSee('Cổng Vàng');
     }
 
     public function test_welcome_letter_page_displays_director_message(): void
@@ -108,9 +112,9 @@ class ExampleTest extends TestCase
         $response->assertSee('BANQUET HALL');
         $response->assertDontSee('PHÒNG KHÁNH TIẾTBANQUET HALL');
         $response->assertDontSee('Khung thời gian tổng thể');
-        $response->assertSee('BSCKII. Đoàn Việt Quân, PGS.TS. Đào Xuân Thành');
-        $response->assertSee('người hiến chết não (DDLT)');
-        $response->assertSee('GS. Sang Yub Lee');
+        $response->assertSee('Assoc. Prof. Le Tu Hoang');
+        $response->assertSee('Outcomes of Oblique Lateral Interbody Fusion (OLIF) in lumbar spine disease treatment');
+        $response->assertDontSee('Hoàng Mạnh Huy');
         $response->assertSee('Viet Duc University Hospital: 120 years of formation and development');
     }
 

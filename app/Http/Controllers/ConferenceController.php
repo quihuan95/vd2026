@@ -59,8 +59,9 @@ class ConferenceController extends Controller
             ->get();
 
         $sponsors = $this->getSponsorLogos();
+        $meetingRooms = $this->meetingRooms();
 
-        return view('pages.welcome', compact('locale', 'speakers', 'sponsors'));
+        return view('pages.welcome', compact('locale', 'speakers', 'sponsors', 'meetingRooms'));
     }
 
     /**
@@ -91,6 +92,12 @@ class ConferenceController extends Controller
             'sponsorship' => $this->sponsorship($locale),
             'register' => $this->registerView($locale),
             'abstract' => $this->abstractView($locale),
+            'layout', 'venue' => view("pages.{$page}", [
+                'locale' => $locale,
+                'page' => $page,
+                'sponsors' => $this->getSponsorLogos(),
+                'meetingRooms' => $this->meetingRooms(),
+            ]),
             default => view("pages.{$page}", [
                 'locale' => $locale,
                 'page' => $page,
@@ -292,6 +299,54 @@ class ConferenceController extends Controller
         $registration = Registration::where('qr_code_token', $token)->firstOrFail();
 
         return view('pages.ticket', compact('locale', 'registration'));
+    }
+
+    /**
+     * @return array<int, array{name: string, name_en: string, sessions: array<int, array{title: string, title_en: string}>}>
+     */
+    protected function meetingRooms(): array
+    {
+        $rows = json_decode(File::get(resource_path('program.json')), true, flags: JSON_THROW_ON_ERROR);
+        $rooms = [];
+
+        foreach ($rows as $row) {
+            if ($row['kind'] === 'hall') {
+                $rooms[] = [
+                    'name' => $row['cells'][0][0] ?? '',
+                    'name_en' => $row['cells'][0][1] ?? '',
+                    'sessions' => [],
+                ];
+
+                continue;
+            }
+
+            if ($row['kind'] !== 'session' || $rooms === []) {
+                continue;
+            }
+
+            $lines = $row['cells'][0];
+            $title = $lines[0] ?? '';
+            $titleEn = '';
+
+            foreach ($lines as $line) {
+                if (str_starts_with($line, 'Session')) {
+                    $titleEn = $line;
+                    break;
+                }
+            }
+
+            if ($titleEn === '' && preg_match('/^(.*?)(Session\b.*)$/u', $title, $matches) === 1) {
+                $title = trim($matches[1]);
+                $titleEn = trim($matches[2]);
+            }
+
+            $rooms[array_key_last($rooms)]['sessions'][] = [
+                'title' => $title,
+                'title_en' => $titleEn,
+            ];
+        }
+
+        return $rooms;
     }
 
     /**
