@@ -78,6 +78,7 @@ class ExampleTest extends TestCase
         $response->assertSee('Bạch kim');
         $response->assertSee('Đồng tài trợ');
         $response->assertSee('Astellas');
+        $response->assertSee('Xem bài đăng Astellas');
         $response->assertSee('Novartis');
         $response->assertSee('Pfizer');
         $response->assertSee('Xem bài đăng');
