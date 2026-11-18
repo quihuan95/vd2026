@@ -5,7 +5,7 @@
 @section('content')
 
 {{-- Success state --}}
-@if(request('success') && request('id'))
+@if(request()->isMethod('get') && request('success') && request('id'))
 <section class="py-16 md:py-24 bg-gradient-to-br from-emerald-50 via-white to-amber-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
         <div class="bg-white rounded-3xl shadow-xl border border-emerald-100 p-10 sm:p-14 space-y-6">
@@ -37,13 +37,23 @@
                 <a href="{{ route('conference.home', ['locale' => $locale]) }}" class="btn-primary text-sm">
                     Về trang chủ
                 </a>
+                @unless($registrationClosed)
                 <a href="{{ route('conference.page', ['locale' => $locale, 'page' => 'register']) }}" class="btn-secondary text-sm">
                     Đăng ký thêm đại biểu khác
                 </a>
+                @endunless
             </div>
         </div>
     </div>
 </section>
+
+@elseif($registrationClosed)
+
+<x-conference-hero-title
+    title="Đã đóng đăng ký"
+    subtitle="Đăng ký tham dự Hội nghị đã kết thúc lúc 12:00 ngày 18/11/2026 (giờ Việt Nam). Cảm ơn Quý đại biểu đã quan tâm."
+    :centered="true"
+/>
 
 @else
 

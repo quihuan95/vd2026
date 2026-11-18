@@ -7,6 +7,7 @@ use App\Models\AbstractSubmission;
 use App\Models\Registration;
 use App\Models\Speaker;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -14,6 +15,8 @@ use Illuminate\Support\Str;
 
 class ConferenceController extends Controller
 {
+    private const string REGISTRATION_CLOSES_AT = '2026-11-18T12:00:00+07:00';
+
     /**
      * Whitelist of valid public pages
      */
@@ -154,7 +157,10 @@ class ConferenceController extends Controller
      */
     public function registerView(string $locale)
     {
-        return view('pages.register', compact('locale'));
+        $registrationClosed = $this->registrationClosed();
+
+        return response()->view('pages.register', compact('locale', 'registrationClosed'))
+            ->header('Cache-Control', 'no-store');
     }
 
     /**
@@ -162,6 +168,13 @@ class ConferenceController extends Controller
      */
     public function registerSubmit(string $locale, Request $request)
     {
+        if ($this->registrationClosed()) {
+            return response()->view('pages.register', [
+                'locale' => $locale,
+                'registrationClosed' => true,
+            ], 403)->header('Cache-Control', 'no-store');
+        }
+
         $validated = $request->validate([
             'full_name' => 'required|string|max:255',
             'gender' => 'required|string|in:male,female,other',
@@ -235,6 +248,11 @@ class ConferenceController extends Controller
         }
 
         return redirect("/{$locale}/register?success=1&id={$registration->delegate_id}&token={$qrToken}");
+    }
+
+    private function registrationClosed(): bool
+    {
+        return now()->greaterThanOrEqualTo(Carbon::parse(self::REGISTRATION_CLOSES_AT));
     }
 
     /**

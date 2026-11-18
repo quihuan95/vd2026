@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Mail\RegistrationConfirmed;
 use App\Models\Registration;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 
@@ -121,6 +122,7 @@ class ExampleTest extends TestCase
 
     public function test_registration_submission_with_doc_fields(): void
     {
+        $this->travelTo(Carbon::parse('2026-11-18T11:59:59+07:00'));
         Mail::fake();
         config(['mail.always_cc' => 'dh.qt2@hoabinh-group.com']);
 
@@ -162,5 +164,51 @@ class ExampleTest extends TestCase
         $this->get('/en/about')->assertRedirect('/vi/about');
 
         $this->get('/vi')->assertDontSee('>EN<');
+    }
+
+    public function test_registration_form_is_available_before_noon_in_vietnam(): void
+    {
+        $this->travelTo(Carbon::parse('2026-11-18T04:59:59Z'));
+
+        $this->get('/vi/register')
+            ->assertOk()
+            ->assertSee('id="register-form"', false)
+            ->assertDontSee('Đã đóng đăng ký');
+    }
+
+    public function test_registration_closes_at_noon_in_vietnam_and_stays_closed(): void
+    {
+        Mail::fake();
+
+        foreach (['2026-11-18T05:00:00Z', '2026-11-19T05:00:00Z'] as $time) {
+            $this->travelTo(Carbon::parse($time));
+
+            $this->get('/vi/register')
+                ->assertOk()
+                ->assertSee('Đã đóng đăng ký')
+                ->assertDontSee('id="register-form"', false);
+
+            $this->post('/vi/register?success=1&id=forged', [
+                'full_name' => 'Nguyễn Văn Test',
+                'gender' => 'male',
+                'email' => 'late@example.com',
+                'phone' => '0912345678',
+            ])->assertForbidden()
+                ->assertSee('Đã đóng đăng ký')
+                ->assertDontSee('Đăng ký thành công!');
+        }
+
+        $this->assertDatabaseCount('registrations', 0);
+        Mail::assertNothingSent();
+    }
+
+    public function test_registration_confirmation_remains_visible_after_closing(): void
+    {
+        $this->travelTo(Carbon::parse('2026-11-18T12:00:00+07:00'));
+
+        $this->get('/vi/register?success=1&id=VDUH26-TEST')
+            ->assertSee('Đăng ký thành công!')
+            ->assertDontSee('Đăng ký thêm đại biểu khác')
+            ->assertDontSee('id="register-form"', false);
     }
 }
