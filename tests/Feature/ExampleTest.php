@@ -82,6 +82,9 @@ class ExampleTest extends TestCase
         $response->assertSee('Xem bài đăng Astellas');
         $response->assertSee('Novartis');
         $response->assertSee('Pfizer');
+        $response->assertSee('images/sponsors/silver/04-Merck.png', false);
+        $response->assertSee('Xem bài đăng Merck');
+        $response->assertDontSee('images/sponsors/co_sponsor/09-Merck.png', false);
         $response->assertSee('Xem bài đăng');
         $response->assertSee('sponsor-posts', false);
         $response->assertDontSee('Medtronic Vietnam');
