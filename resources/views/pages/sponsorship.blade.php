@@ -12,7 +12,10 @@
 
 <section class="bg-slate-50 py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <x-sponsor-logos :sponsors="$sponsors" />
+        <x-sponsor-logos
+            :sponsors="$sponsors"
+            :videos="['Astellas' => 'https://sgp1.digitaloceanspaces.com/hbg/websitehoinghi/vduc/AVN%20Video_full.mp4']"
+        />
     </div>
 </section>
 @endsection

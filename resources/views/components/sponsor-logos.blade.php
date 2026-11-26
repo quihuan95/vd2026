@@ -1,5 +1,6 @@
 @props([
     'sponsors' => [],
+    'videos' => [],
 ])
 
 @php
@@ -31,12 +32,13 @@
 
             <div class="grid gap-4 {{ $tier['grid'] }}">
                 @foreach ($sponsors[$key] as $logo)
-                    @if (! empty($logo['posts']))
+                    @php($video = $videos[$logo['name']] ?? null)
+                    @if ($video || ! empty($logo['posts']))
                         <button
                             type="button"
                             class="group relative flex min-h-0 cursor-pointer items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:border-emerald-700 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700 {{ $tier['card'] }}"
-                            aria-label="Xem bài đăng {{ $logo['name'] }}"
-                            @click="active = {{ \Illuminate\Support\Js::from(['name' => $logo['name'], 'posts' => $logo['posts']]) }}"
+                            aria-label="Xem bài đăng {{ $logo['name'] }}{{ $video ? ' và video' : '' }}"
+                            @click="active = {{ \Illuminate\Support\Js::from(['name' => $logo['name'], 'posts' => $logo['posts'], 'video' => $video]) }}"
                         >
                             <img
                                 src="{{ $logo['url'] }}"
@@ -44,7 +46,7 @@
                                 class="h-full w-full min-h-0 object-contain transition duration-200 group-hover:scale-105"
                                 loading="lazy"
                             >
-                            <span class="pointer-events-none absolute inset-x-3 bottom-3 rounded-full bg-emerald-800 px-3 py-1 text-xs font-bold text-white opacity-100 transition sm:opacity-0 sm:group-hover:opacity-100">Xem bài đăng</span>
+                            <span class="pointer-events-none absolute inset-x-3 bottom-3 rounded-full bg-emerald-800 px-3 py-1 text-xs font-bold text-white opacity-100 transition sm:opacity-0 sm:group-hover:opacity-100">{{ $video ? 'Xem video và bài đăng' : 'Xem bài đăng' }}</span>
                         </button>
                     @else
                         <div class="flex min-h-0 items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm {{ $tier['card'] }}">
@@ -77,6 +79,9 @@
                     <button type="button" class="shrink-0 rounded-full bg-slate-100 px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-slate-200" @click="active = null">Đóng</button>
                 </div>
                 <div class="space-y-4">
+                    <template x-if="active?.video">
+                        <video :src="active.video" :aria-label="active.name" controls playsinline preload="metadata" class="aspect-video w-full rounded-xl bg-black"></video>
+                    </template>
                     <template x-for="(page, index) in active?.posts ?? []" :key="index">
                         <img :src="page" :alt="active?.name" class="w-full rounded-xl border border-slate-200">
                     </template>
